@@ -21,7 +21,7 @@
                 <i style="right: 5px">in</i>
             </div>
             <span>
-                    <form action="post">
+                    <form action="post" method="POST" id="form-data" novalidate>
                         <p class="form"><input type="text" id="user" placeholder="username"></p>
                         <p class="form"><input type="password" id="passwd" placeholder="password"></p>
                         <p class="form confirm"><input type="password" id="confirm-passwd"
@@ -90,7 +90,7 @@
     function submit(callback) {
         if (passwd.value == con_pass.value) {
             let request = new XMLHttpRequest()
-            let url = ""
+            let url = "{{url_for('admin.login')}}"
             request.open("post", url, true)
             let data = new FormData()
             data.append("user", user.value)
