@@ -83,3 +83,11 @@ def login ():
         flash("登陆成功！", "ok")
         return redirect(request.args.get("next") or url_for("admin.index"))
     return render_template("admin/login.html", form=form)
+
+# 退出
+@admin.route("/logout/")
+@admin_login_req
+def logout ():
+    session.pop("admin", None)
+    session.pop("admin_id", None)
+    return redirect(url_for("admin.login"))
