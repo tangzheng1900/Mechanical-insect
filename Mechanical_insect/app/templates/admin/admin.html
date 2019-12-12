@@ -18,12 +18,11 @@
 </head>
 <body>
 <div class="container-scroller">
-    <!-- partial:partials/_navbar.html -->
+    <!-- T头部 -->
     <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-            <a class="navbar-brand brand-logo" href="{{ url_for('admin.index') }}"><img src="{{url_for('static',filename='images/logo.svg')}}"
-                                                                      alt="logo"/></a>
-            <a class="navbar-brand brand-logo-mini" href="{{ url_for('admin.index') }}"><img src="{{url_for('static',filename='images/logo-mini.svg')}}"
+            <a class="navbar-brand brand-logo" href="{{ url_for('admin.index') }}">🕷 Mechanical Insect</a>
+            <a class="navbar-brand brand-logo-mini" href="{{ url_for('admin.index') }}"><img src="{{url_for('static',filename='images/logo-mini.png')}}"
                                                                            alt="logo"/></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-stretch">
@@ -38,29 +37,6 @@
                 </form>
             </div>
             <ul class="navbar-nav navbar-nav-right">
-                <li class="nav-item nav-profile dropdown">
-                    <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown"
-                       aria-expanded="false">
-                        <div class="nav-profile-img">
-                            <img src="{{url_for('static',filename='images/faces/face1.jpg')}}" alt="image">
-                            <span class="availability-status online"></span>
-                        </div>
-                        <div class="nav-profile-text">
-                            <p class="mb-1 text-black">David Greymaax</p>
-                        </div>
-                    </a>
-                    <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-                        <a class="dropdown-item" href="#">
-                            <i class="mdi mdi-cached mr-2 text-success"></i>
-                            Activity Log
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{{ url_for('admin.logout') }}">
-                            <i class="mdi mdi-logout mr-2 text-primary"></i>
-                            Signout
-                        </a>
-                    </div>
-                </li>
                 <li class="nav-item d-none d-lg-block full-screen-link">
                     <a class="nav-link">
                         <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
@@ -173,15 +149,28 @@
                         <h6 class="p-3 mb-0 text-center">See all notifications</h6>
                     </div>
                 </li>
-                <li class="nav-item nav-logout d-none d-lg-block">
-                    <a class="nav-link" href="#">
-                        <i class="mdi mdi-power"></i>
+                <li class="nav-item nav-profile dropdown">
+                    <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown"
+                       aria-expanded="false">
+                        <div class="nav-profile-img">
+                            <img src="{{url_for('static',filename='images/faces/face1.jpg')}}" alt="image">
+                            <span class="availability-status online"></span>
+                        </div>
+                        <div class="nav-profile-text">
+                            <p class="mb-1 text-black">David Greymaax</p>
+                        </div>
                     </a>
-                </li>
-                <li class="nav-item nav-settings d-none d-lg-block">
-                    <a class="nav-link" href="#">
-                        <i class="mdi mdi-format-line-spacing"></i>
-                    </a>
+                    <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                        <a class="dropdown-item" href="#">
+                            <i class="mdi mdi-cached mr-2 text-success"></i>
+                            Activity Log
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{ url_for('admin.logout') }}">
+                            <i class="mdi mdi-logout mr-2 text-primary"></i>
+                            Signout
+                        </a>
+                    </div>
                 </li>
             </ul>
             <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
@@ -190,20 +179,26 @@
             </button>
         </div>
     </nav>
-
+    <!-- E头部 -->
+    <!-- 操作区域 -->
     <div class="container-fluid page-body-wrapper">
+        <!-- 菜单 -->
         {% include "admin/grid.html" %}
-
+        <!-- 菜单 -->
         <div class="main-panel">
-            {% block content %}{% endblock %}
-            <footer class="footer" >
-            <div class="d-sm-flex justify-content-center justify-content-sm-between" >
-              <span class="text-muted text-center text-sm-left d-block d-sm-inline-block" style="margin:auto;">Copyright © 2020 <a href="" target="_blank">智 能 机 械 虫 质 量 监 控 平 台</a><i class="mdi mdi-heart text-danger"></i>. All rights reserved. </span>
-            </div>
-            </footer>
-        </div>
+            <div class="content-wrapper">
 
+                {% block content %}{% endblock %}
+
+                <footer class="footer">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between" >
+                      <span class="text-muted text-center text-sm-left d-block d-sm-inline-block" style="margin:auto;">Copyright © 2020 <a href="" target="_blank">🕷 智 能 机 械 虫 质 量 监 控 平 台</a><i class="mdi mdi-heart text-danger"></i>. All rights reserved. </span>
+                    </div>
+                </footer>
+            </div>
+        </div>
     </div>
+    <!-- 操作区域 -->
 </div>
 
 

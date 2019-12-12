@@ -91,3 +91,11 @@ def logout ():
     session.pop("admin", None)
     session.pop("admin_id", None)
     return redirect(url_for("admin.login"))
+
+
+# test列表
+@admin.route("/tag/list/", methods=["GET"])
+@admin_login_req
+def tag_list ():
+
+    return render_template("admin/test.html")
