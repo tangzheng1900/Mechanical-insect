@@ -7,6 +7,7 @@
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" media="screen" href="../../static/css/style1.css">
 </head>
+{% import "ul/message.html" as message %}
 <body>
 
 <div id="particles-js">
@@ -21,16 +22,26 @@
                 <i style="right: 5px">in</i>
             </div>
             <span>
-                    <form action="post" method="POST" id="form-data" novalidate>
-                        <p class="form"><input type="text" id="user" placeholder="username"></p>
-                        <p class="form"><input type="password" id="passwd" placeholder="password"></p>
-                        <p class="form confirm"><input type="password" id="confirm-passwd"
-                                                       placeholder="confirm password"></p>
-                        <input type="button" value="登 录" class="btn" onclick="login()" style="margin-right: 20px;">
-                        <input type="button" value="注 册" class="btn" onclick='signin()' id="btn">
-                    </form>
-                    <a href="#">Forget your password?</a>
-                </span>
+                <form method="POST" id="form-data" novalidate>
+                    {% for err in form.account.errors %}
+                        <div class="col-md-12"><p style="color:#000000;font-weight:bold">{{ err }}</p></div>
+                    {% endfor %}
+                    <p class="form">{{ form.account }}</p>
+                    {% for err in form.pwd.errors %}
+                        <div class="col-md-12"><p style="color:#000000;font-weight:bold">{{ err }}</p></div>
+                    {% endfor %}
+                    <p class="form">{{ form.pwd }}</p>
+{#                  <p class="form"><input type="text" id="user" placeholder="username"></p>#}
+{#                  <p class="form"><input type="password" id="passwd" placeholder="password"></p>#}
+                    <p class="form confirm"><input type="password" id="confirm-passwd"
+                                                   placeholder="confirm password"></p>
+                    {{ form.submit }}
+                    {{ form.csrf_token }}
+{#                  <input type="button" value="登 录" class="btn" onclick="login()" style="margin-right: 20px;">#}
+                    <input type="button" value="注 册" class="btn" onclick='signin()' id="btn">
+                </form>
+                <a href="{{ url_for('admin.login') }}">Forget your password?</a>
+            </span>
         </div>
 
         <div id="login_img"><!-- 图片绘制框 -->
@@ -90,8 +101,8 @@
     function submit(callback) {
         if (passwd.value == con_pass.value) {
             let request = new XMLHttpRequest()
-            let url = "{{url_for('admin.login')}}"
-            request.open("post", url, true)
+            let url = ""
+            request.open("", url, true)
             let data = new FormData()
             data.append("user", user.value)
             data.append("passwd", passwd.value)
@@ -170,5 +181,8 @@
 </script>
 <div style="text-align:center;">
 </div>
+{% for msg in get_flashed_messages(category_filter=["err"]) %}
+    {{ message.message('err',msg) }}
+{% endfor %}
 </body>
 </html>

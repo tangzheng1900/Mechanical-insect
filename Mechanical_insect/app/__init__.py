@@ -5,25 +5,27 @@
 # @File    : init.py
 # @Software: PyCharm
 
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template
 import os
 from flask_sqlalchemy import SQLAlchemy
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
+
 engine = create_engine('mysql+pymysql://root:123456@172.16.20.130:3306/insect', convert_unicode=True)
-db_session = scoped_session(sessionmaker(autocommit=False,autoflush=False,bind=engine))
+db_session = scoped_session(sessionmaker(autocommit=False,
+                                         autoflush=False,
+                                         bind=engine))
 Base = declarative_base()
 Base.query = db_session.query_property()
 
 def init_db():
     # 在这里导入定义模型所需要的所有模块，这样它们就会正确的注册在
     # 元数据上。否则你就必须在调用 init_db() 之前导入它们。
-    import app.models
+    from app import models
     Base.metadata.create_all(bind=engine)
-
-import pymysql
 
 # 定义数据库连接
 app = Flask(__name__)  # 创建实例化app对象
@@ -44,7 +46,7 @@ from app.admin import admin as admin_blueprint
 
 # 注册蓝图 (添加前后端模块，将蓝图中的url映射关系加载到项目中)
 app.register_blueprint(home_blueprint)
-app.register_blueprint(admin_blueprint, url_prefix="/")
+app.register_blueprint(admin_blueprint, url_prefix="/admin")
 
 
 # 404

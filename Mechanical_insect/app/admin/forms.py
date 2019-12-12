@@ -8,36 +8,36 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField,FileField,TextAreaField,SelectField,SelectMultipleField
 from wtforms.validators import DataRequired,ValidationError,EqualTo
-
+from app.models import Admin, Auth,Role
 
 class LoginForm(FlaskForm):
     '''管理员登录'''
     account = StringField(
         label="账号",
         validators=[
-            DataRequired("请输入账号!!!")
+            DataRequired("Name Error")
         ],
         description="账号",
         render_kw={
             "class": "form-control",
-            "placeholder": "请输入账号!",
+            "placeholder": "username",
             # "required": "required"
         }
     )
     pwd = PasswordField(
         label="密码",
         validators=[
-            DataRequired("请输入密码!!!")
+            DataRequired("Pwd Error")
         ],
         description="密码",
         render_kw={
             "class": "form-control",
-            "placeholder": "请输入密码!",
+            "placeholder": "password",
             # "required": "required"
         }
     )
     submit = SubmitField(
-        '登陆',
+        '登 录',
         render_kw={
             "class": "btn btn-primary btn-block btn-flat",
         }
@@ -47,4 +47,4 @@ class LoginForm(FlaskForm):
         account = field.data
         admin = Admin.query.filter_by(name=account).count()
         if admin == 0:
-            raise ValidationError("账号不存在！")
+            raise ValidationError("Name Undefined")
