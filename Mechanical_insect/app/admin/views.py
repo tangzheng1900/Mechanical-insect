@@ -9,7 +9,7 @@
 from . import admin
 from flask import render_template, redirect, url_for, flash, session, request,abort
 from app.admin.forms import LoginForm
-from app.database import Admin, User,  Oplog, Adminlog, Userlog, Auth, Role
+from app.models import Admin, User,  Oplog, Adminlog, Userlog, Auth, Role
 from functools import wraps
 from app import db, app
 from werkzeug.utils import secure_filename

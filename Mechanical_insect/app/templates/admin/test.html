@@ -1,11 +1,29 @@
 {% extends "admin/admin.html" %}
 {% import "ul/message.html" as message %}
-
+<!-- 功能区 -->
 {% block content %}
-
-        <p class="tip">Mechanical-insect</p>
+<div class="page-header">
+    <h3 class="page-title">
+          <span class="page-title-icon bg-gradient-primary text-white mr-2">
+            <i class="mdi mdi-home"></i>
+          </span>
+        工作台
+    </h3>
+    <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">
+                <span></span>概述
+                <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
+            </li>
+        </ul>
+    </nav>
+</div>
+<p class="tip">Mechanical-insect</p>
 
 </div>
 {% endblock %}
-{% block js%}
+<!-- 功能区 -->
+<!-- 引入js -->
+{% block js %}
 {% endblock%}
+<!-- 引入js -->

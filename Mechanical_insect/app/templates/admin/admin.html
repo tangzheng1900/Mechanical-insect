@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <!-- 引入css -->
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,10 +16,11 @@
     <!-- endinject -->
     <link rel="shortcut icon" href="{{url_for('static',filename='images/favicon.png')}}"/>
     {% block css %}{% endblock %}
+    <!-- 引入css -->
 </head>
 <body>
 <div class="container-scroller">
-    <!-- T头部 -->
+    <!-- 头部 -->
     <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
             <a class="navbar-brand brand-logo" href="{{ url_for('admin.index') }}">🕷 Mechanical Insect</a>
@@ -157,7 +159,7 @@
                             <span class="availability-status online"></span>
                         </div>
                         <div class="nav-profile-text">
-                            <p class="mb-1 text-black">David Greymaax</p>
+                            <p class="mb-1 text-black">David Zhang</p>
                         </div>
                     </a>
                     <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
@@ -179,22 +181,20 @@
             </button>
         </div>
     </nav>
-    <!-- E头部 -->
+    <!-- 头部 -->
     <!-- 操作区域 -->
     <div class="container-fluid page-body-wrapper">
-        <!-- 菜单 -->
         {% include "admin/grid.html" %}
-        <!-- 菜单 -->
         <div class="main-panel">
             <div class="content-wrapper">
-
                 {% block content %}{% endblock %}
-
+                <!-- 底部 -->
                 <footer class="footer">
                     <div class="d-sm-flex justify-content-center justify-content-sm-between" >
                       <span class="text-muted text-center text-sm-left d-block d-sm-inline-block" style="margin:auto;">Copyright © 2020 <a href="" target="_blank">🕷 智 能 机 械 虫 质 量 监 控 平 台</a><i class="mdi mdi-heart text-danger"></i>. All rights reserved. </span>
                     </div>
                 </footer>
+                <!-- 底部 -->
             </div>
         </div>
     </div>
@@ -216,6 +216,7 @@
 <script src="{{url_for('static',filename='js/dashboard.js')}}"></script>
 <!-- End custom js for this page-->
 {% block js %}{% endblock %}
+
 </body>
 
 </html>
