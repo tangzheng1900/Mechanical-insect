@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+{% for msg in get_flashed_messages(category_filter=["ok"]) %}
+    {{ message.message('ok',msg) }}
+{% endfor %}
 <head>
     <!-- 引入css -->
     <!-- Required meta tags -->
@@ -185,6 +187,7 @@
     <!-- 操作区域 -->
     <div class="container-fluid page-body-wrapper">
         {% include "admin/grid.html" %}
+        <!-- 内容 -->
         <div class="main-panel">
             <div class="content-wrapper">
                 {% block content %}{% endblock %}
@@ -196,6 +199,7 @@
                 </footer>
                 <!-- 底部 -->
             </div>
+        <!-- 内容 -->
         </div>
     </div>
     <!-- 操作区域 -->
@@ -215,6 +219,8 @@
 <!-- Custom js for this page-->
 <script src="{{url_for('static',filename='js/dashboard.js')}}"></script>
 <!-- End custom js for this page-->
+<script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
 {% block js %}{% endblock %}
 
 </body>

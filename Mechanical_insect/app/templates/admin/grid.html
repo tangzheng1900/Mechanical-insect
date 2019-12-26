@@ -15,9 +15,21 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('admin.tag_list') }}">
+            <a class="nav-link" href="#">
                 <span class="menu-title">工作台</span>
                 <i class="mdi mdi-home menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for("admin.admin_list",page=1) }}">
+                <span class="menu-title">管理员列表</span>
+                <i class="mdi mdi-contacts menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for("admin.role_list",page=1) }}">
+                <span class="menu-title">角色列表</span>
+                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
             </a>
         </li>
         <li class="nav-item">
@@ -37,18 +49,7 @@
                 </ul>
             </div>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('static',filename='pages/icons/mdi.html') }}">
-                <span class="menu-title">Icons</span>
-                <i class="mdi mdi-contacts menu-icon"></i>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('static',filename='pages/forms/basic_elements.html') }}">
-                <span class="menu-title">Forms</span>
-                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
-            </a>
-        </li>
+
         <li class="nav-item">
             <a class="nav-link" href="{{ url_for('static',filename='pages/charts/chartjs.html') }}">
                 <span class="menu-title">Charts</span>

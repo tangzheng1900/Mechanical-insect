@@ -33,4 +33,4 @@ print('* ━━━━━━感觉萌萌哒━━━━━━')
 
 if __name__ == '__main__':
     print(app.url_map)  # 查看路由映射
-    app.run(host='127.0.0.1', port=82)# 启动web服务器
+    app.run(host='0.0.0.0', port=82)# 启动web服务器
