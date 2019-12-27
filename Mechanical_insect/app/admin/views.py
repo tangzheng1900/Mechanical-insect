@@ -53,7 +53,7 @@ def admin_auth (f):
         # print(urls)
         # print(rule)
         if str(rule) not in urls:
-            flash('您没有权限！请咨询管理员。', 'ok')
+            flash('您没有权限！请咨询管理员。', 'err')
             abort(404)
         return f(*args, **kwargs)
     return decorated_function
@@ -95,7 +95,7 @@ def logout ():
 
 
 # 管理员列表
-@admin.route("/admin/list/<int:page>/",  methods=["GET","POST"])
+@admin.route("/admin/list/<int:page>/",  methods=["GET", "POST"])
 @admin_login_req
 @admin_auth
 def admin_list (page=None):
@@ -133,7 +133,7 @@ def admin_add (data):
     return redirect(url_for("admin.admin_list", page=1))
 
 # 管理员删除
-@admin.route("/admin/del/<int:id>/", methods=["GET"])
+@admin.route("/admin/del/<int:id>/", methods=["GET","POST"])
 @admin_login_req
 @admin_auth
 def admin_del (id=None):
