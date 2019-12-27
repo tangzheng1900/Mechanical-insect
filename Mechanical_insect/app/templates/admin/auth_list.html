@@ -16,7 +16,7 @@
                     <div class="col-lg-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">管理员列表
+                                <h4 class="card-title">角色列表
                                     <button type="button" class="btn btn-info btn-sm" data-toggle="modal"
                                             data-target="#myModal" style="float:right;">
                                         新增
@@ -26,28 +26,23 @@
                                     <thead>
                                     <tr>
                                         <th>编号</th>
-                                        <th>管理员名称</th>
-                                        <th>管理员类型</th>
-                                        <th>管理员角色</th>
+                                        <th>名称</th>
+                                        <th>地址</th>
                                         <th>添加时间</th>
                                         <th>操作事项</th>
                                     </tr>
-                                    </thead>
-                                    <tbody>
                                     {% for v in page_data.items %}
                                         <tr>
                                             <td>{{ v.id }}</td>
                                             <td>{{ v.name }}</td>
-                                            {% if v.is_super==0 %}
-                                                <td>超级管理员</td>
-                                            {% else %}
-                                                <td>普通管理员</td>
-                                            {% endif %}
-                                            <td>{{ v.role.name }}</td>
+                                            <td>{{ v.url }}</td>
                                             <td>{{ v.addtime }}</td>
                                             <td>
-                                                <a href="#" class="label label-success">编辑</a>
-                                                <a href="{{ url_for('admin.admin_del',id=v.id)}}" class="label label-danger">删除</a>
+                                                <a href="{{ url_for('admin.auth_edit',id=v.id) }}" data-toggle="modal"
+                                                   data-target="#myModal1" class="label label-success">编辑</a>
+                                                &nbsp;
+                                                <a href="{{ url_for('admin.auth_del',id=v.id) }}"
+                                                   class="label label-danger">删除</a>
                                             </td>
                                         </tr>
                                     {% endfor %}
@@ -55,9 +50,9 @@
                                 </table>
                             </div>
                             <div class="box-footer clearfix" style="text-align: center">
-                                {{ pg.page(page_data,'admin.admin_list') }}
+                                {{ pg.page(page_data,'admin.auth_list') }}
                             </div>
-                            <!-- 模态框（Modal） -->
+                            <!-- 新增（Modal） -->
                             <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
                                  aria-labelledby="myModalLabel" aria-hidden="true">
                                 <div class="modal-dialog"
@@ -65,7 +60,7 @@
                                     <div class="modal-content" style="height: auto;">
                                         <div class="modal-header">
                                             <h4 class="modal-title" id="myModalLabel">
-                                                管理员新增
+                                                角色新增
                                             </h4>
                                         </div>
                                         <form role="form" method="post" novalidate>
@@ -80,27 +75,9 @@
                                                     {% endfor %}
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="input_pwd">{{ form.pwd.label }}</label>
-                                                    {{ form.pwd }}
-                                                    {% for err in form.pwd.errors %}
-                                                        <div class="col-md-12">
-                                                            <p style="color:red">{{ err }}</p>
-                                                        </div>
-                                                    {% endfor %}
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="input_re_pwd">{{ form.repwd.label }}</label>
-                                                    {{ form.repwd }}
-                                                    {% for err in form.repwd.errors %}
-                                                        <div class="col-md-12">
-                                                            <p style="color:red">{{ err }}</p>
-                                                        </div>
-                                                    {% endfor %}
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="input_role_id">{{ form.role_id.label }}</label>
-                                                    {{ form.role_id }}
-                                                    {% for err in form.role_id.errors %}
+                                                    <label for="input_url">{{ form.url.label }}</label>
+                                                    {{ form.url }}
+                                                    {% for err in form.url.errors %}
                                                         <div class="col-md-12">
                                                             <p style="color:red">{{ err }}</p>
                                                         </div>
@@ -111,9 +88,9 @@
                                                 <button type="button" class="btn btn-outline-secondary btn-sm"
                                                         data-dismiss="modal">关闭
                                                 </button>
-{#                                                <button type="button" class="btn btn-outline-info btn-sm">#}
-{#                                                    提交#}
-{#                                                </button>#}
+                                                {#                                        <button type="button" class="btn btn-outline-info btn-sm">#}
+                                                {#                                            提交#}
+                                                {#                                        </button>#}
                                                 {{ form.submit }}
                                                 {{ form.csrf_token }}
                                             </div>
@@ -121,7 +98,54 @@
                                     </div><!-- /.modal-content -->
                                 </div><!-- /.modal -->
                             </div>
-                            <!-- 模态框（Modal） -->
+                            <!-- 新增（Modal） -->
+                            <!-- 编辑（Modal） -->
+                            <div class="modal fade" id="myModal1" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog"
+                                     style="position: absolute; width: auto; height: 520px; margin: auto; top: 0; left: 0; bottom: 0; right: 0;">
+                                    <div class="modal-content" style="height: auto;">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="myModalLabel">
+                                                角色编辑
+                                            </h4>
+                                        </div>
+                                        <form role="form" method="post" novalidate>
+                                            <div class="box-body">
+                                                <div class="form-group">
+                                                    <label for="input_name">{{ form.name.label }}</label>
+                                                    {{ form.name(value=auth.name) }}
+                                                    {% for err in form.name.errors %}
+                                                    <div class="col-md-12">
+                                                        <p style="color:red">{{ err }}</p>
+                                                    </div>
+                                                    {% endfor %}
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="input_url">{{ form.url.label }}</label>
+                                                    {{ form.url(value=auth.url) }}
+                                                    {% for err in form.url.errors %}
+                                                    <div class="col-md-12">
+                                                        <p style="color:red">{{ err }}</p>
+                                                    </div>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-secondary btn-sm"
+                                                        data-dismiss="modal">关闭
+                                                </button>
+        {#                                        <button type="button" class="btn btn-outline-info btn-sm">#}
+        {#                                            提交#}
+        {#                                        </button>#}
+                                                {{ form.edit }}
+                                                {{ form.csrf_token }}
+                                            </div>
+                                        </form>
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal -->
+                            </div>
+                            <!-- 编辑（Modal） -->
                         </div>
                     </div>
                 </div>
@@ -136,8 +160,9 @@
     <!-- 引入js -->
     <script>
         $(document).ready(function () {
-            $("#g-11").addClass("active");
-            $("#g-11-2").addClass("active");
+            $("#g-9").addClass("active");
+            $("#g-9-2").addClass("active");
+            $("#g-9-1").addClass("active");
         })
     </script>
     <!-- 引入js -->

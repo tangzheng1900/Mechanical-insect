@@ -1,60 +1,61 @@
 {% macro message(hh,msg) -%}
 
-<head>
-    <meta charset="utf-8"/>
-    <title>antd</title>
-    <link rel="https://unpkg.com/antd@3.9.3/dist/antd.min.css"/>
-    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script src="https://cdn.bootcss.com/babel-standalone/6.26.0/babel.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
-    <script src="https://unpkg.com/antd@3.9.3/dist/antd.min.js"></script>
-    <script src="https://cdn.bootcss.com/antd/3.18.1/antd.min.js"></script>
-    <script src="https://cdn.bootcss.com/antd/3.18.1/antd.js"></script>
-    <link href="https://cdn.bootcss.com/antd/3.18.1/antd.min.css" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="utf-8"/>
+        <title>🕷 Mechanical Insectd</title>
+        <link rel="https://unpkg.com/antd@3.9.3/dist/antd.min.css"/>
+        <script crossorigin src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+        <script src="https://cdn.bootcss.com/babel-standalone/6.26.0/babel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+        <script src="https://unpkg.com/antd@3.9.3/dist/antd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/antd/3.25.3/antd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/antd/3.25.3/antd.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/antd/3.25.3/antd.min.css" rel="stylesheet">
+    </head>
 
-<body >
-{% if hh=='ok' %}
-<script type="text/babel" >
-    class MessageBox extends React.Component {
-        renderMessage = () => {
-            antd.message.config({
-                top:75,
-            })
-            antd.message.success('{{ msg }}');
-        }
-        render = () => {
-            return (<div>{this.renderMessage()}</div>)
-        }
-    }
-    document.getElementById("app")
-    ReactDOM.render(<MessageBox/>,
-        document.getElementById('app'),
-    )
-</script>
+    <body>
+    {% if hh=='ok' %}
+        <script type="text/babel">
+            class MessageBox extends React.Component {
+                renderMessage = () => {
+                    antd.message.config({
+                        top: 75,
+                    })
+                    antd.message.success('{{ msg }}');
+                }
+                render = () => {
+                    return (<div>{this.renderMessage()}</div>)
+                }
+            }
 
-{% else %}
-<script type="text/babel">
-    class MessageBox extends React.Component {
-        renderMessage = () => {
-            antd.message.config({
-                top:75,
-            })
-            antd.message.error('{{ msg }}');
-        }
-        render = () => {
-            return (<div>{this.renderMessage()}</div>)
-        }
-    }
-    document.getElementById("app")
-    ReactDOM.render(<MessageBox/>,
-        document.getElementById('app'),
-    )
-</script>
-{% endif %}
+            document.getElementById("app")
+            ReactDOM.render(<MessageBox/>,
+                document.getElementById('app'),
+            )
+        </script>
 
-<div id="app"></div>
-</body>
+    {% else %}
+        <script type="text/babel">
+            class MessageBox extends React.Component {
+                renderMessage = () => {
+                    antd.message.config({
+                        top: 75,
+                    })
+                    antd.message.error('{{ msg }}');
+                }
+                render = () => {
+                    return (<div>{this.renderMessage()}</div>)
+                }
+            }
+            document.getElementById("app")
+            ReactDOM.render(<MessageBox/>,
+                document.getElementById('app'),
+            )
+        </script>
+    {% endif %}
+
+    <div id="app"></div>
+    </body>
 
 {%- endmacro %}
