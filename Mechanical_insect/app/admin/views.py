@@ -66,6 +66,7 @@ def admin_auth (f):
 def index ():
     return render_template("admin/index.html")
 
+
 # 登录
 @admin.route("/login/", methods=["GET", "POST"])
 def login ():
@@ -76,6 +77,9 @@ def login ():
         if not admin.check_pwd(data["pwd"]):
             flash("密码错误！", "err")
             return redirect(url_for("admin.login"))
+        if not admin.state==0:
+            flash("账号已停用，联系管理员！", "err")
+            return redirect(url_for("admin.login"))
         session["admin"] = data["account"]
         session["admin_id"] = admin.id
         adminlog = Adminlog(admin_id=admin.id, ip=request.remote_addr, )
@@ -84,6 +88,7 @@ def login ():
         flash("登陆成功！", "ok")
         return redirect(request.args.get("next") or url_for("admin.index"))
     return render_template("admin/login.html", form=form)
+
 
 # 退出
 @admin.route("/logout/")
@@ -114,6 +119,27 @@ def admin_list (page=None):
         admin_add(data)
     return render_template("admin/admin_list.html",page_data=page_data,form=form)
 
+
+#管理员状态
+@admin.route("/admin/state/<int:id><int:state>/", methods=["GET", "POST"])
+@admin_login_req
+@admin_auth
+def admin_state (id=None,state=None):
+    admin = Admin.query.get_or_404(id)
+    if id==1:
+        flash("无权停用，联系管理员！", "err")
+        return redirect(url_for("admin.admin_list", page=1))
+    if state==0:
+        admin.state = 1
+        flash("停用角色成功！", "ok")
+    else:
+        admin.state = 0
+        flash("启用角色成功！", "ok")
+    db.session.add(admin)
+    db.session.commit()
+    return redirect(url_for("admin.admin_list", page=1))
+
+
 # 添加管理员
 @admin.route("/admin/add/", methods=["GET", "POST"])
 @admin_login_req
@@ -125,12 +151,14 @@ def admin_add (data):
         name=data["name"],
         pwd =generate_password_hash(data["pwd"]),
         role_id= data["role_id"],
-        is_super=1
+        is_super=1,
+        state=0
     )
     db.session.add(admin)
     db.session.commit()
     flash("添加管理员成功！","ok")
     return redirect(url_for("admin.admin_list", page=1))
+
 
 # 管理员删除
 @admin.route("/admin/del/<int:id>/", methods=["GET","POST"])
@@ -146,6 +174,7 @@ def admin_del (id=None):
     flash("删除角色成功！", "ok")
     return redirect(url_for("admin.admin_list", page=1))
 
+
 # 添加角色
 @admin.route("/role/add/", methods=["GET", "POST"])
 @admin_login_req
@@ -160,6 +189,7 @@ def role_add (data):
     db.session.commit()
     flash("添加角色成功！", "ok")
     return redirect(url_for("admin.role_list", page=1))
+
 
 # 角色列表
 @admin.route("/role/list/<int:page>/", methods=['GET', "POST"])

@@ -29,6 +29,7 @@
                                         <th>管理员名称</th>
                                         <th>管理员类型</th>
                                         <th>管理员角色</th>
+                                        <th>启用状态</th>
                                         <th>添加时间</th>
                                         <th>操作事项</th>
                                     </tr>
@@ -44,6 +45,11 @@
                                                 <td>普通管理员</td>
                                             {% endif %}
                                             <td>{{ v.role.name }}</td>
+                                            {% if v.state==0 %}
+                                                <td><a href="{{ url_for('admin.admin_state',id=v.id,state=v.state)}}" class="label label-success">启用</a></td>
+                                            {% else %}
+                                                <td><a href="{{ url_for('admin.admin_state',id=v.id,state=v.state)}}" class="label label-success">停用</a></td>
+                                            {% endif %}
                                             <td>{{ v.addtime }}</td>
                                             <td>
                                                 <a href="#" class="label label-success">编辑</a>
