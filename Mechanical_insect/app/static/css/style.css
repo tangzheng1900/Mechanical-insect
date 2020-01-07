@@ -20485,6 +20485,7 @@ code {
 
 select.form-control {
   padding: .4375rem .75rem;
+  height: 400px;
   border: 0;
   outline: 1px solid #ebedf2;
   color: #c9c8c8;
