@@ -225,6 +225,9 @@ def role_del (id=None):
 @admin_login_req
 @admin_auth
 def role_edit (id=None):
+    if id == 1:
+        flash("无权编辑，联系管理员！", "err")
+        return redirect(url_for("admin.role_list", page=1))
     form = RoleForm()
     role = Role.query.get_or_404(id)
     if request.method == "GET":
@@ -237,8 +240,8 @@ def role_edit (id=None):
         db.session.add(role)
         db.session.commit()
         flash("编辑角色成功！", "ok")
-        return redirect(url_for('admin.role_list', id=id))
-    return render_template("admin/role_list.html", form=form, role=role)
+        return redirect(url_for('admin.role_list',page=1))
+    return render_template("admin/role_edit.html", form=form, role=role)
 
 
 # 权限列表

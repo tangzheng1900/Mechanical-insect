@@ -1,0 +1,76 @@
+{% extends "admin/admin.html" %}
+{% import "ul/admin_page.html" as pg %}
+{% import "ul/message.html" as message %}
+{% for msg in get_flashed_messages(category_filter=["ok"]) %}
+    {{ message.message('ok',msg) }}
+{% endfor %}
+{% block css %}
+{% endblock %}
+
+{% block content %}
+<!-- 功能区 -->
+    <section class="content" id="showcontent">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <div class="col-lg-12 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <!-- 编辑（Modal） -->
+                                <div><h4 class="card-title">角色编辑</h4></div>
+                                <form role="form" method="post" novalidate>
+                                    <div class="box-body">
+                                        <div class="form-group">
+                                            <label for="input_name">{{ form.name.label }}</label>
+                                            {{ form.name(value=role.name) }}
+                                            {% for err in form.name.errors %}
+                                            <div class="col-md-12">
+                                                <p style="color:red">{{ err }}</p>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                        <div class="form-group" id="auth_list">
+                                            <div class="col-md-12">
+                                                <label>{{ form.auths.label }}</label>
+                                            </div>
+                                            {{ form.auths }}
+                                            {% for err in form.auths.errors %}
+                                            <div class="col-md-12" style="color:red">{{ err }}</div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button onclick="window.location.href='{{ url_for("admin.role_list",page=1) }}'" type="button" class="btn btn-outline-secondary btn-sm"
+                                                data-dismiss="modal">返回
+                                        </button>
+                    {#                                        <button type="button" class="btn btn-outline-info btn-sm">#}
+                    {#                                            提交#}
+                    {#                                        </button>#}
+                                        {{ form.edit }}
+                                        {{ form.csrf_token }}
+                                    </div>
+                                </form>
+                                <!-- 编辑（Modal） -->
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 功能区 -->
+
+{% endblock %}
+
+{% block js %}
+    <!-- 引入js -->
+    <script>
+        $(document).ready(function () {
+            $("#g-9").addClass("active");
+            $("#g-9-2").addClass("active");
+            $("#g-9-1").addClass("active");
+        })
+    </script>
+    <!-- 引入js -->
+{% endblock %}

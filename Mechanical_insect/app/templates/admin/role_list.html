@@ -38,7 +38,7 @@
                             <td>{{ v.name }}</td>
                             <td>{{ v.addtime }}</td>
                             <td>
-                                <a href="#" class="label label-success">编辑</a>
+                                <a href="{{ url_for('admin.role_edit',id=v.id) }}" class="label label-success">编辑</a>
                                 <a href="{{ url_for('admin.role_del',id=v.id)}}" class="label label-danger">删除</a>
                             </td>
                         </tr>
@@ -49,7 +49,7 @@
                   <div class="box-footer clearfix" style="text-align: center">
                     {{ pg.page(page_data,'admin.role_list') }}
                   </div>
-                    <!-- 模态框（Modal） -->
+                    <!-- 新增（Modal） -->
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
                          aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog"
@@ -93,7 +93,7 @@
                             </div><!-- /.modal-content -->
                         </div><!-- /.modal -->
                     </div>
-                    <!-- 模态框（Modal） -->
+                    <!-- 新增（Modal） -->
                   </div>
                 </div>
             </div>
