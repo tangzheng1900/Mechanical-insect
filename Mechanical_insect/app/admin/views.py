@@ -245,19 +245,16 @@ def role_edit (id=None):
 @admin.route("/auth/list/<int:page>/", methods=['GET', "POST"])
 @admin_login_req
 @admin_auth
-def auth_list (page=None,id=None):
+def auth_list (page=None):
     form = AuthFrom()
     data = form.data
-    if id is None:
-        id =2
     if page is None:
         page = 1
     page_data = Auth.query.order_by(Auth.addtime.desc()).paginate(page=page, per_page=10)
-    auth = Auth.query.get_or_404(id)
     if form.validate_on_submit():
         if form.submit.data:
             auth_add(data)
-    return render_template("admin/auth_list.html", page_data=page_data, form=form, auth=auth)
+    return render_template("admin/auth_list.html", page_data=page_data, form=form)
 
 # 添加权限
 @admin.route("/auth/add/", methods=["GET", "POST"])
@@ -286,13 +283,19 @@ def auth_edit (id=None):
     auth = Auth.query.get_or_404(id)
     if form.edit.data:
         data = form.data
+        if Auth.query.filter_by(url=data['url']).count() == 1:
+            flash('权限链接地址已存在！', category='err')
+            return redirect(url_for('admin.auth_edit', id=id))
+        if Auth.query.filter_by(name=data['name']).count() == 1:
+            flash('权限名称已存在！', category='err')
+            return redirect(url_for('admin.auth_edit', id=id))
         auth.url = data['url']
         auth.name = data["name"]
         db.session.add(auth)
         db.session.commit()
         flash("修改权限成功！", "ok")
-        return redirect(url_for('admin.auth_list',page=1, id=id))
-    return render_template("admin/auth_list.html", form=form, auth=auth)
+        return redirect(url_for('admin.auth_list', page=1))
+    return render_template("admin/auth_edit.html", form=form, auth=auth)
 
 
 # 权限删除
