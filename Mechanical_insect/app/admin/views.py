@@ -357,6 +357,7 @@ def oplog_list(page=None):
         page = 1
     page_data = Oplog.query.join(Admin).filter(Admin.id == Oplog.admin_id, ).order_by(Oplog.addtime.desc()).paginate(
         page=page, per_page=10)
+    print(page_data,1)
     return render_template("admin/oplog_list.html", page_data=page_data)
 
 
@@ -381,4 +382,5 @@ def userloginlog_list(page=None):
         page = 1
     page_data = Userlog.query.join(User).filter(User.id == Userlog.user_id, ).order_by(Userlog.addtime.desc()).paginate(
         page=page, per_page=10)
+    print(page_data,1)
     return render_template("admin/userloginlog_list.html", page_data=page_data)

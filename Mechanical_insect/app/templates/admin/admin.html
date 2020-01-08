@@ -192,7 +192,7 @@
         {% include "admin/grid.html" %}
         <!-- 内容 -->
         <div class="main-panel">
-            <div class="content-wrapper">
+            <div class="content-wrapper" id="libiao">
                 {% block content %}{% endblock %}
                 <!-- 底部 -->
                 <footer class="footer">
@@ -213,8 +213,6 @@
 <script src="{{url_for('static',filename='vendors/js/vendor.bundle.base.js')}}"></script>
 <script src="{{url_for('static',filename='vendors/js/vendor.bundle.addons.js')}}"></script>
 <!-- endinject -->
-<!-- Plugin js for this page-->
-<!-- End plugin js for this page-->
 <!-- inject:js -->
 <script src="{{url_for('static',filename='js/off-canvas.js')}}"></script>
 <script src="{{url_for('static',filename='js/misc.js')}}"></script>

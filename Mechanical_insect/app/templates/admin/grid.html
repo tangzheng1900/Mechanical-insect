@@ -46,15 +46,9 @@
             </a>
             <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"><a class="nav-link"
-                                            href="{{ url_for("admin.adminloginlog_list",page=1) }}">管理登录日志</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link"
-                                            href="{{ url_for("admin.oplog_list",page=1) }}">操作日志</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link"
-                                            href="{{ url_for("admin.userloginlog_list",page=1) }}">用户登录日志</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="javascript:void(0);" onclick="loadXMLDoc('/admin/adminloginlog/list/1/')">管理登录日志</a></li>
+                    <li class="nav-item"><a class="nav-link" href="javascript:void(0);" onclick="loadXMLDoc('/admin/oplog/list/1/')">操作日志</a></li>
+                    <li class="nav-item"><a class="nav-link" href="javascript:void(0);" onclick="loadXMLDoc('/admin/userloginlog/list/1/')">用户登录日志</a></li>
                 </ul>
             </div>
         </li>
@@ -112,5 +106,26 @@
     </ul>
 </nav>
 <!-- 菜单 -->
+
+<script>
+    function loadXMLDoc(url) {
+        var xmlhttp;
+        if (window.XMLHttpRequest) {
+            //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+            xmlhttp = new XMLHttpRequest();
+        }
+        else {
+            // IE6, IE5 浏览器执行代码
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("libiao").innerHTML = xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+    }
+</script>
 
 
