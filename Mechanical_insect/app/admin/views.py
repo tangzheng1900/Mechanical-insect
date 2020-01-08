@@ -7,36 +7,36 @@
 
 
 from . import admin
-from flask import render_template, redirect, url_for, flash, session, request,abort
-from app.admin.forms import LoginForm,AdminForm,RoleForm,AuthFrom
-from app.models import Admin, User,  Oplog, Adminlog, Userlog, Auth, Role
+from flask import render_template, redirect, url_for, flash, session, request, abort
+from app.admin.forms import LoginForm, AdminForm, RoleForm, AuthFrom
+from app.models import Admin, User, Oplog, Adminlog, Userlog, Auth, Role
 from functools import wraps
-from app import db, app
-from werkzeug.utils import secure_filename
-import os
-import uuid
+from app import db
 import datetime
+
 
 # 上下文应用处理器
 @admin.context_processor
-def tpl_extra ():
+def tpl_extra():
     data = dict(online_time=datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     return data
 
+
 # 登录装饰器
-def admin_login_req (f):
+def admin_login_req(f):
     @wraps(f)
-    def decorated_function (*args, **kwargs):
+    def decorated_function(*args, **kwargs):
         if "admin" not in session:
             return redirect(url_for("admin.login", next=request.url))
         return f(*args, **kwargs)
+
     return decorated_function
 
 
 # 权限控制装饰器
-def admin_auth (f):
+def admin_auth(f):
     @wraps(f)
-    def decorated_function (*args, **kwargs):
+    def decorated_function(*args, **kwargs):
         admin = Admin.query.join(
             Role
         ).filter(
@@ -63,13 +63,13 @@ def admin_auth (f):
 @admin.route("/")
 @admin_login_req
 @admin_auth
-def index ():
+def index():
     return render_template("admin/index.html")
 
 
 # 登录
 @admin.route("/login/", methods=["GET", "POST"])
-def login ():
+def login():
     form = LoginForm()
     if form.validate_on_submit():
         data = form.data
@@ -77,7 +77,7 @@ def login ():
         if not admin.check_pwd(data["pwd"]):
             flash("密码错误！", "err")
             return redirect(url_for("admin.login"))
-        if not admin.state==0:
+        if not admin.state == 0:
             flash("账号已停用，联系管理员！", "err")
             return redirect(url_for("admin.login"))
         session["admin"] = data["account"]
@@ -93,7 +93,7 @@ def login ():
 # 退出
 @admin.route("/logout/")
 @admin_login_req
-def logout ():
+def logout():
     oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="退出系统")
     db.session.add(oplog)
     db.session.commit()
@@ -103,10 +103,10 @@ def logout ():
 
 
 # 管理员列表
-@admin.route("/admin/list/<int:page>/",  methods=["GET", "POST"])
+@admin.route("/admin/list/<int:page>/", methods=["GET", "POST"])
 @admin_login_req
 @admin_auth
-def admin_list (page=None):
+def admin_list(page=None):
     form = AdminForm()
     if page is None:
         page = 1
@@ -115,24 +115,24 @@ def admin_list (page=None):
     ).join(
         Role
     ).filter(
-        Role.id==Admin.role_id
+        Role.id == Admin.role_id
     ).paginate(page=page, per_page=10)
     if form.validate_on_submit():
         data = form.data
         admin_add(data)
-    return render_template("admin/admin_list.html",page_data=page_data,form=form)
+    return render_template("admin/admin_list.html", page_data=page_data, form=form)
 
 
-#管理员状态
+# 管理员状态
 @admin.route("/admin/state/<int:id><int:state>/", methods=["GET", "POST"])
 @admin_login_req
 @admin_auth
-def admin_state (id=None,state=None):
+def admin_state(id=None, state=None):
     admin = Admin.query.get_or_404(id)
-    if id==1:
+    if id == 1:
         flash("无权停用，联系管理员！", "err")
         return redirect(url_for("admin.admin_list", page=1))
-    if state==0:
+    if state == 0:
         admin.state = 1
         flash("停用角色成功！", "ok")
         oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="停用角色%s" % id)
@@ -153,19 +153,19 @@ def admin_state (id=None,state=None):
 @admin.route("/admin/add/", methods=["GET", "POST"])
 @admin_login_req
 @admin_auth
-def admin_add (data):
+def admin_add(data):
     # print(data)
     from werkzeug.security import generate_password_hash
-    admin=Admin(
+    admin = Admin(
         name=data["name"],
-        pwd =generate_password_hash(data["pwd"]),
-        role_id= data["role_id"],
+        pwd=generate_password_hash(data["pwd"]),
+        role_id=data["role_id"],
         is_super=1,
         state=0
     )
     db.session.add(admin)
     db.session.commit()
-    flash("添加管理员成功！","ok")
+    flash("添加管理员成功！", "ok")
     oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="添加管理员%s" % data["name"])
     db.session.add(oplog)
     db.session.commit()
@@ -173,11 +173,11 @@ def admin_add (data):
 
 
 # 管理员删除
-@admin.route("/admin/del/<int:id>/", methods=["GET","POST"])
+@admin.route("/admin/del/<int:id>/", methods=["GET", "POST"])
 @admin_login_req
 @admin_auth
-def admin_del (id=None):
-    if id==1:
+def admin_del(id=None):
+    if id == 1:
         flash("无权删除，联系管理员！", "err")
         return redirect(url_for("admin.admin_list", page=1))
     admin = Admin.query.get_or_404(int(id))
@@ -194,7 +194,7 @@ def admin_del (id=None):
 @admin.route("/role/add/", methods=["GET", "POST"])
 @admin_login_req
 @admin_auth
-def role_add (data):
+def role_add(data):
     # print(data)
     if Role.query.filter_by(name=data['name']).count() == 1:
         flash('角色名称已存在！', category='err')
@@ -213,7 +213,7 @@ def role_add (data):
 @admin.route("/role/list/<int:page>/", methods=['GET', "POST"])
 @admin_login_req
 @admin_auth
-def role_list (page=None):
+def role_list(page=None):
     form = RoleForm()
     if page is None:
         page = 1
@@ -223,11 +223,12 @@ def role_list (page=None):
         role_add(data)
     return render_template("admin/role_list.html", page_data=page_data, form=form)
 
+
 # 角色删除
 @admin.route("/role/del/<int:id>/", methods=["GET"])
 @admin_login_req
 @admin_auth
-def role_del (id=None):
+def role_del(id=None):
     if id == 1:
         flash("无权删除，联系管理员！", "err")
         return redirect(url_for("admin.role_list", page=1))
@@ -245,7 +246,7 @@ def role_del (id=None):
 @admin.route("/role/edit/<int:id>/", methods=["GET", "POST"])
 @admin_login_req
 @admin_auth
-def role_edit (id=None):
+def role_edit(id=None):
     if id == 1:
         flash("无权编辑，联系管理员！", "err")
         return redirect(url_for("admin.role_list", page=1))
@@ -264,7 +265,7 @@ def role_edit (id=None):
         oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="编辑角色%s" % id)
         db.session.add(oplog)
         db.session.commit()
-        return redirect(url_for('admin.role_list',page=1))
+        return redirect(url_for('admin.role_list', page=1))
     return render_template("admin/role_edit.html", form=form, role=role)
 
 
@@ -272,7 +273,7 @@ def role_edit (id=None):
 @admin.route("/auth/list/<int:page>/", methods=['GET', "POST"])
 @admin_login_req
 @admin_auth
-def auth_list (page=None):
+def auth_list(page=None):
     form = AuthFrom()
     data = form.data
     if page is None:
@@ -283,11 +284,12 @@ def auth_list (page=None):
             auth_add(data)
     return render_template("admin/auth_list.html", page_data=page_data, form=form)
 
+
 # 添加权限
 @admin.route("/auth/add/", methods=["GET", "POST"])
 @admin_login_req
 @admin_auth
-def auth_add (data):
+def auth_add(data):
     if Auth.query.filter_by(url=data['url']).count() == 1:
         flash('权限链接地址已存在！', category='err')
         return redirect(url_for('admin.auth_list'))
@@ -308,7 +310,7 @@ def auth_add (data):
 @admin.route("/auth/edit/<int:id>/", methods=["GET", "POST"])
 @admin_login_req
 @admin_auth
-def auth_edit (id=None):
+def auth_edit(id=None):
     form = AuthFrom()
     auth = Auth.query.get_or_404(id)
     if form.edit.data:
@@ -335,7 +337,7 @@ def auth_edit (id=None):
 @admin.route("/auth/del/<int:id>/", methods=["GET"])
 @admin_login_req
 @admin_auth
-def auth_del (id=None):
+def auth_del(id=None):
     auth = Auth.query.get_or_404(int(id))
     db.session.delete(auth)
     db.session.commit()
@@ -350,7 +352,7 @@ def auth_del (id=None):
 @admin.route("/oplog/list/<int:page>/", methods=['GET'])
 @admin_login_req
 @admin_auth
-def oplog_list (page=None):
+def oplog_list(page=None):
     if page is None:
         page = 1
     page_data = Oplog.query.join(Admin).filter(Admin.id == Oplog.admin_id, ).order_by(Oplog.addtime.desc()).paginate(
@@ -362,7 +364,7 @@ def oplog_list (page=None):
 @admin.route("/adminloginlog/list/<int:page>/", methods=['GET'])
 @admin_login_req
 @admin_auth
-def adminloginlog_list (page=None):
+def adminloginlog_list(page=None):
     if page is None:
         page = 1
     page_data = Adminlog.query.join(Admin).filter(Admin.id == Adminlog.admin_id, ).order_by(
@@ -374,12 +376,9 @@ def adminloginlog_list (page=None):
 @admin.route("/userloginlog/list/<int:page>/", methods=['GET'])
 @admin_login_req
 @admin_auth
-def userloginlog_list (page=None):
+def userloginlog_list(page=None):
     if page is None:
         page = 1
     page_data = Userlog.query.join(User).filter(User.id == Userlog.user_id, ).order_by(Userlog.addtime.desc()).paginate(
         page=page, per_page=10)
     return render_template("admin/userloginlog_list.html", page_data=page_data)
-
-
-
