@@ -94,6 +94,9 @@ def login ():
 @admin.route("/logout/")
 @admin_login_req
 def logout ():
+    oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="退出系统")
+    db.session.add(oplog)
+    db.session.commit()
     session.pop("admin", None)
     session.pop("admin_id", None)
     return redirect(url_for("admin.login"))
@@ -132,9 +135,15 @@ def admin_state (id=None,state=None):
     if state==0:
         admin.state = 1
         flash("停用角色成功！", "ok")
+        oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="停用角色%s" % id)
+        db.session.add(oplog)
+        db.session.commit()
     else:
         admin.state = 0
         flash("启用角色成功！", "ok")
+        oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="启用角色%s" % id)
+        db.session.add(oplog)
+        db.session.commit()
     db.session.add(admin)
     db.session.commit()
     return redirect(url_for("admin.admin_list", page=1))
@@ -157,6 +166,9 @@ def admin_add (data):
     db.session.add(admin)
     db.session.commit()
     flash("添加管理员成功！","ok")
+    oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="添加管理员%s" % data["name"])
+    db.session.add(oplog)
+    db.session.commit()
     return redirect(url_for("admin.admin_list", page=1))
 
 
@@ -172,6 +184,9 @@ def admin_del (id=None):
     db.session.delete(admin)
     db.session.commit()
     flash("删除角色成功！", "ok")
+    oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="删除管理员%s" % id)
+    db.session.add(oplog)
+    db.session.commit()
     return redirect(url_for("admin.admin_list", page=1))
 
 
@@ -188,6 +203,9 @@ def role_add (data):
     db.session.add(role)
     db.session.commit()
     flash("添加角色成功！", "ok")
+    oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="添加角色%s" % data['name'])
+    db.session.add(oplog)
+    db.session.commit()
     return redirect(url_for("admin.role_list", page=1))
 
 
@@ -217,6 +235,9 @@ def role_del (id=None):
     db.session.delete(role)
     db.session.commit()
     flash("删除角色成功！", "ok")
+    oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="删除角色%s" % id)
+    db.session.add(oplog)
+    db.session.commit()
     return redirect(url_for("admin.role_list", page=1))
 
 
@@ -240,6 +261,9 @@ def role_edit (id=None):
         db.session.add(role)
         db.session.commit()
         flash("编辑角色成功！", "ok")
+        oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="编辑角色%s" % id)
+        db.session.add(oplog)
+        db.session.commit()
         return redirect(url_for('admin.role_list',page=1))
     return render_template("admin/role_edit.html", form=form, role=role)
 
@@ -274,6 +298,9 @@ def auth_add (data):
     db.session.add(auth)
     db.session.commit()
     flash("添加权限成功！", "ok")
+    oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="添加权限%s" % data['name'])
+    db.session.add(oplog)
+    db.session.commit()
     return redirect(url_for("admin.auth_list", page=1))
 
 
@@ -297,6 +324,9 @@ def auth_edit (id=None):
         db.session.add(auth)
         db.session.commit()
         flash("修改权限成功！", "ok")
+        oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="修改权限%s" % data['name'])
+        db.session.add(oplog)
+        db.session.commit()
         return redirect(url_for('admin.auth_list', page=1))
     return render_template("admin/auth_edit.html", form=form, auth=auth)
 
@@ -310,6 +340,9 @@ def auth_del (id=None):
     db.session.delete(auth)
     db.session.commit()
     flash("删除权限成功！", "ok")
+    oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="删除权限%s" % id)
+    db.session.add(oplog)
+    db.session.commit()
     return redirect(url_for("admin.auth_list", page=1))
 
 
