@@ -47,13 +47,13 @@
             <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"><a class="nav-link"
-                                            href="{{ url_for('static',filename='pages/ui-features/buttons.html') }}">管理登录日志</a>
+                                            href="{{ url_for("admin.adminloginlog_list",page=1) }}">管理登录日志</a>
                     </li>
                     <li class="nav-item"><a class="nav-link"
-                                            href="{{ url_for('static',filename='pages/ui-features/typography.html') }}">操作日志</a>
+                                            href="{{ url_for("admin.oplog_list",page=1) }}">操作日志</a>
                     </li>
                     <li class="nav-item"><a class="nav-link"
-                                            href="{{ url_for('static',filename='pages/ui-features/typography.html') }}">用户登录日志</a>
+                                            href="{{ url_for("admin.userloginlog_list",page=1) }}">用户登录日志</a>
                     </li>
                 </ul>
             </div>

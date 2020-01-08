@@ -311,3 +311,42 @@ def auth_del (id=None):
     db.session.commit()
     flash("删除权限成功！", "ok")
     return redirect(url_for("admin.auth_list", page=1))
+
+
+# 操作日志列表
+@admin.route("/oplog/list/<int:page>/", methods=['GET'])
+@admin_login_req
+@admin_auth
+def oplog_list (page=None):
+    if page is None:
+        page = 1
+    page_data = Oplog.query.join(Admin).filter(Admin.id == Oplog.admin_id, ).order_by(Oplog.addtime.desc()).paginate(
+        page=page, per_page=10)
+    return render_template("admin/oplog_list.html", page_data=page_data)
+
+
+# 管理员登录日志列表
+@admin.route("/adminloginlog/list/<int:page>/", methods=['GET'])
+@admin_login_req
+@admin_auth
+def adminloginlog_list (page=None):
+    if page is None:
+        page = 1
+    page_data = Adminlog.query.join(Admin).filter(Admin.id == Adminlog.admin_id, ).order_by(
+        Adminlog.addtime.desc()).paginate(page=page, per_page=10)
+    return render_template("admin/adminloginlog_list.html", page_data=page_data)
+
+
+# 会员登录日志列表
+@admin.route("/userloginlog/list/<int:page>/", methods=['GET'])
+@admin_login_req
+@admin_auth
+def userloginlog_list (page=None):
+    if page is None:
+        page = 1
+    page_data = Userlog.query.join(User).filter(User.id == Userlog.user_id, ).order_by(Userlog.addtime.desc()).paginate(
+        page=page, per_page=10)
+    return render_template("admin/userloginlog_list.html", page_data=page_data)
+
+
+

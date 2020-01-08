@@ -1,0 +1,60 @@
+{% extends "admin/admin.html" %}
+{% import "ul/admin_page.html" as pg %}
+{% import "ul/message.html" as message %}
+{% for msg in get_flashed_messages(category_filter=["ok"]) %}
+    {{ message.message('ok',msg) }}
+{% endfor %}
+{% block css %}
+{% endblock %}
+
+{% block content %}
+    <!-- 功能区 -->
+    <section class="content" id="showcontent">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <div class="col-lg-12 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="box-title">操作日志列表</h3>
+                            </div>
+                            <div class="box-body table-responsive no-padding">
+                                <table class="table table-hover">
+                                    <tbody>
+                                    <tr>
+                                        <th>编号</th>
+                                        <th>管理员</th>
+                                        <th>操作时间</th>
+                                        <th>操作原因</th>
+                                        <th>操作IP</th>
+                                    </tr>
+                                    {% for v in page_data.items %}
+                                        <tr>
+                                            <td>{{ v.id }}</td>
+                                            <td>{{ v.admin.name }}</td>
+                                            <td>{{ v.addtime }}</td>
+                                            <td>{{ v.reason }}</td>
+                                            <td>{{ v.ip }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="box-footer clearfix" style="text-align: center">
+                                {{ pg.page(page_data,'admin.oplog_list') }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 功能区 -->
+    </div>
+{% endblock %}
+
+{% block js %}
+    <!-- 引入js -->
+
+    <!-- 引入js -->
+{% endblock %}
