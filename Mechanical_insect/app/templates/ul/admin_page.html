@@ -28,7 +28,9 @@
     {% endif %}
 
     {% for v in data.iter_pages() %}
-        {% if v == data.page %}
+        {% if v == None %}
+            <li><a>...</a></li>
+        {% elif v == data.page %}
             <li class="active"><a href="#">{{ v }}</a></li>
         {% elif url == 'admin.adminloginlog_list' %}
             <li ><a href="javascript:void(0);" onclick="loadXMLDoc('/admin/adminloginlog/list/{{ v }}/')">{{ v }}</a></li>
