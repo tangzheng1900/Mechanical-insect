@@ -2,8 +2,334 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3f5d670-9dfe-47b8-882b-a821f75d19eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/static/css/font.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/theme1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/theme2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/theme3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/theme4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/theme5.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/xadmin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/fonts/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/fonts/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/fonts/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/fonts/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/images/aiwrap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/images/bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/xadmin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/xcity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/console/prograss.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/console/top-card.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/console/top-search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/content/comment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/content/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/content/tags.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/forum/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/forum/replys.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/layer/photos.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/layim/getList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/layim/getMembers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/mall/order.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/menu1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/message/all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/message/detail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/message/direct.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/message/new.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/message/notice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/table/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/table/demo2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/table/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/table/user30.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/upload/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/user/forget.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/user/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/user/logout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/user/reg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/user/resetpass.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/user/session.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/user/sms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/useradmin/mangadmin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/useradmin/role.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/useradmin/webuser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/workorder/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/json/说明.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/layui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/layui.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/modules/code.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/modules/laydate/default/font.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/modules/laydate/default/laydate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/modules/layer/default/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/modules/layer/default/layer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/modules/layim/html/chatlog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/modules/layim/html/find.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/modules/layim/html/getmsg.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/modules/layim/html/msgbox.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/modules/layim/layim.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/modules/layim/mobile/layim.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/modules/layim/skin/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/modules/layim/skin/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/modules/layim/skin/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/modules/layim/skin/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/modules/layim/skin/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/modules/layim/skin/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/css/modules/layim/voice/default.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/font/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/font/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/font/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/font/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/10.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/11.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/12.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/13.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/14.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/15.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/16.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/17.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/18.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/19.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/20.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/21.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/22.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/23.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/24.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/25.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/26.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/27.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/28.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/29.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/30.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/31.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/33.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/34.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/35.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/36.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/37.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/38.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/39.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/40.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/41.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/42.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/43.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/44.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/45.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/46.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/47.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/48.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/49.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/50.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/51.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/52.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/53.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/54.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/55.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/56.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/57.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/58.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/59.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/60.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/61.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/62.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/63.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/64.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/65.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/66.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/67.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/68.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/69.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/7.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/70.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/71.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/8.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/images/face/9.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/all-mobile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/element.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/flow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/laydate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/layedit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/layer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/layim.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/laypage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/laytpl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/mobile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/mobile/layer-mobile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/mobile/layim-mobile-open.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/mobile/layim-mobile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/mobile/upload-mobile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/mobile/zepto.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/rate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/tree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/upload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/lay/modules/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/layui.all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/layui/layui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/lib/admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/lib/extend/echarts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/lib/extend/echartsTheme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/lib/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/lib/view.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/modules/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/modules/console.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/modules/contlist.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/modules/forum.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/modules/im.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/modules/message.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/modules/sample.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/modules/senior.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/modules/set.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/modules/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/modules/useradmin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/modules/workorder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/style/admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/style/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/style/res/bg-none.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/style/res/layui-logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/style/res/logo-black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/style/res/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/style/res/template/character.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/style/res/template/huge.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/style/res/template/portrait.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/style/template.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/tpl/layim/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/tpl/system/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/tpl/system/get.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/tpl/system/more.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/tpl/system/theme.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/tpl/system/说明.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/layuiadmin/tpl/说明.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/css/layui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/css/layui.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/css/modules/code.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/css/modules/laydate/default/laydate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/css/modules/layer/default/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/css/modules/layer/default/layer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/font/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/font/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/font/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/font/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/10.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/11.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/12.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/13.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/14.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/15.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/16.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/17.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/18.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/19.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/20.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/21.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/22.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/23.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/24.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/25.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/26.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/27.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/28.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/29.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/30.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/31.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/33.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/34.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/35.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/36.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/37.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/38.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/39.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/40.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/41.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/42.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/43.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/44.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/45.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/46.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/47.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/48.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/49.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/50.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/51.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/52.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/53.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/54.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/55.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/56.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/57.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/58.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/59.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/60.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/61.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/62.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/63.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/64.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/65.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/66.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/67.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/68.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/69.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/7.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/70.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/71.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/8.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/images/face/9.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/lay/modules/carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/lay/modules/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/lay/modules/colorpicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/lay/modules/element.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/lay/modules/flow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/lay/modules/form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/lay/modules/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/lay/modules/laydate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/lay/modules/layedit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/lay/modules/layer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/lay/modules/laypage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/lay/modules/laytpl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/lay/modules/mobile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/lay/modules/rate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/lay/modules/slider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/lay/modules/table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/lay/modules/tree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/lay/modules/upload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/lay/modules/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/layui.all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/lib/layui/layui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mechanical_insect.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/userloginlog_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/userloginlog_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/style1.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/style1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/admin/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../X-admin/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../X-admin/login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,7 +338,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Mechanical_insect$manage.coverage" NAME="manage Coverage Results" MODIFIED="1578473685930" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mechanical_insect$manage.coverage" NAME="manage Coverage Results" MODIFIED="1578617793488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Mechanical_insect$models__1_.coverage" NAME="models (1) Coverage Results" MODIFIED="1576046319472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/models" />
     <SUITE FILE_PATH="coverage/Mechanical_insect$models__2_.coverage" NAME="models (2) Coverage Results" MODIFIED="1577252711615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
     <SUITE FILE_PATH="coverage/Mechanical_insect$models.coverage" NAME="models Coverage Results" MODIFIED="1576031852102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
@@ -31,26 +357,28 @@
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.24" value="3" />
+          <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.47" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.53" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="44" />
+          <entry key="css" value="60" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="83" />
+          <entry key="html" value="110" />
+          <entry key="jinja2" value="1" />
           <entry key="jpg" value="1" />
-          <entry key="js" value="18" />
+          <entry key="js" value="23" />
           <entry key="json" value="20" />
           <entry key="log" value="2" />
           <entry key="map" value="2" />
-          <entry key="png" value="4" />
-          <entry key="py" value="53" />
+          <entry key="png" value="5" />
+          <entry key="py" value="58" />
           <entry key="rnc" value="2" />
           <entry key="svg" value="4" />
           <entry key="ts" value="4" />
@@ -58,14 +386,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="44" />
-          <entry key="HTML" value="83" />
-          <entry key="Image" value="5" />
+          <entry key="CSS" value="60" />
+          <entry key="HTML" value="110" />
+          <entry key="Image" value="6" />
           <entry key="JSON" value="20" />
-          <entry key="JavaScript" value="18" />
+          <entry key="JavaScript" value="23" />
+          <entry key="Jinja2" value="1" />
           <entry key="Log" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="53" />
+          <entry key="Python" value="58" />
           <entry key="RNG Compact" value="2" />
           <entry key="SVG" value="4" />
           <entry key="SourceMap" value="2" />
@@ -74,22 +403,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="89" />
-          <entry key="html" value="2247" />
+          <entry key="css" value="119" />
+          <entry key="html" value="2522" />
           <entry key="js" value="56" />
           <entry key="json" value="20" />
-          <entry key="py" value="1270" />
-          <entry key="txt" value="189" />
+          <entry key="py" value="1338" />
+          <entry key="txt" value="265" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="89" />
-          <entry key="HTML" value="2247" />
+          <entry key="CSS" value="119" />
+          <entry key="HTML" value="2522" />
           <entry key="JSON" value="20" />
           <entry key="JavaScript" value="56" />
-          <entry key="PLAIN_TEXT" value="189" />
-          <entry key="Python" value="1270" />
+          <entry key="PLAIN_TEXT" value="265" />
+          <entry key="Python" value="1338" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -101,62 +430,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/templates/admin/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/admin/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="713">
+              <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+              <folding>
+                <element signature="e#144#175#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/static/css/style1.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="65" column="23" lean-forward="true" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/admin/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="376" column="26" selection-start-line="376" selection-start-column="26" selection-end-line="376" selection-end-column="26" />
-              <folding>
-                <element signature="e#145#164#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="265">
+              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/admin/adminloginlog_list.html">
+        <entry file="file://$PROJECT_DIR$/app/static/css/login.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/admin/auth_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="18" column="53" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/admin/oplog_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/admin/userloginlog_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="19" column="49" lean-forward="true" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
-              <folding>
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="621">
+              <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -175,14 +496,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.box-footer</find>
-      <find>clearfix</find>
-      <find>box-sizing</find>
-      <find>display</find>
-      <find>85</find>
-      <find>card-body</find>
-      <find>.content-wrapper</find>
-      <find>vendors/js/bootstrap.min.js.map</find>
       <find>vendors/js/bootstrap</find>
       <find>vendors</find>
       <find>static/vendors</find>
@@ -205,6 +518,14 @@
       <find>select.form-control</find>
       <find>content-wrappe</find>
       <find>content</find>
+      <find>footer</find>
+      <find>g-11</find>
+      <find>position</find>
+      <find>x-admin-sm</find>
+      <find>login-bg</find>
+      <find>particles-js</find>
+      <find>particles</find>
+      <find>particles-js-canvas-el</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -212,7 +533,6 @@
     </replaceStrings>
     <dirStrings>
       <dir>D:\Mechanical-insect\Mechanical_insect\app\static\css\maps</dir>
-      <dir>D:\Mechanical-insect\Mechanical_insect\app\static\css</dir>
       <dir>D:\Mechanical-insect\Mechanical_insect\app\static\css\bootstrap</dir>
       <dir>D:\Mechanical-insect\Mechanical_insect\app\templates\admin</dir>
       <dir>D:\Mechanical-insect\Mechanical_insect\app</dir>
@@ -220,6 +540,7 @@
       <dir>D:\Mechanical-insect\Mechanical_insect\app\templates</dir>
       <dir>D:\Mechanical-insect\Mechanical_insect</dir>
       <dir>D:\Mechanical-insect\Mechanical_insect\app\static</dir>
+      <dir>D:\Mechanical-insect\Mechanical_insect\app\static\css</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -231,14 +552,12 @@
         <option value="$PROJECT_DIR$/app/database.py" />
         <option value="$PROJECT_DIR$/app/models/models.py" />
         <option value="$PROJECT_DIR$/app/models/__init__.py" />
-        <option value="$PROJECT_DIR$/app/static/css/style1.css" />
         <option value="$PROJECT_DIR$/app/templates/index.html" />
         <option value="$PROJECT_DIR$/app/templates/ul/500.html" />
         <option value="$PROJECT_DIR$/app/templates/ul/404.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/grid.py" />
         <option value="$PROJECT_DIR$/app/static/pages/samples/blank-page.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/index.html" />
-        <option value="$PROJECT_DIR$/app/templates/admin/login.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/test.html" />
         <option value="$PROJECT_DIR$/app/models.py" />
         <option value="$PROJECT_DIR$/app/static/css/bootstrap/css/bootstrap.css" />
@@ -255,21 +574,26 @@
         <option value="$PROJECT_DIR$/app/templates/admin/admin_add.html" />
         <option value="$PROJECT_DIR$/app/__init__.py" />
         <option value="$PROJECT_DIR$/app/templates/ul/message.html" />
-        <option value="$PROJECT_DIR$/app/templates/admin/admin_list.html" />
-        <option value="$PROJECT_DIR$/app/templates/admin/role_list.html" />
         <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/app/templates/admin/auth_edit.html" />
-        <option value="$PROJECT_DIR$/app/templates/admin/auth_list.html" />
-        <option value="$PROJECT_DIR$/app/admin/forms.py" />
         <option value="$PROJECT_DIR$/app/templates/admin/role_edit.html" />
         <option value="$PROJECT_DIR$/app/static/css/style.css" />
-        <option value="$PROJECT_DIR$/app/templates/admin/admin.html" />
-        <option value="$PROJECT_DIR$/app/admin/views.py" />
-        <option value="$PROJECT_DIR$/app/templates/ul/admin_page.html" />
-        <option value="$PROJECT_DIR$/app/templates/admin/grid.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/adminloginlog_list.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/oplog_list.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/userloginlog_list.html" />
+        <option value="$PROJECT_DIR$/app/templates/ul/home_page.html" />
+        <option value="$PROJECT_DIR$/app/admin/views.py" />
+        <option value="$PROJECT_DIR$/app/templates/ul/admin_page.html" />
+        <option value="$PROJECT_DIR$/app/templates/admin/grid.html" />
+        <option value="$PROJECT_DIR$/app/templates/admin/admin.html" />
+        <option value="$PROJECT_DIR$/app/templates/admin/admin_list.html" />
+        <option value="$PROJECT_DIR$/app/templates/admin/auth_list.html" />
+        <option value="$PROJECT_DIR$/app/templates/admin/role_list.html" />
+        <option value="$PROJECT_DIR$/app/static/css/xadmin.css" />
+        <option value="$PROJECT_DIR$/app/admin/forms.py" />
+        <option value="$PROJECT_DIR$/app/static/css/login.css" />
+        <option value="$PROJECT_DIR$/app/static/css/style1.css" />
+        <option value="$PROJECT_DIR$/app/templates/admin/login.html" />
       </list>
     </option>
   </component>
@@ -309,6 +633,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -331,7 +656,14 @@
               <item name="Mechanical_insect" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mechanical_insect" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mechanical_insect" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mechanical_insect" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Mechanical_insect" type="b2602c69:ProjectViewProjectNode" />
@@ -346,18 +678,10 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Mechanical_insect" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mechanical_insect" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="ul" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -374,8 +698,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Mechanical-insect\Mechanical_insect\app\static\js" />
       <recent name="D:\Mechanical-insect\Mechanical_insect\app\static" />
+      <recent name="D:\Mechanical-insect\Mechanical_insect\app\static\js" />
       <recent name="D:\Mechanical-insect\Mechanical_insect\app\templates\admin" />
       <recent name="D:\Mechanical-insect\Mechanical_insect\app\static\css" />
       <recent name="D:\Mechanical-insect\Mechanical_insect\app\templates\ul" />
@@ -622,14 +946,41 @@
       <option name="project" value="LOCAL" />
       <updated>1578473989968</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="》修改内嵌页面标题字号&#10;》删除页面page_data内容打印">
+      <created>1578474923168</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1578474923168</updated>
+    </task>
+    <task id="LOCAL-00015" summary="》修改底部背景色及代码分区">
+      <created>1578476677054</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1578476677054</updated>
+    </task>
+    <task id="LOCAL-00016" summary="》修改日志管理中页面格式">
+      <created>1578478160271</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1578478160271</updated>
+    </task>
+    <task id="LOCAL-00017" summary="》修改分页符页码None代码">
+      <created>1578531934783</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1578531934783</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="766" y="0" width="1161" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.208901" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21253406" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -721,29 +1072,13 @@
     <MESSAGE value="》完成系统接口调用操作日志代码" />
     <MESSAGE value="》更新代码格式" />
     <MESSAGE value="》完成日志管理页面不刷新内嵌数据跟新&#10;》完成日志管理分页处理单独判读" />
-    <option name="LAST_COMMIT_MESSAGE" value="》完成日志管理页面不刷新内嵌数据跟新&#10;》完成日志管理分页处理单独判读" />
+    <MESSAGE value="》修改内嵌页面标题字号&#10;》删除页面page_data内容打印" />
+    <MESSAGE value="》修改底部背景色及代码分区" />
+    <MESSAGE value="》修改日志管理中页面格式" />
+    <MESSAGE value="》修改分页符页码None代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="》修改分页符页码None代码" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/static/css/bootstrap/css/bootstrap.css" />
-    <entry file="file://$PROJECT_DIR$/app/templates/ul/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1109">
-          <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/js/mobile/need/layer.css" />
-    <entry file="file://$PROJECT_DIR$/node_modules/antd/dist/antd.css" />
-    <entry file="file://$PROJECT_DIR$/npm-debug.log" />
-    <entry file="file://$PROJECT_DIR$/app/static/index.html.py" />
-    <entry file="file://$PROJECT_DIR$/app/static/package-lock.json" />
-    <entry file="file://D:/Python37/Lib/site-packages/theano/d3viz/js/dagre-d3.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="29903" selection-start-column="29903" selection-end-column="29903" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/static/js/vue.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/antd/lib/modal/Modal.d.ts" />
     <entry file="file://$PROJECT_DIR$/node_modules/antd/lib/button/button.d.ts" />
@@ -771,20 +1106,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3036">
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="42" column="53" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/js/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -828,9 +1149,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="178" column="4" selection-start-line="178" selection-start-column="4" selection-end-line="178" selection-end-column="4" />
-          <folding>
-            <element signature="e#1419#1437#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -845,33 +1163,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="9" lean-forward="true" selection-start-column="9" selection-end-column="9" />
-          <folding>
-            <element signature="e#523#2111#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3335">
-          <caret line="145" column="19" selection-start-line="145" selection-start-column="19" selection-end-line="145" selection-end-column="19" />
-          <folding>
-            <element signature="e#144#175#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/role_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="718">
-          <caret line="90" column="42" selection-start-line="90" selection-start-column="42" selection-end-line="90" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -883,41 +1174,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/css/style1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-31" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/role_edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-432">
           <caret line="34" column="50" lean-forward="true" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
-          <folding>
-            <element signature="e#1988#2005#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/admin_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="61" column="87" lean-forward="true" selection-start-line="61" selection-start-column="61" selection-end-line="61" selection-end-column="87" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="7654" column="41" selection-start-line="7654" selection-start-column="41" selection-end-line="7654" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/js/jquery-1.12.3.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/js/jquery-1.12.3.min.js" />
     <entry file="file://$PROJECT_DIR$/app/admin/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -925,76 +1189,173 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="18603" column="38" lean-forward="true" selection-start-line="18603" selection-start-column="38" selection-end-line="18603" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python37/Lib/site-packages/flask_sqlalchemy/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2531">
+          <caret line="429" column="8" selection-start-line="429" selection-start-column="8" selection-end-line="429" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/ul/home_page.html">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="194" column="51" selection-start-line="194" selection-start-column="45" selection-end-line="194" selection-end-column="51" />
-          <folding>
-            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="143">
+          <caret line="214" column="18" lean-forward="true" selection-start-line="214" selection-start-column="18" selection-end-line="214" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/grid.html">
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/admin_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="46" column="48" lean-forward="true" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
-          <folding>
-            <element signature="n#li#6;n#ul#0;n#nav#0;n#!!top" />
-            <element signature="n#li#7;n#ul#0;n#nav#0;n#!!top" />
-            <element signature="n#a#0;n#li#7;n#ul#0;n#nav#0;n#!!top" />
-            <element signature="n#li#8;n#ul#0;n#nav#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/ul/admin_page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="76" selection-start-line="7" selection-start-column="76" selection-end-line="7" selection-end-column="76" />
+        <state relative-caret-position="442">
+          <caret line="141" selection-start-line="141" selection-end-line="141" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/auth_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="18" column="53" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/adminloginlog_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+        <state relative-caret-position="442">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/oplog_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+        <state relative-caret-position="-188">
+          <caret line="13" column="39" lean-forward="true" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/role_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/userloginlog_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="19" column="49" lean-forward="true" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+        <state relative-caret-position="-188">
+          <caret line="11" column="64" lean-forward="true" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/adminloginlog_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/grid.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="92" column="20" lean-forward="true" selection-start-line="92" selection-start-column="20" selection-end-line="92" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/layuiadmin/lib/extend/echarts.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="381" column="23" selection-start-line="381" selection-start-column="23" selection-end-line="381" selection-end-column="23" />
           <folding>
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="e#145#164#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/views.py">
+    <entry file="file://$PROJECT_DIR$/app/static/css/xadmin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="376" column="26" selection-start-line="376" selection-start-column="26" selection-end-line="376" selection-end-column="26" />
+        <state relative-caret-position="277">
+          <caret line="463" column="28" lean-forward="true" selection-start-line="463" selection-start-column="28" selection-end-line="463" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/images/aiwrap.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-414" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/js/particles.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/ul/admin_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/css/font.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
           <folding>
-            <element signature="e#145#164#0" expanded="true" />
+            <element signature="e#144#175#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/css/style1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="65" column="23" lean-forward="true" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

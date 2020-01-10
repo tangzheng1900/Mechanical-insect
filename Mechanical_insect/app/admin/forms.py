@@ -17,33 +17,38 @@ role_list= Role.query.all()
 class LoginForm(FlaskForm):
     '''管理员登录'''
     account = StringField(
-        label="账号",
+        label="用户名",
         validators=[
-            DataRequired("Name Error")
+            DataRequired("用户名错误")
         ],
-        description="账号",
+        description="用户名",
         render_kw={
-            "class": "form-control",
-            "placeholder": "username",
-            # "required": "required"
+            "class": "layui-input",
+            "placeholder": "用户名",
+            "lay-verify": "required",
+            "type" : "text"
         }
     )
     pwd = PasswordField(
         label="密码",
         validators=[
-            DataRequired("Pwd Error")
+            DataRequired("密码错误")
         ],
         description="密码",
         render_kw={
-            "class": "form-control",
-            "placeholder": "password",
-            # "required": "required"
+            "class": "layui-input",
+            "placeholder": "密码",
+            "lay-verify": "required",
+            "type" : "password"
         }
     )
     submit = SubmitField(
         '登 录',
         render_kw={
             "class": "btn btn-primary btn-block btn-flat",
+            "lay - submit lay - filter": "login",
+            "style" : "width:100%;",
+            "type" : "submit"
         }
     )
 
