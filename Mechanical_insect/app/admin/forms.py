@@ -23,7 +23,7 @@ class LoginForm(FlaskForm):
         ],
         description="用户名",
         render_kw={
-            "class": "layui-input",
+            "class": "form-control",
             "placeholder": "用户名",
             "lay-verify": "required",
             "type" : "text"
@@ -36,7 +36,7 @@ class LoginForm(FlaskForm):
         ],
         description="密码",
         render_kw={
-            "class": "layui-input",
+            "class": "form-control",
             "placeholder": "密码",
             "lay-verify": "required",
             "type" : "password"
@@ -56,7 +56,7 @@ class LoginForm(FlaskForm):
         account = field.data
         admin = Admin.query.filter_by(name=account).count()
         if admin == 0:
-            raise ValidationError("Name Undefined")
+            raise ValidationError("无效用户名")
 
 class AdminForm(FlaskForm):
     name = StringField(
