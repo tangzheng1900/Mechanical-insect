@@ -14033,7 +14033,7 @@ button.close {
 
 .carousel-item {
   position: relative;
-  display: none;
+  /*display: none;*/
   align-items: center;
   width: 100%;
   transition: transform 0.6s ease;

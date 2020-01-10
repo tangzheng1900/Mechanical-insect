@@ -41,9 +41,8 @@ body {
     margin: 0;
     color: rgba(0, 0, 0, .65);
     font-size: 14px;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     font-variant: tabular-nums;
-    line-height: 1.5;
+    line-height: 1.35;
     background-color: #fff;
     -webkit-font-feature-settings: "tnum";
     font-feature-settings: "tnum"
@@ -5731,7 +5730,6 @@ a.ant-btn-sm {
     font-feature-settings: "tnum";
     position: absolute;
     z-index: 1050;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol
 }
 
 .ant-calendar-picker-container.slide-up-appear.slide-up-appear-active.ant-calendar-picker-container-placement-topLeft, .ant-calendar-picker-container.slide-up-appear.slide-up-appear-active.ant-calendar-picker-container-placement-topRight, .ant-calendar-picker-container.slide-up-enter.slide-up-enter-active.ant-calendar-picker-container-placement-topLeft, .ant-calendar-picker-container.slide-up-enter.slide-up-enter-active.ant-calendar-picker-container-placement-topRight {
@@ -19723,7 +19721,6 @@ span.ant-radio + * {
 .ant-statistic-content {
     color: rgba(0, 0, 0, .85);
     font-size: 24px;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol
 }
 
 .ant-statistic-content-value-decimal {
@@ -19796,7 +19793,6 @@ span.ant-radio + * {
     height: 32px;
     margin-right: 8px;
     font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     line-height: 32px;
     text-align: center;
     border: 1px solid rgba(0, 0, 0, .25);
@@ -22501,7 +22497,6 @@ tr.ant-table-expanded-row td > .ant-table-wrapper {
     font-feature-settings: "tnum";
     position: absolute;
     z-index: 1050;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol
 }
 
 .ant-time-picker-panel-inner {

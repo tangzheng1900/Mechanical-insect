@@ -65,6 +65,15 @@ def admin_auth(f):
 @admin_auth
 def index():
     return render_template("admin/index.html")
+@admin.route("/home/")
+def home():
+    return render_template("admin/home.html")
+@admin.route("/home1/")
+def home1():
+    return render_template("admin/homepage1.html")
+@admin.route("/home2/")
+def home2():
+    return render_template("admin/homepage2.html")
 
 
 # 登录
