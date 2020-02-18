@@ -67,7 +67,7 @@ def index():
     return render_template("admin/admin.html")
 @admin.route("/home/")
 def home():
-    return render_template("admin/welcome.html")
+    return render_template("admin/welcome1.html")
 @admin.route("/home1/")
 def home1():
     return render_template("admin/homepage1.html")

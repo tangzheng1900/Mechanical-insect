@@ -5,13 +5,13 @@
             <li>
                 <a href="javascript:;">
                     <i class="iconfont left-nav-li" lay-tips="会员管理">&#xe6b8;</i>
-                    <cite>人员管理</cite>
+                    <cite>列表管理</cite>
                     <i class="iconfont nav_right">&#xe697;</i></a>
                 <ul class="sub-menu">
                     <li>
-                        <a onclick="xadmin.add_tab('管理员页面','{{ url_for("admin.admin_list",page=1) }}')">
+                        <a onclick="xadmin.add_tab('管理员列表','{{ url_for("admin.admin_list",page=1) }}')">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>管理员页面</cite></a>
+                            <cite>管理员列表</cite></a>
                     </li>
                     <li>
                         <a onclick="xadmin.add_tab('会员列表(静态表格)','member-list.html')">
