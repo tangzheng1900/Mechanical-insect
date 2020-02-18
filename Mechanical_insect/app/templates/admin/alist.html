@@ -1,0 +1,144 @@
+{#{% extends "admin/admin.html" %}#}
+{% import "ul/admin_page.html" as pg %}
+{% import "ul/message.html" as message %}
+{% for msg in get_flashed_messages(category_filter=["ok"]) %}
+    {{ message.message('ok',msg) }}
+{% endfor %}
+{% block css %}
+{% endblock %}
+
+{% block content %}
+    <!-- 功能区 -->
+    <section class="content" id="showcontent">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <div class="col-lg-12 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">管理员列表
+                                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal"
+                                            data-target="#myModal" style="float:right;">
+                                        新增
+                                    </button>
+                                </h4>
+                                <table class="table table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th>编号</th>
+                                        <th>管理员名称</th>
+                                        <th>管理员类型</th>
+                                        <th>管理员角色</th>
+                                        <th>启用状态</th>
+                                        <th>添加时间</th>
+                                        <th>操作事项</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for v in page_data.items %}
+                                        <tr>
+                                            <td>{{ v.id }}</td>
+                                            <td>{{ v.name }}</td>
+                                            {% if v.is_super==0 %}
+                                                <td>超级管理员</td>
+                                            {% else %}
+                                                <td>普通管理员</td>
+                                            {% endif %}
+                                            <td>{{ v.role.name }}</td>
+                                            {% if v.state==0 %}
+                                                <td><a href="{{ url_for('admin.admin_state',id=v.id,state=v.state)}}" class="label label-success">启用</a></td>
+                                            {% else %}
+                                                <td><a href="{{ url_for('admin.admin_state',id=v.id,state=v.state)}}" class="label label-success">停用</a></td>
+                                            {% endif %}
+                                            <td>{{ v.addtime }}</td>
+                                            <td>
+                                                <a href="{{ url_for('admin.admin_del',id=v.id)}}" class="label label-danger"  onclick="{if(confirm('确定删除吗?')){this.document.formname.submit();return true;}return false;}">删除</a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="box-footer clearfix" style="text-align: center">
+                                {{ pg.page(page_data,'admin.admin_list') }}
+                            </div>
+                            <!-- 模态框（Modal） -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog"
+                                     style="position: absolute; width: auto; height: 520px; margin: auto; top: 0; left: 0; bottom: 0; right: 0;">
+                                    <div class="modal-content" style="height: auto;">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="myModalLabel">
+                                                管理员新增
+                                            </h4>
+                                        </div>
+                                        <form role="form" method="post" novalidate>
+                                            <div class="box-body">
+                                                <div class="form-group">
+                                                    <label for="input_name">{{ form.name.label }}</label>
+                                                    {{ form.name }}
+                                                    {% for err in form.name.errors %}
+                                                        <div class="col-md-12">
+                                                            <p style="color:red">{{ err }}</p>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="input_pwd">{{ form.pwd.label }}</label>
+                                                    {{ form.pwd }}
+                                                    {% for err in form.pwd.errors %}
+                                                        <div class="col-md-12">
+                                                            <p style="color:red">{{ err }}</p>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="input_re_pwd">{{ form.repwd.label }}</label>
+                                                    {{ form.repwd }}
+                                                    {% for err in form.repwd.errors %}
+                                                        <div class="col-md-12">
+                                                            <p style="color:red">{{ err }}</p>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="input_role_id">{{ form.role_id.label }}</label>
+                                                    {{ form.role_id }}
+                                                    {% for err in form.role_id.errors %}
+                                                        <div class="col-md-12">
+                                                            <p style="color:red">{{ err }}</p>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-secondary btn-sm"
+                                                        data-dismiss="modal">关闭
+                                                </button>
+{#                                                <button type="button" class="btn btn-outline-info btn-sm">#}
+{#                                                    提交#}
+{#                                                </button>#}
+                                                {{ form.submit }}
+                                                {{ form.csrf_token }}
+                                            </div>
+                                        </form>
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal -->
+                            </div>
+                            <!-- 模态框（Modal） -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 功能区 -->
+    </div>
+{% endblock %}
+
+{% block js %}
+    <!-- 引入js -->
+
+    <!-- 引入js -->
+{% endblock %}

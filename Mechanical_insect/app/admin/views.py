@@ -64,10 +64,10 @@ def admin_auth(f):
 @admin_login_req
 @admin_auth
 def index():
-    return render_template("admin/index.html")
+    return render_template("admin/admin.html")
 @admin.route("/home/")
 def home():
-    return render_template("admin/home.html")
+    return render_template("admin/welcome.html")
 @admin.route("/home1/")
 def home1():
     return render_template("admin/homepage1.html")
@@ -126,9 +126,6 @@ def admin_list(page=None):
     ).filter(
         Role.id == Admin.role_id
     ).paginate(page=page, per_page=10)
-    if form.validate_on_submit():
-        data = form.data
-        admin_add(data)
     return render_template("admin/admin_list.html", page_data=page_data, form=form)
 
 
