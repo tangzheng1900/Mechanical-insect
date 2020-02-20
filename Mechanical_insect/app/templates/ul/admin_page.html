@@ -1,9 +1,14 @@
 {% macro page(data,url) -%}
+    <script type="text/javascript">
+        function partRefresh(a) {
+            document.getElementsByClassName("layui-this").src = a;
+        }
+    </script>
 
 {% if data %}
-<ul class="pagination pagination-sm no-margin pull-right">
+    <ul class="pagination pagination-sm no-margin pull-right ">
     {% if url == 'admin.adminloginlog_list' %}
-        <li ><a href="javascript:void(0);" onclick="loadXMLDoc('/admin/adminloginlog/list/1/')">首页</a></li>
+        <li><a href="" onclick="xadmin.add_tab('在tab打开','{{ url_for('admin.adminloginlog_list',page=2) }}')">首页</a></li>
     {% elif url == 'admin.oplog_list' %}
         <li ><a href="javascript:void(0);" onclick="loadXMLDoc('/admin/oplog/list/1/')">首页</a></li>
     {% elif url == 'admin.userloginlog_list' %}

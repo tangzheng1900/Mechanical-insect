@@ -14,19 +14,19 @@
                             <cite>管理员列表</cite></a>
                     </li>
                     <li>
-                        <a onclick="xadmin.add_tab('角色管理','admin-role.html')">
+                        <a onclick="xadmin.add_tab('角色列表','{{ url_for("admin.role_list",page=1) }}')">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>角色管理</cite></a>
+                            <cite>角色列表</cite></a>
+                    </li>
+                    <li>
+                        <a onclick="xadmin.add_tab('权限列表','{{ url_for("admin.auth_list",page=1) }}')">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>权限列表</cite></a>
                     </li>
                     <li>
                         <a onclick="xadmin.add_tab('权限分类','admin-cate.html')">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>权限分类</cite></a>
-                    </li>
-                    <li>
-                        <a onclick="xadmin.add_tab('权限管理','admin-rule.html')">
-                            <i class="iconfont">&#xe6a7;</i>
-                            <cite>权限管理</cite></a>
                     </li>
                 </ul>
             </li>
@@ -83,14 +83,14 @@
                             <cite>管理员登录日志列表</cite></a>
                     </li>
                     <li>
-                        <a onclick="xadmin.add_tab('订单列表','order-list.html')">
+                        <a onclick="xadmin.add_tab('用户登录日志列表','{{ url_for("admin.userloginlog_list",page=1) }}')">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>订单列表</cite></a>
+                            <cite>用户登录日志列表</cite></a>
                     </li>
                     <li>
-                        <a onclick="xadmin.add_tab('订单列表1','order-list1.html')">
+                        <a onclick="xadmin.add_tab('操作日志列表','{{ url_for("admin.oplog_list",page=1) }}')">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>订单列表1</cite></a>
+                            <cite>操作日志列表</cite></a>
                     </li>
                 </ul>
             </li>
