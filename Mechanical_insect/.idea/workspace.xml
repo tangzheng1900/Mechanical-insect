@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3f5d670-9dfe-47b8-882b-a821f75d19eb" name="Default Changelist" comment="》调试页面内容部分刷新">
-      <change afterPath="$PROJECT_DIR$/app/static/js/antd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/js/babel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/js/moment.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/js/react-dom.production.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/js/react.production.min.js" afterDir="false" />
+    <list default="true" id="e3f5d670-9dfe-47b8-882b-a821f75d19eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/templates/admin/admin_add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/admin/admin_edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/admin/admin_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/admin_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/adminloginlog_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/adminloginlog_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/auth_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/auth_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/admin/grid.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/grid.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/oplog_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/oplog_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/role_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/role_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/userloginlog_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/userloginlog_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/ul/admin_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/ul/admin_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/ul/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/ul/message.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Mechanical_insect$manage.coverage" NAME="manage Coverage Results" MODIFIED="1582168305758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mechanical_insect$manage.coverage" NAME="manage Coverage Results" MODIFIED="1582180463024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Mechanical_insect$models__1_.coverage" NAME="models (1) Coverage Results" MODIFIED="1576046319472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/models" />
     <SUITE FILE_PATH="coverage/Mechanical_insect$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1578881717129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/fishbook/app" />
     <SUITE FILE_PATH="coverage/Mechanical_insect$Flask________fishbook_test_test_py_.coverage" NAME="Flask (../../fishbook/test/test.py) Coverage Results" MODIFIED="1578882014406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -62,10 +54,10 @@
         <counts>
           <entry key="css" value="77" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="186" />
+          <entry key="html" value="193" />
           <entry key="jinja2" value="1" />
           <entry key="jpg" value="1" />
-          <entry key="js" value="37" />
+          <entry key="js" value="38" />
           <entry key="json" value="20" />
           <entry key="log" value="2" />
           <entry key="map" value="2" />
@@ -80,10 +72,10 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="77" />
-          <entry key="HTML" value="186" />
+          <entry key="HTML" value="193" />
           <entry key="Image" value="8" />
           <entry key="JSON" value="20" />
-          <entry key="JavaScript" value="37" />
+          <entry key="JavaScript" value="38" />
           <entry key="Jinja2" value="1" />
           <entry key="Log" value="2" />
           <entry key="PLAIN_TEXT" value="3" />
@@ -97,21 +89,21 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="152" />
-          <entry key="html" value="3899" />
+          <entry key="html" value="4021" />
           <entry key="js" value="62" />
           <entry key="json" value="20" />
-          <entry key="py" value="1526" />
-          <entry key="txt" value="340" />
+          <entry key="py" value="1539" />
+          <entry key="txt" value="407" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="152" />
-          <entry key="HTML" value="3899" />
+          <entry key="HTML" value="4021" />
           <entry key="JSON" value="20" />
           <entry key="JavaScript" value="62" />
-          <entry key="PLAIN_TEXT" value="340" />
-          <entry key="Python" value="1526" />
+          <entry key="PLAIN_TEXT" value="407" />
+          <entry key="Python" value="1539" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -132,20 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/admin/grid.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="77" column="66" lean-forward="true" selection-start-line="77" selection-start-column="66" selection-end-line="77" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/admin/userloginlog_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="82" column="22" lean-forward="true" selection-end-line="93" />
+            <state relative-caret-position="1008">
+              <caret line="110" column="38" selection-start-line="110" selection-start-column="38" selection-end-line="110" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -153,17 +136,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="360" column="14" selection-start-line="360" selection-start-column="4" selection-end-line="360" selection-end-column="14" />
+            <state relative-caret-position="-3841">
+              <caret line="190" column="26" selection-start-line="190" selection-start-column="26" selection-end-line="190" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/templates/ul/admin_page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="27" selection-start-column="27" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/admin/oplog_list.html">
+        <entry file="file://$PROJECT_DIR$/app/templates/admin/admin_add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="86" column="53" selection-start-line="86" selection-start-column="53" selection-end-line="86" selection-end-column="53" />
+            <state relative-caret-position="764">
+              <caret line="145" column="14" selection-start-line="145" selection-start-column="14" selection-end-line="145" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -171,8 +163,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/admin/adminloginlog_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
+            <state relative-caret-position="-110">
               <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/admin/admin_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1017">
+              <caret line="87" column="51" lean-forward="true" selection-start-line="87" selection-start-column="51" selection-end-line="87" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -245,7 +246,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app/static/js/index.js" />
         <option value="$PROJECT_DIR$/app/static/index.css" />
         <option value="$PROJECT_DIR$/app/static/package.json" />
@@ -254,7 +254,6 @@
         <option value="$PROJECT_DIR$/app/static/vendors/js/vendor.bundle.base.js" />
         <option value="$PROJECT_DIR$/app/static/js/bootstrap.min.js" />
         <option value="$PROJECT_DIR$/app/static/js/jquery.min.js" />
-        <option value="$PROJECT_DIR$/app/templates/admin/admin_add.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/auth_edit.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/role_edit.html" />
         <option value="$PROJECT_DIR$/app/static/css/style.css" />
@@ -283,19 +282,21 @@
         <option value="$PROJECT_DIR$/app/static/lib/layui/lay/modules/jquery.js" />
         <option value="$PROJECT_DIR$/app/__init__.py" />
         <option value="$PROJECT_DIR$/app/templates/admin/member-list.html" />
-        <option value="$PROJECT_DIR$/app/admin/views.py" />
         <option value="$PROJECT_DIR$/app/templates/admin/welcome.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/welcome1.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/admin.html" />
         <option value="$PROJECT_DIR$/app/templates/ul/message.html" />
-        <option value="$PROJECT_DIR$/app/templates/admin/admin_list.html" />
-        <option value="$PROJECT_DIR$/app/templates/ul/admin_page.html" />
-        <option value="$PROJECT_DIR$/app/templates/admin/grid.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/adminloginlog_list.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/userloginlog_list.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/auth_list.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/role_list.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/oplog_list.html" />
+        <option value="$PROJECT_DIR$/app/templates/admin/admin_edit.html" />
+        <option value="$PROJECT_DIR$/app/templates/admin/admin_list.html" />
+        <option value="$PROJECT_DIR$/app/admin/views.py" />
+        <option value="$PROJECT_DIR$/app/templates/admin/admin_add.html" />
+        <option value="$PROJECT_DIR$/app/templates/admin/grid.html" />
+        <option value="$PROJECT_DIR$/app/templates/ul/admin_page.html" />
       </list>
     </option>
   </component>
@@ -697,7 +698,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582026919154</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="》更新所有已完成前端调试页面权限列表、角色列表、登录日志、操作日志、用户日志等&#10;》修复消息闪现加载时间过长，改调用本地样式">
+      <created>1582175854579</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1582175854579</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView">
@@ -711,7 +719,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="761" y="0" width="1166" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.261302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -738,7 +745,7 @@
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.261302" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.261302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32894737" />
@@ -755,7 +762,7 @@
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49863762" weight="0.32894737" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32894737" />
       <window_info anchor="bottom" id="TypeScript" order="13" weight="0.32894737" />
-      <window_info anchor="bottom" id="Run" order="14" sideWeight="0.49901184" visible="true" weight="0.21820176" />
+      <window_info anchor="bottom" id="Run" order="14" sideWeight="0.49901184" weight="0.21820176" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -816,24 +823,11 @@
     <MESSAGE value="》修改列表跳转模式&#10;》完成分页正确跳转加载样式" />
     <MESSAGE value="》完成桌面内容修改显示表" />
     <MESSAGE value="》调试页面内容部分刷新" />
-    <option name="LAST_COMMIT_MESSAGE" value="》调试页面内容部分刷新" />
+    <MESSAGE value="》更新所有已完成前端调试页面权限列表、角色列表、登录日志、操作日志、用户日志等&#10;》修复消息闪现加载时间过长，改调用本地样式" />
+    <option name="LAST_COMMIT_MESSAGE" value="》更新所有已完成前端调试页面权限列表、角色列表、登录日志、操作日志、用户日志等&#10;》修复消息闪现加载时间过长，改调用本地样式" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/static/layuiadmin/lib/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="59" column="14" lean-forward="true" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/layuiadmin/layui/css/layui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="4402" column="1" lean-forward="true" selection-start-line="4402" selection-start-column="1" selection-end-line="4402" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/views/app/mall/list.html" />
     <entry file="file://$PROJECT_DIR$/app/templates/admin/senior/im/index.html" />
     <entry file="file://D:/fishbook/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -1016,13 +1010,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/js/xadmin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
@@ -1058,24 +1045,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/ul/admin_page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/role_edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="40" column="15" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/admin_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1817">
-          <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1095,22 +1068,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/userloginlog_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="471">
           <caret line="82" column="22" lean-forward="true" selection-end-line="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="360" column="14" selection-start-line="360" selection-start-column="4" selection-end-line="360" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/adminloginlog_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1121,10 +1080,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/grid.html">
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/auth_edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-483" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/admin_edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
-          <caret line="77" column="66" lean-forward="true" selection-start-line="77" selection-start-column="66" selection-end-line="77" selection-end-column="66" />
+          <caret line="8" selection-start-line="8" selection-end-line="21" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/admin_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="764">
+          <caret line="145" column="14" selection-start-line="145" selection-start-column="14" selection-end-line="145" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/grid.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="110" column="38" selection-start-line="110" selection-start-column="38" selection-end-line="110" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/admin_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1017">
+          <caret line="87" column="51" lean-forward="true" selection-start-line="87" selection-start-column="51" selection-end-line="87" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/adminloginlog_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-110">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3841">
+          <caret line="190" column="26" selection-start-line="190" selection-start-column="26" selection-end-line="190" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/js/xadmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/ul/admin_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="27" selection-start-column="27" selection-end-column="27" />
         </state>
       </provider>
     </entry>

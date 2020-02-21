@@ -159,23 +159,25 @@ def admin_state(id=None, state=None):
 @admin.route("/admin/add/", methods=["GET", "POST"])
 @admin_login_req
 @admin_auth
-def admin_add(data):
-    # print(data)
+def admin_add():
+    form = AdminForm()
     from werkzeug.security import generate_password_hash
-    admin = Admin(
-        name=data["name"],
-        pwd=generate_password_hash(data["pwd"]),
-        role_id=data["role_id"],
-        is_super=1,
-        state=0
-    )
-    db.session.add(admin)
-    db.session.commit()
-    flash("添加管理员成功！", "ok")
-    oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="添加管理员%s" % data["name"])
-    db.session.add(oplog)
-    db.session.commit()
-    return redirect(url_for("admin.admin_list", page=1))
+    if form.validate_on_submit():
+        data = form.data
+        admin = Admin(
+            name=data["name"],
+            pwd=generate_password_hash(data["pwd"]),
+            role_id=data["role_id"],
+            state=0,
+            is_super=1
+        )
+        db.session.add(admin)
+        db.session.commit()
+        flash("添加管理员成功！", "ok")
+        oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="添加管理员%s" % data["name"])
+        db.session.add(oplog)
+        db.session.commit()
+    return render_template("admin/admin_add.html", form=form)
 
 
 # 管理员删除
