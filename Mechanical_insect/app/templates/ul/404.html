@@ -15,7 +15,13 @@
   <!-- endinject -->
   <link rel="shortcut icon" href="{{url_for('static',filename='images/favicon.png')}}" />
 </head>
-
+{% import "ul/message.html" as message %}
+{% for msg in get_flashed_messages(category_filter=["ok"]) %}
+    {{ message.message('ok',msg) }}
+{% endfor %}
+{% for msg in get_flashed_messages(category_filter=["err"]) %}
+    {{ message.message('err',msg) }}
+{% endfor %}
 <body>
   <div class="container-scroller">
     <div class="container-fluid page-body-wrapper full-page-wrapper">

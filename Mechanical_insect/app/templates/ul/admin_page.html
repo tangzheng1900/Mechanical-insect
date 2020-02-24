@@ -2,27 +2,11 @@
 
 {% if data %}
     <ul class="pagination pagination-sm no-margin pull-right ">
-    {% if url == 'admin.adminloginlog_list' %}
-        <li><a href="" onclick="xadmin.add_tab('在tab打开','{{ url_for('admin.adminloginlog_list',page=2) }}')">首页</a></li>
-    {% elif url == 'admin.oplog_list' %}
-        <li ><a href="javascript:void(0);" onclick="loadXMLDoc('/admin/oplog/list/1/')">首页</a></li>
-    {% elif url == 'admin.userloginlog_list' %}
-        <li ><a href="javascript:void(0);" onclick="loadXMLDoc('/admin/userloginlog/list/1/')">首页</a></li>
-    {% else %}
         <li><a href="{{ url_for(url,page=1) }}">首页</a></li>
-    {% endif %}
 
 
     {% if data.has_prev %}
-        {% if url == 'admin.adminloginlog_list' %}
-            <li ><a href="javascript:void(0);" onclick="loadXMLDoc('/admin/adminloginlog/list/{{ data.prev_num }}/')">上一页</a></li>
-        {% elif url == 'admin.oplog_list' %}
-            <li ><a href="javascript:void(0);" onclick="loadXMLDoc('/admin/oplog/list/{{ data.prev_num }}/')">上一页</a></li>
-        {% elif url == 'admin.userloginlog_list' %}
-            <li ><a href="javascript:void(0);" onclick="loadXMLDoc('/admin/userloginlog/list/{{ data.prev_num }}/')">上一页</a></li>
-        {% else %}
-            <li><a href="{{ url_for(url,page=data.prev_num) }}">上一页</a></li>
-        {% endif %}
+        <li><a href="{{ url_for(url,page=data.prev_num) }}">上一页</a></li>
     {% else %}
         <li class="disabled"><a href="#">上一页</a></li>
     {% endif %}
@@ -32,42 +16,20 @@
             <li><a>...</a></li>
         {% elif v == data.page %}
             <li class="active"><a href="#">{{ v }}</a></li>
-        {% elif url == 'admin.adminloginlog_list' %}
-            <li ><a href="javascript:void(0);" onclick="loadXMLDoc('/admin/adminloginlog/list/{{ v }}/')">{{ v }}</a></li>
-        {% elif url == 'admin.oplog_list' %}
-            <li ><a href="javascript:void(0);" onclick="loadXMLDoc('/admin/oplog/list/{{ v }}/')">{{ v }}</a></li>
-        {% elif url == 'admin.userloginlog_list' %}
-            <li ><a href="javascript:void(0);" onclick="loadXMLDoc('/admin/userloginlog/list/{{ v }}/')">{{ v }}</a></li>
         {% else %}
             <li ><a href="{{ url_for(url,page=v) }}">{{ v }}</a></li>
         {% endif %}
     {% endfor %}
 
     {% if data.has_next %}
-        {% if url == 'admin.adminloginlog_list' %}
-            <li ><a href="javascript:void(0);" onclick="loadXMLDoc('/admin/adminloginlog/list/{{ data.next_num }}/')">下一页</a></li>
-        {% elif url == 'admin.oplog_list' %}
-            <li ><a href="javascript:void(0);" onclick="loadXMLDoc('/admin/oplog/list/{{ data.next_num }}/')">下一页</a></li>
-        {% elif url == 'admin.userloginlog_list' %}
-            <li ><a href="javascript:void(0);" onclick="loadXMLDoc('/admin/userloginlog/list/{{ data.next_num }}/')">下一页</a></li>
-        {% else %}
-            <li><a href="{{ url_for(url,page=data.next_num) }}">下一页</a></li>
-        {% endif %}
+        <li><a href="{{ url_for(url,page=data.next_num) }}">下一页</a></li>
     {% else %}
         <li class="disabled"><a href="#">下一页</a></li>
     {% endif %}
 
-    {% if url == 'admin.adminloginlog_list' %}
-        <li ><a href="javascript:void(0);" onclick="loadXMLDoc('/admin/adminloginlog/list/{{ data.pages }}/')">尾页</a></li>
-    {% elif url == 'admin.oplog_list' %}
-        <li ><a href="javascript:void(0);" onclick="loadXMLDoc('/admin/oplog/list/{{ data.pages }}/')">尾页</a></li>
-    {% elif url == 'admin.userloginlog_list' %}
-        <li ><a href="javascript:void(0);" onclick="loadXMLDoc('/admin/userloginlog/list/{{ data.pages }}/')">尾页</a></li>
-    {% else %}
+
         <li><a href="{{ url_for(url,page=data.pages) }}">尾页</a></li>
-    {% endif %}
 
 </ul>
 {% endif %}
-
 {%- endmacro %}

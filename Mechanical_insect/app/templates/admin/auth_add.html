@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>欢迎页面-X-admin2.2</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -28,36 +29,28 @@
             <div class="box-body">
                 <div class="form-group">
                     <label for="input_name">{{ form.name.label }}</label>
-                    {{ form.name(value=role.name) }}
+                    {{ form.name }}
                     {% for err in form.name.errors %}
                         <div class="col-md-12">
                             <p style="color:red">{{ err }}</p>
                         </div>
                     {% endfor %}
                 </div>
-                <div class="form-group" id="auth_list">
-                    <div class="col-md-12">
-                        <label>{{ form.auths.label }}</label>
-                    </div>
-                    {{ form.auths }}
-                    {% for err in form.auths.errors %}
-                        <div class="col-md-12" style="color:red">{{ err }}</div>
+                <div class="form-group">
+                    <label for="input_url">{{ form.url.label }}</label>
+                    {{ form.url }}
+                    {% for err in form.url.errors %}
+                        <div class="col-md-12">
+                            <p style="color:red">{{ err }}</p>
+                        </div>
                     {% endfor %}
                 </div>
             </div>
-            <div class="modal-footer">
-                <button onclick="window.location.href='{{ url_for("admin.role_list",page=1) }}'" type="button"
-                        class="btn btn-outline-secondary btn-sm"
-                        data-dismiss="modal">返回
-                </button>
-                {#                                         <button type="button" class="btn btn-outline-info btn-sm">#}
-                {#                                            提交#}
-                {#                                        </button>#}
-                {{ form.edit }}
+            <div class="box-footer">
                 {{ form.csrf_token }}
+                {{ form.submit }}
             </div>
         </form>
-        <!-- 编辑（Modal） -->
     </div>
 </div>
 </body>
