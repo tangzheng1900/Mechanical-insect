@@ -202,19 +202,22 @@ def admin_del(id=None):
 @admin.route("/role/add/", methods=["GET", "POST"])
 @admin_login_req
 @admin_auth
-def role_add(data):
-    # print(data)
-    if Role.query.filter_by(name=data['name']).count() == 1:
-        flash('角色名称已存在！', category='err')
-        return redirect(url_for('admin.role_list'))
-    role = Role(name=data['name'], auths=','.join(map(lambda v: str(v), data['auths'])))
-    db.session.add(role)
-    db.session.commit()
-    flash("添加角色成功！", "ok")
-    oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="添加角色%s" % data['name'])
-    db.session.add(oplog)
-    db.session.commit()
-    return redirect(url_for("admin.role_list", page=1))
+def role_add():
+    form = RoleForm()
+    if form.validate_on_submit():
+        data = form.data
+        # print(data)
+        if Role.query.filter_by(name=data['name']).count() == 1:
+            flash('角色名称已存在！', category='err')
+            return redirect(url_for('admin.role_add'))
+        role = Role(name=data['name'], auths=','.join(map(lambda v: str(v), data['auths'])))
+        db.session.add(role)
+        db.session.commit()
+        flash("添加角色成功！", "ok")
+        oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="添加角色%s" % data['name'])
+        db.session.add(oplog)
+        db.session.commit()
+    return render_template("admin/role_add.html", form=form)
 
 
 # 角色列表
@@ -257,7 +260,7 @@ def role_del(id=None):
 def role_edit(id=None):
     if id == 1:
         flash("无权编辑，联系管理员！", "err")
-        return redirect(url_for("admin.role_list", page=1))
+        return abort(404)
     form = RoleForm()
     role = Role.query.get_or_404(id)
     if request.method == "GET":
@@ -297,21 +300,24 @@ def auth_list(page=None):
 @admin.route("/auth/add/", methods=["GET", "POST"])
 @admin_login_req
 @admin_auth
-def auth_add(data):
-    if Auth.query.filter_by(url=data['url']).count() == 1:
-        flash('权限链接地址已存在！', category='err')
-        return redirect(url_for('admin.auth_list'))
-    if Auth.query.filter_by(name=data['name']).count() == 1:
-        flash('权限名称已存在！', category='err')
-        return redirect(url_for('admin.auth_list'))
-    auth = Auth(name=data["name"], url=data["url"])
-    db.session.add(auth)
-    db.session.commit()
-    flash("添加权限成功！", "ok")
-    oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="添加权限%s" % data['name'])
-    db.session.add(oplog)
-    db.session.commit()
-    return redirect(url_for("admin.auth_list", page=1))
+def auth_add():
+    form = AuthFrom()
+    if form.validate_on_submit():
+        data = form.data
+        if Auth.query.filter_by(url=data['url']).count() == 1:
+            flash('权限链接地址已存在！', category='err')
+            return redirect(url_for('admin.auth_add'))
+        if Auth.query.filter_by(name=data['name']).count() == 1:
+            flash('权限名称已存在！', category='err')
+            return redirect(url_for('admin.auth_add'))
+        auth = Auth(name=data["name"], url=data["url"])
+        db.session.add(auth)
+        db.session.commit()
+        flash("添加权限成功！", "ok")
+        oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="添加权限%s" % data['name'])
+        db.session.add(oplog)
+        db.session.commit()
+    return render_template("admin/auth_add.html", form=form)
 
 
 # 编辑权限
@@ -321,7 +327,7 @@ def auth_add(data):
 def auth_edit(id=None):
     form = AuthFrom()
     auth = Auth.query.get_or_404(id)
-    if form.edit.data:
+    if form.validate_on_submit():
         data = form.data
         if Auth.query.filter_by(url=data['url']).count() == 1:
             flash('权限链接地址已存在！', category='err')
@@ -378,6 +384,38 @@ def adminloginlog_list(page=None):
     page_data = Adminlog.query.join(Admin).filter(Admin.id == Adminlog.admin_id, ).order_by(
         Adminlog.addtime.desc()).paginate(page=page, per_page=10)
     return render_template("admin/adminloginlog_list.html", page_data=page_data)
+
+
+# 会员列表
+@admin.route("/user/list/<int:page>/", methods=["GET"])
+@admin_login_req
+@admin_auth
+def user_list(page=None):
+    if page is None:
+        page = 1
+    page_data = User.query.order_by(User.addtime.desc()).paginate(page=page, per_page=10)
+    return render_template("admin/user_list.html", page_data=page_data)
+
+
+# 查看会员
+@admin.route("/user/view/<int:id>", methods=["GET"])
+@admin_auth
+@admin_login_req
+def user_view(id=None):
+    user = User.query.get_or_404(int(id))
+    return render_template("admin/user_view.html", user=user)
+
+
+# 会员删除
+@admin.route("/user/del/<int:id>/", methods=["GET"])
+@admin_login_req
+@admin_auth
+def user_del(id=None):
+    user = User.query.get_or_404(int(id))
+    db.session.delete(user)
+    db.session.commit()
+    flash("删除预告成功！", "ok")
+    return redirect(url_for("admin.user_list", page=1))
 
 
 # 会员登录日志列表
