@@ -9,7 +9,7 @@
 from . import admin
 from flask import render_template, redirect, url_for, flash, session, request, abort
 from app.admin.forms import LoginForm, AdminForm, RoleForm, AuthFrom
-from app.models import Admin, User, Oplog, Adminlog, Userlog, Auth, Role
+from app.models import Admin, User, Oplog, Adminlog, Userlog, Auth, Role, Project, Case
 from functools import wraps
 from app import db
 import datetime
@@ -428,3 +428,15 @@ def userloginlog_list(page=None):
     page_data = Userlog.query.join(User).filter(User.id == Userlog.user_id, ).order_by(Userlog.addtime.desc()).paginate(
         page=page, per_page=10)
     return render_template("admin/userloginlog_list.html", page_data=page_data)
+
+
+# 项目列表
+@admin.route("/project/list/<int:page>/", methods=['GET'])
+@admin_login_req
+@admin_auth
+def project_list(page=None):
+    if page is None:
+        page = 1
+    page_data = Project.query.join(User).filter(User.id == Project.user_id, ).order_by(Project.addtime.desc()).paginate(
+        page=page, per_page=10)
+    return render_template("admin/project_list.html", page_data=page_data)

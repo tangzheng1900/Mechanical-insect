@@ -101,7 +101,7 @@
                     <i class="iconfont nav_right">&#xe697;</i></a>
                 <ul class="sub-menu">
                     <li>
-                        <a onclick="xadmin.add_tab('项目列表','cate.html')">
+                        <a onclick="xadmin.add_tab('项目列表','{{ url_for("admin.project_list",page=1) }}')">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>项目列表</cite></a>
                     </li>

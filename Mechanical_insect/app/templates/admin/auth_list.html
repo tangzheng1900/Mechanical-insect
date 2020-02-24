@@ -101,10 +101,10 @@
                                        href="javascript:;">
                                         <i class="layui-icon">&#xe642;</i>
                                     </a>
-                                    <a onclick="xadmin.open('修改密码','member-password.html',600,400)" title="修改密码"
-                                       href="javascript:;">
-                                        <i class="layui-icon">&#xe631;</i>
-                                    </a>
+                                    {#                                    <a onclick="xadmin.open('修改密码','member-password.html',600,400)" title="修改密码"#}
+                                    {#                                       href="javascript:;">#}
+                                    {#                                        <i class="layui-icon">&#xe631;</i>#}
+                                    {#                                    </a>#}
                                     <a title="删除" href="{{ url_for('admin.auth_del',id=v.id) }}"
                                        onclick="{if(confirm('确定删除吗?')){this.document.formname.submit();return true;}return false;}">
                                         <i class="layui-icon">&#xe640;</i>

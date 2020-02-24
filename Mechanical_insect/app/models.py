@@ -89,7 +89,7 @@ class Project(db.Model):
     name = db.Column(db.String(100), unique=True)  # 项目名称
     version = db.Column(db.String(100), unique=True)  # 项目版本
     models = db.Column(db.String(100))  # 项目模块
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))  # 所属会员
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))  # 所属用户
     leader = db.Column(db.Integer, db.ForeignKey('users2.id'))   # 项目负责人
     addtime = db.Column(db.DateTime, default=datetime.now)  # 创建时间
     case_num = db.Column(db.Integer)  # 用例数量
