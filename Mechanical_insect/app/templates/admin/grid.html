@@ -4,6 +4,24 @@
         <ul id="nav">
             <li>
                 <a href="javascript:;">
+                    <i class="iconfont left-nav-li" lay-tips="项目管理">&#xe723;</i>
+                    <cite>项目管理</cite>
+                    <i class="iconfont nav_right">&#xe697;</i></a>
+                <ul class="sub-menu">
+                    <li>
+                        <a onclick="xadmin.add_tab('项目列表','{{ url_for("admin.project_list",page=1) }}')">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>项目列表</cite></a>
+                    </li>
+                    <li>
+                        <a onclick="xadmin.add_tab('用例列表','cate.html')">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>用例列表</cite></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">
                     <i class="iconfont left-nav-li" lay-tips="管理员管理">&#xe726;</i>
                     <cite>管理员管理</cite>
                     <i class="iconfont nav_right">&#xe697;</i></a>
@@ -91,24 +109,6 @@
                         <a onclick="xadmin.add_tab('操作日志列表','{{ url_for("admin.oplog_list",page=1) }}')">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>操作日志列表</cite></a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <i class="iconfont left-nav-li" lay-tips="项目管理">&#xe723;</i>
-                    <cite>项目管理</cite>
-                    <i class="iconfont nav_right">&#xe697;</i></a>
-                <ul class="sub-menu">
-                    <li>
-                        <a onclick="xadmin.add_tab('项目列表','{{ url_for("admin.project_list",page=1) }}')">
-                            <i class="iconfont">&#xe6a7;</i>
-                            <cite>项目列表</cite></a>
-                    </li>
-                    <li>
-                        <a onclick="xadmin.add_tab('用例列表','cate.html')">
-                            <i class="iconfont">&#xe6a7;</i>
-                            <cite>用例列表</cite></a>
                     </li>
                 </ul>
             </li>

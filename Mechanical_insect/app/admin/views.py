@@ -8,7 +8,7 @@
 
 from . import admin
 from flask import render_template, redirect, url_for, flash, session, request, abort
-from app.admin.forms import LoginForm, AdminForm, RoleForm, AuthFrom
+from app.admin.forms import LoginForm, AdminForm, RoleForm, AuthFrom, ProjectFrom
 from app.models import Admin, User, Oplog, Adminlog, Userlog, Auth, Role, Project, Case
 from functools import wraps
 from app import db
@@ -440,3 +440,24 @@ def project_list(page=None):
     page_data = Project.query.join(User).filter(User.id == Project.user_id, ).order_by(Project.addtime.desc()).paginate(
         page=page, per_page=10)
     return render_template("admin/project_list.html", page_data=page_data)
+
+
+# 添加项目
+@admin.route("/project/add/", methods=["GET", "POST"])
+@admin_login_req
+# @admin_auth
+def project_add():
+    form = ProjectFrom()
+    if form.validate_on_submit():
+        data = form.data
+        if Project.query.filter_by(url=data['name']).count() == 1:
+            flash('项目名称已存在！', category='err')
+            return redirect(url_for('admin.project_add'))
+        project = Project(name=data["name"], url=data["url"])
+        db.session.add(project)
+        db.session.commit()
+        flash("添加权限成功！", "ok")
+        oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="添加项目%s" % data['name'])
+        db.session.add(oplog)
+        db.session.commit()
+    return render_template("admin/project_add.html", form=form)

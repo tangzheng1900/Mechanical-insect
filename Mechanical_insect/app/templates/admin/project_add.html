@@ -35,31 +35,13 @@
                         </div>
                     {% endfor %}
                 </div>
-                <div class="form-group">
-                    <label for="input_pwd">{{ form.pwd.label }}</label>
-                    {{ form.pwd }}
-                    {% for err in form.pwd.errors %}
-                        <div class="col-md-12">
-                            <p style="color:red">{{ err }}</p>
-                        </div>
-                    {% endfor %}
-                </div>
-                <div class="form-group">
-                    <label for="input_re_pwd">{{ form.repwd.label }}</label>
-                    {{ form.repwd }}
-                    {% for err in form.repwd.errors %}
-                        <div class="col-md-12">
-                            <p style="color:red">{{ err }}</p>
-                        </div>
-                    {% endfor %}
-                </div>
-                <div class="form-group">
-                    <label for="input_role_id">{{ form.role_id.label }}</label>
-                    {{ form.role_id }}
-                    {% for err in form.role_id.errors %}
-                        <div class="col-md-12">
-                            <p style="color:red">{{ err }}</p>
-                        </div>
+                <div class="form-group" id="auth_list">
+                    <div class="col-md-12">
+                        <label>{{ form.auths.label }}</label>
+                    </div>
+                    {{ form.auths }}
+                    {% for err in form.auths.errors %}
+                        <div class="col-md-12" style="color:red">{{ err }}</div>
                     {% endfor %}
                 </div>
             </div>

@@ -176,3 +176,35 @@ class AuthFrom(FlaskForm):
             "class": "btn btn-outline-info btn-sm"
         }
     )
+
+
+# 项目
+class ProjectFrom(FlaskForm):
+    name = StringField(
+        label="项目名称",
+        validators=[
+            DataRequired("请输入项目名称！")
+        ],
+        description="项目名称",
+        render_kw={
+            "class": "form-control",
+            "placeholder": "请输入项目名称！"
+        }
+    )
+    version = StringField(
+        label="版本编号",
+        validators=[
+            DataRequired("请输入版本编号！")
+        ],
+        description="版本编号",
+        render_kw={
+            "class": "form-control",
+            "placeholder": "请输入版本编号！"
+        }
+    )
+    submit = SubmitField(
+        '确认',
+        render_kw={
+            "class": "btn btn-outline-info btn-sm"
+        }
+    )
