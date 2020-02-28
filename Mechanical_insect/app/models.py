@@ -113,7 +113,7 @@ class Case(db.Model):
     name = db.Column(db.String(100), unique=True)  # 名称
     version = db.Column(db.String(100), unique=True)  # 版本
     models = db.Column(db.String(100))  # 模块
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))  # 所属会员
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))  # 所属用户
     case_leader = db.Column(db.Integer, db.ForeignKey('users2.id'))  # 接口负责人
     addtime = db.Column(db.DateTime,default=datetime.now)  # 创建时间
     update_time = db.Column(db.DateTime, default=datetime.now, onupdate=datetime.now)  # 更新时间

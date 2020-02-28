@@ -8,10 +8,11 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField,FileField,TextAreaField,SelectField,SelectMultipleField
 from wtforms.validators import DataRequired,ValidationError,EqualTo
-from app.models import Admin, Auth,Role
+from app.models import Admin, Auth, Role, User
 
 auths_list=Auth.query.all()
 role_list= Role.query.all()
+user_list= User.query.all()
 
 
 class LoginForm(FlaskForm):
@@ -200,6 +201,48 @@ class ProjectFrom(FlaskForm):
         render_kw={
             "class": "form-control",
             "placeholder": "请输入版本编号！"
+        }
+    )
+    models = StringField(
+        label="模块",
+        validators=[
+            DataRequired("请输入模块名称！")
+        ],
+        description="模块",
+        render_kw={
+            "class": "form-control",
+            "placeholder": "请输入模块名称！"
+        }
+    )
+    user_id = SelectField(
+        label="所属用户",
+        coerce=int,
+        choices=[(v.id, v.name) for v in user_list],
+        render_kw={
+            "class": "form-control",
+        }
+
+    )
+    models = StringField(
+        label="模块",
+        validators=[
+            DataRequired("请输入模块名称！")
+        ],
+        description="模块",
+        render_kw={
+            "class": "form-control",
+            "placeholder": "请输入模块名称！"
+        }
+    )
+    models = StringField(
+        label="模块",
+        validators=[
+            DataRequired("请输入模块名称！")
+        ],
+        description="模块",
+        render_kw={
+            "class": "form-control",
+            "placeholder": "请输入模块名称！"
         }
     )
     submit = SubmitField(
