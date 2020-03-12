@@ -6,13 +6,13 @@
 # @Software: PyCharm
 
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField,FileField,TextAreaField,SelectField,SelectMultipleField
-from wtforms.validators import DataRequired,ValidationError,EqualTo
+from wtforms import StringField, PasswordField, SubmitField, FileField, TextAreaField, SelectField, SelectMultipleField
+from wtforms.validators import DataRequired, ValidationError, EqualTo
 from app.models import Admin, Auth, Role, User
 
-auths_list=Auth.query.all()
-role_list= Role.query.all()
-user_list= User.query.all()
+auths_list = Auth.query.all()
+role_list = Role.query.all()
+user_list = User.query.all()
 
 
 class LoginForm(FlaskForm):
@@ -27,7 +27,7 @@ class LoginForm(FlaskForm):
             "class": "form-control",
             "placeholder": "用户名",
             "lay-verify": "required",
-            "type" : "text"
+            "type": "text"
         }
     )
     pwd = PasswordField(
@@ -40,7 +40,7 @@ class LoginForm(FlaskForm):
             "class": "form-control",
             "placeholder": "密码",
             "lay-verify": "required",
-            "type" : "password"
+            "type": "password"
         }
     )
     submit = SubmitField(
@@ -48,8 +48,8 @@ class LoginForm(FlaskForm):
         render_kw={
             "class": "btn btn-primary btn-block btn-flat",
             "lay - submit lay - filter": "login",
-            "style" : "width:100%;",
-            "type" : "submit"
+            "style": "width:100%;",
+            "type": "submit"
         }
     )
 
@@ -58,6 +58,7 @@ class LoginForm(FlaskForm):
         admin = Admin.query.filter_by(name=account).count()
         if admin == 0:
             raise ValidationError("无效用户名")
+
 
 class AdminForm(FlaskForm):
     name = StringField(
@@ -70,13 +71,13 @@ class AdminForm(FlaskForm):
         label="密码",
         validators=[DataRequired("请输入密码！")],
         description="密码",
-        render_kw={"class": "form-control","placeholder":"请输入密码！", }
+        render_kw={"class": "form-control", "placeholder": "请输入密码！", }
     )
-    repwd=PasswordField(
+    repwd = PasswordField(
         label="重复管理员密码",
         validators=[
             DataRequired("请输入重复密码！"),
-            EqualTo('pwd',message="两次密码不一致！")
+            EqualTo('pwd', message="两次密码不一致！")
         ],
         description="管理员密码重复",
         render_kw={
@@ -87,22 +88,23 @@ class AdminForm(FlaskForm):
     role_id = SelectField(
         label="所属角色",
         coerce=int,
-        choices=[(v.id,v.name) for v in role_list ],
+        choices=[(v.id, v.name) for v in role_list],
         render_kw={
-            "class":"form-control",
+            "class": "form-control",
         }
 
     )
     submit = SubmitField(
         '确认',
-        render_kw={"class": "btn btn-outline-info btn-sm",}
+        render_kw={"class": "btn btn-outline-info btn-sm", }
     )
     edit = SubmitField(
         '编辑',
         render_kw={"class": "btn btn-outline-info btn-sm"}
     )
 
-#角色
+
+# 角色
 class RoleForm(FlaskForm):
     name = StringField(
         label="角色名称",
@@ -121,7 +123,7 @@ class RoleForm(FlaskForm):
             DataRequired("请输入权限列表！")
         ],
         coerce=int,
-        choices=[(v.id,v.name) for v in auths_list ],
+        choices=[(v.id, v.name) for v in auths_list],
         description="权限列表",
         render_kw={
             "class": "form-control",
@@ -141,7 +143,8 @@ class RoleForm(FlaskForm):
         }
     )
 
-#权限
+
+# 权限
 class AuthFrom(FlaskForm):
     name = StringField(
         label="权限名称",
@@ -214,39 +217,35 @@ class ProjectFrom(FlaskForm):
             "placeholder": "请输入模块名称！"
         }
     )
-    user_id = SelectField(
-        label="所属用户",
+
+    leader = SelectMultipleField(
+        label="负责人列表",
+        validators=[
+            DataRequired("请选择负责人！")
+        ],
         coerce=int,
         choices=[(v.id, v.name) for v in user_list],
+        description="负责人列表",
         render_kw={
             "class": "form-control",
+            "placeholder": "请选择负责人！"
         }
+    )
 
-    )
-    models = StringField(
-        label="模块",
+    comment = StringField(
+        label="备注",
         validators=[
-            DataRequired("请输入模块名称！")
+            DataRequired("备注")
         ],
-        description="模块",
+        description="备注",
         render_kw={
             "class": "form-control",
-            "placeholder": "请输入模块名称！"
+            "placeholder": "备注"
         }
     )
-    models = StringField(
-        label="模块",
-        validators=[
-            DataRequired("请输入模块名称！")
-        ],
-        description="模块",
-        render_kw={
-            "class": "form-control",
-            "placeholder": "请输入模块名称！"
-        }
-    )
+
     submit = SubmitField(
-        '确认',
+        '确定',
         render_kw={
             "class": "btn btn-outline-info btn-sm"
         }

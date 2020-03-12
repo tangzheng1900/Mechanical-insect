@@ -31,6 +31,7 @@ from sqlalchemy.ext.declarative import declarative_base
 app = Flask(__name__)  # 创建实例化app对象
 name='sunbin'
 pwd='Sunbin@123'
+# app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:123456@172.16.20.130:3306/autotest"
 app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://"+name+":"+pwd+"@rm-bp153srx1gt80tl1x2o.mysql.rds.aliyuncs.com:3306/autotest"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True  # 配置，如果设置True,将会追踪对象修改并且发送信号
 app.config['SQLALCHEMY_ECHO'] = False  # 调试输出数据库信息

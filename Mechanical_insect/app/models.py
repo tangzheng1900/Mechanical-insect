@@ -63,15 +63,15 @@ class User(db.Model):
     phone = db.Column(db.String(11), unique=True)  # 手机号码
     info = db.Column(db.Text)  # 个性简介
     face =db.Column(db.String(255), unique=True)  # 头像
-    addtime = db.Column(db.DateTime(),
-                        default=datetime.now)  # 注册时间，now是本地时间，可以认为是你电脑现在的时间，utcnow是世界时间（时区不同，所以这两个是不一样的）
+    addtime = db.Column(db.DateTime(), default=datetime.now)  # 注册时间，now是本地时间，可以认为是你电脑现在的时间，utcnow是世界时间（时区不同，所以这两个是不一样的）
     uuid = db.Column(db.String(255), unique=True)  # 唯一标识符
 
     userlogs = db.relationship('Userlog', backref='users')  # 会员日志外键关系
     projects = db.relationship('Project', backref='users')  # 会员外键关系
-    projects2 = db.relationship('Project', backref='users2')  # 负责人外键关系
+    # projects2 = db.relationship('Project', backref='users2')  # 负责人外键关系
     cases = db.relationship('Case', backref='users')  # 用例人外键关系
-    cases2 = db.relationship('Case', backref='users2')  # 接口人外键关系
+
+    # cases2 = db.relationship('Case', backref='users2')  # 接口人外键关系
 
     def __init__(self, name=None, email=None):
         self.name = name
@@ -89,16 +89,21 @@ class Project(db.Model):
     name = db.Column(db.String(100), unique=True)  # 项目名称
     version = db.Column(db.String(100), unique=True)  # 项目版本
     models = db.Column(db.String(100))  # 项目模块
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))  # 所属用户
-    leader = db.Column(db.Integer, db.ForeignKey('users2.id'))   # 项目负责人
+    user_id = db.Column(db.String(100))  # 所属用户
+    leader = db.Column(db.Integer, db.ForeignKey('users.id'))  # 项目负责人
     addtime = db.Column(db.DateTime, default=datetime.now)  # 创建时间
     case_num = db.Column(db.Integer)  # 用例数量
     execute_count = db.Column(db.Integer)  # 执行次数
-    case_pass = db.Column(db.Integer)  # 用例通过率
+    case_pass = db.Column(db.Float)  # 用例通过率
     status = db.Column(db.Integer)  # 项目状态
     comment = db.Column(db.Text)  # 备注
 
-
+    # user = db.relationship('User', foreign_keys=user_id)
+    # leader = db.relationship('User', foreign_keys=leader)
+    #
+    # def __init__(self, user_id, leader):
+    #     self.user_id = user_id
+    #     self.leader = leader
 
 
     # 定义一个方法，返回的类型
@@ -113,8 +118,8 @@ class Case(db.Model):
     name = db.Column(db.String(100), unique=True)  # 名称
     version = db.Column(db.String(100), unique=True)  # 版本
     models = db.Column(db.String(100))  # 模块
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))  # 所属用户
-    case_leader = db.Column(db.Integer, db.ForeignKey('users2.id'))  # 接口负责人
+    user_id = db.Column(db.Integer)  # 所属用户
+    case_leader = db.Column(db.Integer, db.ForeignKey('users.id'))  # 接口负责人
     addtime = db.Column(db.DateTime,default=datetime.now)  # 创建时间
     update_time = db.Column(db.DateTime, default=datetime.now, onupdate=datetime.now)  # 更新时间
     Environment = db.Column(db.String(100))  # 运行环境
@@ -125,6 +130,12 @@ class Case(db.Model):
     status = db.Column(db.Integer)  # 用例状态
     comment = db.Column(db.Text)  # 备注
 
+    # user = db.relationship('User', foreign_keys=user_id)
+    # leader = db.relationship('User', foreign_keys=leader_id)
+
+    # def __init__(self, user_id, leader):
+    #     self.user_id = user_id
+    #     self.leader = leader
 
     # 定义一个方法，返回的类型
     def __repr__(self):

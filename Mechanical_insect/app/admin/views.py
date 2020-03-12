@@ -14,6 +14,7 @@ from functools import wraps
 from app import db
 import datetime
 
+user_list = User.query.all()
 
 # 上下文应用处理器
 @admin.context_processor
@@ -437,10 +438,35 @@ def userloginlog_list(page=None):
 def project_list(page=None):
     if page is None:
         page = 1
-    page_data = Project.query.join(User).filter(User.id == Project.user_id, ).order_by(Project.addtime.desc()).paginate(
+    page_data = Project.query.join(User).filter(User.id == Project.leader).order_by(Project.addtime.desc()).paginate(
         page=page, per_page=10)
     return render_template("admin/project_list.html", page_data=page_data)
 
+
+# 项目状态
+@admin.route("/project/status/<int:id><int:status>/", methods=["GET", "POST"])
+@admin_login_req
+# @admin_auth
+def project_status(id=None, status=None):
+    project = Project.query.get_or_404(id)
+    # if id == 1:
+    #     flash("无权停用，联系管理员！", "err")
+    #     return redirect(url_for("admin.admin_list", page=1))
+    if status == 0:
+        project.status = 1
+        flash("停用角色成功！", "ok")
+        oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="停用项目%s" % id)
+        db.session.add(oplog)
+        db.session.commit()
+    else:
+        project.status = 0
+        flash("启用角色成功！", "ok")
+        oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="启用项目%s" % id)
+        db.session.add(oplog)
+        db.session.commit()
+    db.session.add(project)
+    db.session.commit()
+    return redirect(url_for("admin.project_list", page=1))
 
 # 添加项目
 @admin.route("/project/add/", methods=["GET", "POST"])
@@ -450,14 +476,45 @@ def project_add():
     form = ProjectFrom()
     if form.validate_on_submit():
         data = form.data
-        if Project.query.filter_by(url=data['name']).count() == 1:
+        if Project.query.filter_by(name=data['name']).count() == 1:
             flash('项目名称已存在！', category='err')
             return redirect(url_for('admin.project_add'))
-        project = Project(name=data["name"], url=data["url"])
+        elif Project.query.filter_by(name=data['version']).count() == 1:
+            flash('项目编号已存在！', category='err')
+            return redirect(url_for('admin.project_add'))
+
+        project = Project(name=data["name"], version=data["version"], models=data["models"], user_id=session["admin"],
+                          leader=data["leader"], comment=data["comment"], case_num='', execute_count='', case_pass='',
+                          status=0)
+
         db.session.add(project)
         db.session.commit()
-        flash("添加权限成功！", "ok")
-        oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="添加项目%s" % data['name'])
+        flash("添加项目成功！", "ok")
+        oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="添加项目：%s" % data['name'])
         db.session.add(oplog)
         db.session.commit()
     return render_template("admin/project_add.html", form=form)
+
+
+# 项目删除
+@admin.route("/project/del/<int:id>/", methods=["GET"])
+@admin_login_req
+# @admin_auth
+def project_del(id=None):
+    project = Project.query.get_or_404(int(id))
+    db.session.delete(project)
+    db.session.commit()
+    flash("删除项目成功！", "ok")
+    return redirect(url_for("admin.project_list", page=1))
+
+
+# 用例列表
+@admin.route("/case/list/<int:page>/", methods=['GET'])
+@admin_login_req
+# @admin_auth
+def case_list(page=None):
+    if page is None:
+        page = 1
+    page_data = Case.query.join(User).filter(User.id == Case.user_id, ).order_by(Case.addtime.desc()).paginate(
+        page=page, per_page=10)
+    return render_template("admin/case_list.html", page_data=page_data)
