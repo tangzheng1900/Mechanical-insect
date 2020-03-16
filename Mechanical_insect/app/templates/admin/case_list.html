@@ -100,7 +100,7 @@
                                 <td>{{ v.version }}</td>
                                 <td>{{ v.models }}</td>
                                 <td>{{ v.user_id }}</td>
-                                <td>{{ v.leader }}</td>
+                                <td>{{ v.case_leader }}</td>
                                 <td>{{ v.addtime }}</td>
                                 <td>{{ v.update_time }}</td>
                                 <td>{{ v.Environment }}</td>
@@ -110,11 +110,11 @@
                                 <td>{{ v.case_pass }}</td>
                                 {% if v.state==0 %}
                                     <td class="td-status"><a
-                                            href="{{ url_for('admin.admin_state',id=v.id,state=v.state) }}"
+                                            href="{{ url_for('admin.case_state',id=v.id,status=v.status) }}"
                                             class="layui-btn layui-btn-normal layui-btn-mini">已启用</a></td>
                                 {% else %}
                                     <td class="td-status"><a
-                                            href="{{ url_for('admin.admin_state',id=v.id,state=v.state) }}"
+                                            href="{{ url_for('admin.case_state',id=v.id,status=v.status) }}"
                                             class="layui-btn layui-btn-normal layui-btn-mini">已停用</a></td>
                                 {% endif %}
                                 <td>{{ v.comment }}</td>
@@ -127,7 +127,7 @@
                                        href="javascript:;">
                                         <i class="layui-icon">&#xe631;</i>
                                     </a>
-                                    <a title="删除" href="{{ url_for('admin.admin_del',id=v.id) }}"
+                                    <a title="删除" href="{{ url_for('admin.case_del',id=v.id,status=v.status) }}"
                                        onclick="{if(confirm('确定删除吗?')){this.document.formname.submit();return true;}return false;}">
                                         <i class="layui-icon">&#xe640;</i>
                                     </a>

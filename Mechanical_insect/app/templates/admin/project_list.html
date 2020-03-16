@@ -114,7 +114,7 @@
                                 <td>{{ v.comment }}</td>
                                 <td class="td-manage">
                                     <a title="编辑"
-                                       onclick="xadmin.open('编辑','{{ url_for("admin.project_add") }}',600,400)"
+                                       onclick="xadmin.open('编辑','{{ url_for("admin.project_edit",id=v.id) }}',600,400)"
                                        href="javascript:;">
                                         <i class="layui-icon">&#xe642;</i>
                                     </a>
@@ -122,7 +122,7 @@
                                     {#                                       href="javascript:;">#}
                                     {#                                        <i class="layui-icon">&#xe631;</i>#}
                                     {#                                    </a>#}
-                                    <a title="删除" href="{{ url_for('admin.project_del',id=v.id) }}"
+                                    <a title="删除" href="{{ url_for('admin.project_del',id=v.id,status=v.status) }}"
                                        onclick="{if(confirm('确定删除吗?')){this.document.formname.submit();return true;}return false;}">
                                         <i class="layui-icon">&#xe640;</i>
                                     </a>

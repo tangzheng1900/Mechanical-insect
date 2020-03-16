@@ -250,3 +250,73 @@ class ProjectFrom(FlaskForm):
             "class": "btn btn-outline-info btn-sm"
         }
     )
+
+
+# 用例
+class CaseFrom(FlaskForm):
+    name = StringField(
+        label="项目名称",
+        validators=[
+            DataRequired("请输入项目名称！")
+        ],
+        description="项目名称",
+        render_kw={
+            "class": "form-control",
+            "placeholder": "请输入项目名称！"
+        }
+    )
+    version = StringField(
+        label="版本编号",
+        validators=[
+            DataRequired("请输入版本编号！")
+        ],
+        description="版本编号",
+        render_kw={
+            "class": "form-control",
+            "placeholder": "请输入版本编号！"
+        }
+    )
+    models = StringField(
+        label="模块",
+        validators=[
+            DataRequired("请输入模块名称！")
+        ],
+        description="模块",
+        render_kw={
+            "class": "form-control",
+            "placeholder": "请输入模块名称！"
+        }
+    )
+
+    case_leader = SelectMultipleField(
+        label="负责人列表",
+        validators=[
+            DataRequired("请选择负责人！")
+        ],
+        coerce=int,
+        choices=[(v.id, v.name) for v in user_list],
+        description="负责人列表",
+        render_kw={
+            "class": "form-control",
+            "placeholder": "请选择负责人！"
+        }
+    )
+
+    comment = StringField(
+        label="备注",
+        validators=[
+            DataRequired("备注")
+        ],
+        description="备注",
+        render_kw={
+            "class": "form-control",
+            "placeholder": "备注"
+        }
+    )
+
+    submit = SubmitField(
+        '确定',
+        render_kw={
+            "class": "btn btn-outline-info btn-sm"
+        }
+    )
