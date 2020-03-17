@@ -12986,8 +12986,8 @@ input[type="button"].btn-block {
 .page-item.active .page-link {
   z-index: 1;
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #009688;
+  border-color: #009688;
 }
 
 .page-item.disabled .page-link {
@@ -20981,7 +20981,7 @@ dl li {
   padding: 6px 12px;
   margin-left: -1px;
   line-height: 1.42857143;
-  color: #007bff;
+  color: #009688;
   text-decoration: none;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -21015,8 +21015,8 @@ dl li {
   z-index: 3;
   color: #fff;
   cursor: default;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #009688;
+  border-color: #009688;
 }
 .pagination > .disabled > span,
 .pagination > .disabled > span:hover,

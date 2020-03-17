@@ -6,12 +6,14 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
-          content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi"/>
+          content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8"/>
     <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='css/font.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='css/xadmin.css') }}">
     <script src="{{ url_for('static',filename='lib/layui/layui.js') }}" charset="utf-8"></script>
     <script type="text/javascript" src="{{ url_for('static',filename='js/xadmin.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='layuiadmin/layui/css/layui.css') }}" media="all">
+    <link rel="stylesheet" href="{{ url_for('static',filename='layuiadmin/style/admin.css') }}" media="all">
 </head>
 {% import "ul/admin_page.html" as pg %}
 {% import "ul/message.html" as message %}
@@ -55,10 +57,21 @@
                 </div>
                 <div class="form-group">
                     <div class="col-md-12">
-                        <label for="input_name">{{ form.leader.label }}</label>
+                        <label for="input_name">{{ form.case_leader.label }}</label>
                     </div>
-                    {{ form.leader }}
-                    {% for err in form.leader.errors %}
+                    {{ form.case_leader }}
+                    {% for err in form.case_leader.errors %}
+                        <div class="col-md-12" id="case_list">
+                            <p style="color:red">{{ err }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <label for="input_name">{{ form.Environment.label }}</label>
+                    </div>
+                    {{ form.Environment }}
+                    {% for err in form.Environment.errors %}
                         <div class="col-md-12" id="case_list">
                             <p style="color:red">{{ err }}</p>
                         </div>

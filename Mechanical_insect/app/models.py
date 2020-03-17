@@ -118,7 +118,7 @@ class Case(db.Model):
     name = db.Column(db.String(100), unique=True)  # 名称
     version = db.Column(db.String(100), unique=True)  # 版本
     models = db.Column(db.String(100))  # 模块
-    user_id = db.Column(db.Integer)  # 所属用户
+    user_id = db.Column(db.String(100))  # 所属用户
     case_leader = db.Column(db.Integer, db.ForeignKey('users.id'))  # 接口负责人
     addtime = db.Column(db.DateTime,default=datetime.now)  # 创建时间
     update_time = db.Column(db.DateTime, default=datetime.now, onupdate=datetime.now)  # 更新时间
@@ -126,7 +126,7 @@ class Case(db.Model):
     pass_num = db.Column(db.Integer)  # 通过数量
     fail_num = db.Column(db.Integer)  # 失败数量
     execute_count = db.Column(db.Integer)  # 执行次数
-    case_pass = db.Column(db.Integer)  # 用例通过率
+    case_pass = db.Column(db.Float)  # 用例通过率
     status = db.Column(db.Integer)  # 用例状态
     comment = db.Column(db.Text)  # 备注
 

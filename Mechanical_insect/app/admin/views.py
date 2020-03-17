@@ -542,7 +542,7 @@ def project_edit(id=None):
 def case_list(page=None):
     if page is None:
         page = 1
-    page_data = Case.query.join(User).filter(User.id == Case.user_id, ).order_by(Case.addtime.desc()).paginate(
+    page_data = Case.query.join(User).filter(User.id == Case.case_leader, ).order_by(Case.addtime.desc()).paginate(
         page=page, per_page=10)
     return render_template("admin/case_list.html", page_data=page_data)
 
@@ -558,13 +558,9 @@ def case_add():
         if Case.query.filter_by(name=data['name']).count() == 1:
             flash('用例名称已存在！', category='err')
             return redirect(url_for('admin.case_add'))
-        elif Case.query.filter_by(name=data['version']).count() == 1:
-            flash('用例编号已存在！', category='err')
-            return redirect(url_for('admin.case_add'))
         case = Case(name=data["name"], version=data["version"], models=data["models"], user_id=session["admin"],
                     case_leader=data["case_leader"], comment=data["comment"], Environment=data["Environment"],
-                    pass_num='',
-                    fail_num='', execute_count='', case_pass='', status=0)
+                    pass_num='', fail_num='', execute_count='', case_pass='', status=0)
         db.session.add(case)
         db.session.commit()
         flash("添加用例成功！", "ok")
@@ -580,9 +576,6 @@ def case_add():
 # @admin_auth
 def case_status(id=None, status=None):
     case = Case.query.get_or_404(id)
-    # if id == 1:
-    #     flash("无权停用，联系管理员！", "err")
-    #     return redirect(url_for("admin.admin_list", page=1))
     if status == 0:
         case.status = 1
         flash("停用项目成功！", "ok")

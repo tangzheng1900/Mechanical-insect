@@ -302,6 +302,20 @@ class CaseFrom(FlaskForm):
         }
     )
 
+    Environment = StringField(
+        label="环境列表",
+        validators=[
+            DataRequired("请选执行环境！")
+        ],
+        # coerce=int,
+        # choices=[(v.id, v.name) for v in user_list],
+        description="环境列表",
+        render_kw={
+            "class": "form-control",
+            "placeholder": "请选执行环境！"
+        }
+    )
+
     comment = StringField(
         label="备注",
         validators=[
