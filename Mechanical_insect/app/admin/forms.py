@@ -255,14 +255,17 @@ class ProjectFrom(FlaskForm):
 # 用例
 class CaseFrom(FlaskForm):
     name = StringField(
-        label="项目名称",
+        label="用例名称",
         validators=[
-            DataRequired("请输入项目名称！")
+            DataRequired("请输入用例名称！")
         ],
-        description="项目名称",
+        description="用例名称",
         render_kw={
-            "class": "form-control",
-            "placeholder": "请输入项目名称！"
+            "placeholder": "请输入用例名称",
+            "type": "text",
+            "lay - verify": "title",
+            "autocomplete": "off",
+            "class": "layui-input"
         }
     )
     version = StringField(
@@ -297,7 +300,7 @@ class CaseFrom(FlaskForm):
         choices=[(v.id, v.name) for v in user_list],
         description="负责人列表",
         render_kw={
-            "class": "form-control",
+            "class": "layui-input-inline",
             "placeholder": "请选择负责人！"
         }
     )

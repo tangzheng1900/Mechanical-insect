@@ -4,30 +4,8 @@
     <list default="true" id="e3f5d670-9dfe-47b8-882b-a821f75d19eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/admin/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/admin_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/admin_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/admin_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/admin_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/admin_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/admin_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/adminloginlog_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/adminloginlog_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/auth_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/auth_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/auth_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/auth_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/admin/case_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/case_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/case_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/case_edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/admin/case_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/case_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/oplog_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/oplog_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/project_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/project_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/project_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/project_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/project_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/project_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/role_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/role_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/role_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/role_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/role_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/role_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/user_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/user_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/userloginlog_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/userloginlog_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/welcome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/welcome1.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/welcome1.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Mechanical_insect$manage.coverage" NAME="manage Coverage Results" MODIFIED="1584427443800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mechanical_insect$manage.coverage" NAME="manage Coverage Results" MODIFIED="1584494243567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Mechanical_insect$models__1_.coverage" NAME="models (1) Coverage Results" MODIFIED="1576046319472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/models" />
     <SUITE FILE_PATH="coverage/Mechanical_insect$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1578881717129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/fishbook/app" />
     <SUITE FILE_PATH="coverage/Mechanical_insect$Flask________fishbook_test_test_py_.coverage" NAME="Flask (../../fishbook/test/test.py) Coverage Results" MODIFIED="1578882014406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -80,18 +58,18 @@
           <entry key="project.open.time.47" value="1" />
           <entry key="project.open.time.5" value="4" />
           <entry key="project.open.time.53" value="1" />
-          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.6" value="3" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="36" />
+          <entry key="project.opened" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="80" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="257" />
+          <entry key="html" value="258" />
           <entry key="jinja2" value="1" />
           <entry key="jpg" value="1" />
           <entry key="js" value="38" />
@@ -99,7 +77,7 @@
           <entry key="log" value="2" />
           <entry key="map" value="2" />
           <entry key="png" value="7" />
-          <entry key="py" value="120" />
+          <entry key="py" value="123" />
           <entry key="rnc" value="3" />
           <entry key="sql" value="3" />
           <entry key="svg" value="5" />
@@ -110,14 +88,14 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="80" />
-          <entry key="HTML" value="257" />
+          <entry key="HTML" value="258" />
           <entry key="Image" value="8" />
           <entry key="JSON" value="20" />
           <entry key="JavaScript" value="38" />
           <entry key="Jinja2" value="1" />
           <entry key="Log" value="2" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="120" />
+          <entry key="Python" value="123" />
           <entry key="RNG Compact" value="3" />
           <entry key="SVG" value="5" />
           <entry key="Scratch" value="3" />
@@ -128,21 +106,21 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="152" />
-          <entry key="html" value="4443" />
+          <entry key="html" value="4588" />
           <entry key="js" value="62" />
           <entry key="json" value="20" />
-          <entry key="py" value="2382" />
-          <entry key="txt" value="697" />
+          <entry key="py" value="2437" />
+          <entry key="txt" value="749" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="152" />
-          <entry key="HTML" value="4443" />
+          <entry key="HTML" value="4588" />
           <entry key="JSON" value="20" />
           <entry key="JavaScript" value="62" />
-          <entry key="PLAIN_TEXT" value="697" />
-          <entry key="Python" value="2382" />
+          <entry key="PLAIN_TEXT" value="749" />
+          <entry key="Python" value="2437" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -157,8 +135,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+            <state relative-caret-position="250">
+              <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="114" column="26" lean-forward="true" selection-start-line="114" selection-start-column="26" selection-end-line="114" selection-end-column="26" />
+              <folding>
+                <element signature="e#1419#1437#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/admin/case_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="83" selection-start-line="83" selection-end-line="84" />
             </state>
           </provider>
         </entry>
@@ -166,17 +165,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/templates/admin/case_add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/ul/admin_page.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="49" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="49" />
+            <state relative-caret-position="301">
+              <caret line="141" column="22" lean-forward="true" selection-start-line="141" selection-start-column="22" selection-end-line="141" selection-end-column="22" />
+              <folding>
+                <element signature="e#5305#5327#0#HTML" expanded="true" />
+                <element signature="e#5841#5858#0#HTML" expanded="true" />
+                <element signature="e#15950#15966#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -188,6 +183,18 @@
               <caret line="553" column="15" selection-start-line="553" selection-start-column="15" selection-end-line="553" selection-end-column="15" />
               <folding>
                 <element signature="e#145#164#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/admin/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="303" column="36" selection-start-line="303" selection-start-column="36" selection-end-line="303" selection-end-column="36" />
+              <folding>
+                <element signature="e#144#175#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -306,12 +313,12 @@
         <option value="$PROJECT_DIR$/app/templates/admin/project_edit.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/project_list.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/case_edit.html" />
-        <option value="$PROJECT_DIR$/app/admin/forms.py" />
         <option value="$PROJECT_DIR$/app/admin/views.py" />
-        <option value="$PROJECT_DIR$/app/templates/admin/case_list.html" />
         <option value="$PROJECT_DIR$/app/models.py" />
-        <option value="$PROJECT_DIR$/app/templates/admin/case_add.html" />
         <option value="$PROJECT_DIR$/app/static/css/style.css" />
+        <option value="$PROJECT_DIR$/app/templates/admin/case_list.html" />
+        <option value="$PROJECT_DIR$/app/admin/forms.py" />
+        <option value="$PROJECT_DIR$/app/templates/admin/case_add.html" />
       </list>
     </option>
   </component>
@@ -327,8 +334,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="910" />
-    <option name="width" value="1017" />
+    <option name="x" value="775" />
+    <option name="width" value="1152" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -770,7 +777,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584343210330</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="》完成用例字段新增适配前端页面&#10;》完成分页组件调整跳转及颜色适配&#10;》修复告警内容消除提示">
+      <created>1584429454664</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1584429454664</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView">
@@ -783,10 +797,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="910" y="0" width="1017" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="775" y="0" width="1152" height="1047" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2863114" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2554945" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32894737" />
@@ -803,7 +816,7 @@
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49863762" weight="0.32894737" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32894737" />
       <window_info anchor="bottom" id="TypeScript" order="13" weight="0.32894737" />
-      <window_info anchor="bottom" id="Run" order="14" sideWeight="0.49901184" visible="true" weight="0.29276314" />
+      <window_info anchor="bottom" id="Run" order="14" sideWeight="0.49901184" visible="true" weight="0.2379386" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -869,7 +882,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="》同步开发环境" />
     <MESSAGE value="》完成新增弹出对话框嵌入&#10;》完成新增路由判断数据库写入&#10;》完成模块化新增配置页面" />
     <MESSAGE value="》更新编辑权限中的权限列表高度" />
     <MESSAGE value="》更新主页中的背景颜色" />
@@ -894,7 +906,8 @@
     <MESSAGE value="》完成项目列表新增字段表单验证前后端代码&#10;》完成各列表消息统一&#10;》删除日志列表中添加及删除视图" />
     <MESSAGE value="》解决自动化平台字段关键字关联关系控制&#10;》完成后端项目关系及启用数据库设计&#10;》完成项目与用户关联关系&#10;》实现前端项目与用户增删改" />
     <MESSAGE value="》完成用例新增及编辑，状态，删除联调&#10;》完成项目编辑状态，状态，删除联调" />
-    <option name="LAST_COMMIT_MESSAGE" value="》完成用例新增及编辑，状态，删除联调&#10;》完成项目编辑状态，状态，删除联调" />
+    <MESSAGE value="》完成用例字段新增适配前端页面&#10;》完成分页组件调整跳转及颜色适配&#10;》修复告警内容消除提示" />
+    <option name="LAST_COMMIT_MESSAGE" value="》完成用例字段新增适配前端页面&#10;》完成分页组件调整跳转及颜色适配&#10;》修复告警内容消除提示" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -1095,13 +1108,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Python37/Lib/site-packages/wtforms/fields/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="107" column="13" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/oplog_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1203">
@@ -1154,16 +1160,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="120" column="38" selection-start-line="120" selection-start-column="38" selection-end-line="120" selection-end-column="38" />
-          <folding>
-            <element signature="e#1419#1437#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/project_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -1178,20 +1174,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="302" column="5" lean-forward="true" selection-start-line="302" selection-start-column="5" selection-end-line="302" selection-end-column="5" />
-          <folding>
-            <element signature="e#144#175#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/admin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="79" column="37" lean-forward="true" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/css/style1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2386" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="12938" column="11" selection-start-line="12938" selection-start-column="11" selection-end-line="12938" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/ul/admin_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="49" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="114" column="26" lean-forward="true" selection-start-line="114" selection-start-column="26" selection-end-line="114" selection-end-column="26" />
+          <folding>
+            <element signature="e#1419#1437#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python37/Lib/site-packages/wtforms/fields/core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -1205,43 +1234,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/css/style1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2386" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/case_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-109">
-          <caret line="121" column="74" selection-start-line="121" selection-start-column="74" selection-end-line="121" selection-end-column="74" />
+        <state relative-caret-position="198">
+          <caret line="83" selection-start-line="83" selection-end-line="84" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/ul/admin_page.html">
+    <entry file="file://$PROJECT_DIR$/app/admin/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="49" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="12938" column="11" selection-start-line="12938" selection-start-column="11" selection-end-line="12938" selection-end-column="11" />
+        <state relative-caret-position="332">
+          <caret line="303" column="36" selection-start-line="303" selection-start-column="36" selection-end-line="303" selection-end-column="36" />
+          <folding>
+            <element signature="e#144#175#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/case_add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+        <state relative-caret-position="301">
+          <caret line="141" column="22" lean-forward="true" selection-start-line="141" selection-start-column="22" selection-end-line="141" selection-end-column="22" />
+          <folding>
+            <element signature="e#5305#5327#0#HTML" expanded="true" />
+            <element signature="e#5841#5858#0#HTML" expanded="true" />
+            <element signature="e#15950#15966#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
