@@ -120,36 +120,119 @@
 
 <div class="layui-fluid">
     <div class="layui-card">
-        <div class="layui-card-header">新建用例</div>
+        {#        <div class="layui-card-header">新增用例</div>#}
         <div class="layui-card-body" style="padding: 15px;">
             <form role="form" method="post" novalidate class="layui-form" action="" lay-filter="component-form-group">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">{{ form.name.label }}</label>
+                    <div class="layui-inline">
+                        <label class="layui-form-label"><a style="color: red">* </a>{{ form.models.label }}</label>
+                        <div class="layui-input-inline">
+                            {{ form.models }}
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label"><a style="color: red">* </a>{{ form.version.label }}</label>
+                        <div class="layui-input-inline">
+                            {{ form.version }}
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><a style="color: red">* </a>{{ form.name.label }}</label>
                     <div class="layui-input-block">
                         {{ form.name }}
-                        {% for err in form.models.errors %}
+                        {% for err in form.name.errors %}
                             <div class="col-md-12">
                                 <p style="color:red">{{ err }}</p>
                             </div>
                         {% endfor %}
                     </div>
                 </div>
-                <div class="layui-inline">
-                    <label class="layui-form-label">搜索选择框</label>
-                    <div class="layui-input-inline">
-                        {{ form.case_leader }}
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <div class="layui-inline">
+                            <label class="layui-form-label"><a style="color: red">* </a>{{ form.case_leader.label }}</label>
+                            <div class="layui-input-inline">
+                                {{ form.case_leader }}
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label"><a style="color: red">* </a>{{ form.Environment.label }}</label>
+                            <div class="layui-input-inline">
+                                {{ form.Environment }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <div class="layui-inline">
+                            <label class="layui-form-label"><a style="color: red">* </a>{{ form.RequestMethod.label }}</label>
+                            <div class="layui-input-inline">
+                                {{ form.RequestMethod }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label"><a style="color: red">* </a>{{ form.code.label }}</label>
+                        <div class="layui-input-block">
+                            {{ form.code }}
+                            {% for err in form.code.errors %}
+                                <div class="col-md-12">
+                                    <p style="color:red">{{ err }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><a style="color: red">* </a>{{ form.RequestAddress.label }}</label>
+                    <div class="layui-input-block">
+                        {{ form.RequestAddress }}
+                        {% for err in form.RequestAddress.errors %}
+                            <div class="col-md-12">
+                                <p style="color:red">{{ err }}</p>
+                            </div>
+                        {% endfor %}
                     </div>
                 </div>
                 <div class="layui-form-item layui-form-text">
-                    <label class="layui-form-label">普通文本域</label>
+                    <label class="layui-form-label"><a style="color: red">* </a>{{ form.RequestData.label }}</label>
                     <div class="layui-input-block">
-                        <textarea name="text" placeholder="请输入内容" class="layui-textarea"></textarea>
+                        {{ form.RequestData }}
+                        {% for err in form.RequestData.errors %}
+                            <div class="col-md-12">
+                                <p style="color:red">{{ err }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><a style="color: red">* </a>{{ form.RequestSql.label }}</label>
+                    <div class="layui-input-block">
+                        {{ form.RequestSql }}
+                        <a style="color: #7e7e7e ; font-size: 10px ">事例：{"my_sql": "select * from knowledge_point where title=%s ORDER BY id DESC", "condition": "zghtest","1":3, "code": 0}</a>
+                        {% for err in form.RequestSql.errors %}
+                            <div class="col-md-12">
+                                <p style="color:red">{{ err }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">备注</label>
+                    <div class="layui-input-block">
+{#                            <textarea name="text" placeholder="请输入内容" class="layui-textarea"></textarea>#}
+                        {{ form.comment }}
                     </div>
                 </div>
                 <div class="layui-form-item layui-layout-admin">
                     <div class="layui-input-block">
                         <div class="layui-footer" style="left: 0;">
-                            <button class="layui-btn" lay-submit="" lay-filter="component-form-demo1">立即提交</button>
+{#                                <button class="layui-btn" lay-submit="" lay-filter="component-form-demo1">立即提交</button>#}
+                            {{ form.submit }}
+                            {{ form.csrf_token }}
                             <button type="reset" class="layui-btn layui-btn-primary">重置</button>
                         </div>
                     </div>
@@ -158,5 +241,38 @@
         </div>
     </div>
 </div>
+<script src="{{ url_for("static",filename="layuiadmin/layui/layui.js") }}"></script>
+<script>
+    layui.config({
+        base: '{{ url_for("static",filename="layuiadmin/") }}' //静态资源所在路径
+    }).extend({
+        index: 'lib/index' //主入口模块
+    }).use(['index', 'form', 'laydate'], function () {
+        var $ = layui.$
+            , admin = layui.admin
+            , element = layui.element
+            , layer = layui.layer
+            , laydate = layui.laydate
+            , form = layui.form;
+
+        form.render(null, 'component-form-group');
+
+        laydate.render({
+            elem: '#LAY-component-form-group-date'
+        });
+        /* 自定义验证规则 */
+        form.verify({
+            title: function (value) {
+                if (value.length < 5) {
+                    return '标题至少得5个字符啊';
+                }
+            }
+            , pass: [/(.+){6,12}$/, '密码必须6到12位']
+            , content: function (value) {
+                layedit.sync(editIndex);
+            }
+        });
+    });
+</script>
 </body>
 </html>

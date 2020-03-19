@@ -8,8 +8,9 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, FileField, TextAreaField, SelectField, SelectMultipleField
 from wtforms.validators import DataRequired, ValidationError, EqualTo
-from app.models import Admin, Auth, Role, User
+from app.models import Admin, Auth, Role, User, Project
 
+project_list = Project.query.all()
 auths_list = Auth.query.all()
 role_list = Role.query.all()
 user_list = User.query.all()
@@ -63,26 +64,26 @@ class LoginForm(FlaskForm):
 class AdminForm(FlaskForm):
     name = StringField(
         label="管理员名称",
-        validators=[DataRequired("请输入管理员名称！")],
+        validators=[DataRequired("请输入管理员名称")],
         description="管理员名称",
-        render_kw={"class": "form-control", "placeholder": "请输入管理员名称！"}
+        render_kw={"class": "form-control", "placeholder": "请输入管理员名称"}
     )
     pwd = PasswordField(
         label="密码",
-        validators=[DataRequired("请输入密码！")],
+        validators=[DataRequired("请输入密码")],
         description="密码",
-        render_kw={"class": "form-control", "placeholder": "请输入密码！", }
+        render_kw={"class": "form-control", "placeholder": "请输入密码", }
     )
     repwd = PasswordField(
         label="重复管理员密码",
         validators=[
-            DataRequired("请输入重复密码！"),
-            EqualTo('pwd', message="两次密码不一致！")
+            DataRequired("请输入重复密码"),
+            EqualTo('pwd', message="两次密码不一致")
         ],
         description="管理员密码重复",
         render_kw={
             "class": "form-control",
-            "placeholder": "请输入密码！",
+            "placeholder": "请输入密码",
         }
     )
     role_id = SelectField(
@@ -109,25 +110,25 @@ class RoleForm(FlaskForm):
     name = StringField(
         label="角色名称",
         validators=[
-            DataRequired("请输入角色名称！")
+            DataRequired("请输入角色名称")
         ],
         description="角色名称",
         render_kw={
             "class": "form-control",
-            "placeholder": "请输入角色名称！"
+            "placeholder": "请输入角色名称"
         }
     )
     auths = SelectMultipleField(
         label="权限列表",
         validators=[
-            DataRequired("请输入权限列表！")
+            DataRequired("请输入权限列表")
         ],
         coerce=int,
         choices=[(v.id, v.name) for v in auths_list],
         description="权限列表",
         render_kw={
             "class": "form-control",
-            "placeholder": "请输入权限列表！"
+            "placeholder": "请输入权限列表"
         }
     )
     submit = SubmitField(
@@ -149,23 +150,23 @@ class AuthFrom(FlaskForm):
     name = StringField(
         label="权限名称",
         validators=[
-            DataRequired("请输入权限名称！")
+            DataRequired("请输入权限名称")
         ],
         description="权限名称",
         render_kw={
             "class": "form-control",
-            "placeholder": "请输入权限名称！"
+            "placeholder": "请输入权限名称"
         }
     )
     url = StringField(
         label="权限地址",
         validators=[
-            DataRequired("请输入权限地址！")
+            DataRequired("请输入权限地址")
         ],
         description="权限地址",
         render_kw={
             "class": "form-control",
-            "placeholder": "请输入权限地址！"
+            "placeholder": "请输入权限地址"
         }
     )
     submit = SubmitField(
@@ -187,48 +188,48 @@ class ProjectFrom(FlaskForm):
     name = StringField(
         label="项目名称",
         validators=[
-            DataRequired("请输入项目名称！")
+            DataRequired("请输入项目名称")
         ],
         description="项目名称",
         render_kw={
             "class": "form-control",
-            "placeholder": "请输入项目名称！"
+            "placeholder": "请输入项目名称"
         }
     )
     version = StringField(
         label="版本编号",
         validators=[
-            DataRequired("请输入版本编号！")
+            DataRequired("请输入版本编号")
         ],
         description="版本编号",
         render_kw={
             "class": "form-control",
-            "placeholder": "请输入版本编号！"
+            "placeholder": "请输入版本编号"
         }
     )
     models = StringField(
         label="模块",
         validators=[
-            DataRequired("请输入模块名称！")
+            DataRequired("请输入模块名称")
         ],
         description="模块",
         render_kw={
             "class": "form-control",
-            "placeholder": "请输入模块名称！"
+            "placeholder": "请输入模块名称"
         }
     )
 
     leader = SelectMultipleField(
         label="负责人列表",
         validators=[
-            DataRequired("请选择负责人！")
+            DataRequired("请选择负责人")
         ],
         coerce=int,
         choices=[(v.id, v.name) for v in user_list],
         description="负责人列表",
         render_kw={
             "class": "form-control",
-            "placeholder": "请选择负责人！"
+            "placeholder": "请选择负责人"
         }
     )
 
@@ -257,7 +258,7 @@ class CaseFrom(FlaskForm):
     name = StringField(
         label="用例名称",
         validators=[
-            DataRequired("请输入用例名称！")
+            DataRequired("请输入用例名称")
         ],
         description="用例名称",
         render_kw={
@@ -268,26 +269,30 @@ class CaseFrom(FlaskForm):
             "class": "layui-input"
         }
     )
-    version = StringField(
+    version = SelectMultipleField(
         label="版本编号",
         validators=[
-            DataRequired("请输入版本编号！")
+            DataRequired("请输入版本编号")
         ],
+        coerce=int,
+        choices=[(v.id, v.version) for v in project_list],
         description="版本编号",
         render_kw={
-            "class": "form-control",
-            "placeholder": "请输入版本编号！"
+            "class": "layui-input-inline",
+            "placeholder": "请输入版本编号"
         }
     )
-    models = StringField(
-        label="模块",
+    models = SelectMultipleField(
+        label="项目模块",
         validators=[
-            DataRequired("请输入模块名称！")
+            DataRequired("请选择项目模块")
         ],
-        description="模块",
+        coerce=int,
+        choices=[(v.id, v.name) for v in project_list],
+        description="项目模块",
         render_kw={
-            "class": "form-control",
-            "placeholder": "请输入模块名称！"
+            "class": "layui-input-inline",
+            "placeholder": "请选择项目模块"
         }
     )
 
@@ -301,39 +306,112 @@ class CaseFrom(FlaskForm):
         description="负责人列表",
         render_kw={
             "class": "layui-input-inline",
-            "placeholder": "请选择负责人！"
+            "placeholder": "请选择负责人"
         }
     )
 
-    Environment = StringField(
+    Environment = SelectMultipleField(
         label="环境列表",
         validators=[
-            DataRequired("请选执行环境！")
+            DataRequired("请选执行环境")
         ],
-        # coerce=int,
-        # choices=[(v.id, v.name) for v in user_list],
+        coerce=int,
+        choices=[(v.id, v.name) for v in user_list],
         description="环境列表",
         render_kw={
-            "class": "form-control",
+            "class": "layui-input-inline",
             "placeholder": "请选执行环境！"
         }
     )
 
-    comment = StringField(
+    RequestAddress = StringField(
+        label="接口路径",
+        validators=[
+            DataRequired("请输入接口路径")
+        ],
+        description="接口路径",
+        render_kw={
+            "placeholder": "请输入接口路径",
+            "type": "text",
+            "lay - verify": "title",
+            "autocomplete": "off",
+            "class": "layui-input"
+        }
+    )
+
+    code = StringField(
+        label="预期返回",
+        validators=[
+            DataRequired("请输入预期返回code值")
+        ],
+        description="预期返回",
+        render_kw={
+            "placeholder": "请输入预期返回code值",
+            "type": "text",
+            "lay - verify": "title",
+            "autocomplete": "off",
+            "class": "layui-input"
+        }
+    )
+
+    RequestMethod = SelectMultipleField(
+        label="请求方法",
+        validators=[
+            DataRequired("请选请求方法")
+        ],
+        coerce=int,
+        choices=[(v.id, v.name) for v in user_list],
+        description="请求方法",
+        render_kw={
+            "class": "layui-input-inline",
+            "placeholder": "请选请求方法"
+        }
+    )
+
+    RequestData = TextAreaField(
+        label="请求参数",
+        validators=[
+            DataRequired("请输入json参数")
+        ],
+        description="请输入json参数",
+        render_kw={
+            "class": "layui-textarea",
+            "placeholder": "请输入json参数"
+        }
+    )
+
+    RequestSql= StringField(
+        label="SQL请求",
+        validators=[
+            DataRequired("请输入对应数据库调用json")
+        ],
+        description="SQL请求",
+        render_kw={
+            "placeholder": "若无需查询使用：{}",
+            "type": "text",
+            "lay - verify": "title",
+            "autocomplete": "off",
+            "class": "layui-input"
+        }
+    )
+
+    comment = TextAreaField(
         label="备注",
         validators=[
-            DataRequired("备注")
+            DataRequired("请输入内容")
         ],
-        description="备注",
+        description="请输入内容",
         render_kw={
-            "class": "form-control",
-            "placeholder": "备注"
+            "class": "layui-textarea",
+            "placeholder": "请输入内容"
         }
     )
 
     submit = SubmitField(
-        '确定',
+        '立即提交',
         render_kw={
-            "class": "btn btn-outline-info btn-sm"
+            "class":"layui-btn",
+            "lay-submit":"",
+            "lay-filter":"component-form-demo1"
         }
     )
