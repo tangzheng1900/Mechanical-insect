@@ -8,12 +8,13 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, FileField, TextAreaField, SelectField, SelectMultipleField
 from wtforms.validators import DataRequired, ValidationError, EqualTo
-from app.models import Admin, Auth, Role, User, Project
+from app.models import Admin, Auth, Role, User, Project, Environment
 
 project_list = Project.query.all()
 auths_list = Auth.query.all()
 role_list = Role.query.all()
 user_list = User.query.all()
+environment_list = Environment.query.all()
 
 
 class LoginForm(FlaskForm):
@@ -255,7 +256,7 @@ class ProjectFrom(FlaskForm):
 
 # 用例
 class CaseFrom(FlaskForm):
-    name = StringField(
+    cases_name = StringField(
         label="用例名称",
         validators=[
             DataRequired("请输入用例名称")
@@ -316,7 +317,7 @@ class CaseFrom(FlaskForm):
             DataRequired("请选执行环境")
         ],
         coerce=int,
-        choices=[(v.id, v.name) for v in user_list],
+        choices=[(v.id, v.name) for v in environment_list],
         description="环境列表",
         render_kw={
             "class": "layui-input-inline",
@@ -360,7 +361,7 @@ class CaseFrom(FlaskForm):
             DataRequired("请选请求方法")
         ],
         coerce=int,
-        choices=[(v.id, v.name) for v in user_list],
+        choices=[(v.id, v.method) for v in environment_list],
         description="请求方法",
         render_kw={
             "class": "layui-input-inline",
@@ -413,5 +414,189 @@ class CaseFrom(FlaskForm):
             "class":"layui-btn",
             "lay-submit":"",
             "lay-filter":"component-form-demo1"
+        }
+    )
+
+
+# 环境
+class EnvironmentFrom(FlaskForm):
+    name = StringField(
+        label="环境名称",
+        validators=[
+            DataRequired("请输入环境名称")
+        ],
+        description="环境名称",
+        render_kw={
+            "placeholder": "请输入环境名称",
+            "type": "text",
+            "lay - verify": "title",
+            "autocomplete": "off",
+            "class": "layui-input"
+        }
+    )
+    version = SelectMultipleField(
+        label="版本编号",
+        validators=[
+            DataRequired("请输入版本编号")
+        ],
+        coerce=int,
+        choices=[(v.id, v.version) for v in project_list],
+        description="版本编号",
+        render_kw={
+            "class": "layui-input-inline",
+            "placeholder": "请输入版本编号"
+        }
+    )
+
+    project_url = StringField(
+        label="项目路径",
+        validators=[
+            DataRequired("请输入项目路径")
+        ],
+        description="项目路径",
+        render_kw={
+            "placeholder": "请输入项目路径",
+            "type": "text",
+            "lay - verify": "title",
+            "autocomplete": "off",
+            "class": "layui-input"
+        }
+    )
+
+    mail_host = StringField(
+        label="SMTP",
+        validators=[
+            DataRequired("请输入SMTP服务器,如：smtp.163.com")
+        ],
+        description="SMTP服务器",
+        render_kw={
+            "placeholder": "请输入SMTP服务器",
+            "type": "text",
+            "lay - verify": "title",
+            "autocomplete": "off",
+            "class": "layui-input"
+        }
+    )
+
+    mail_user = StringField(
+        label="邮箱用户",
+        validators=[
+            DataRequired("请输入邮箱用户")
+        ],
+        description="邮箱用户",
+        render_kw={
+            "placeholder": "请输入邮箱用户",
+            "type": "text",
+            "lay - verify": "title",
+            "autocomplete": "off",
+            "class": "layui-input"
+        }
+    )
+
+    mail_pass = StringField(
+        label="邮箱密码",
+        validators=[
+            DataRequired("请输入邮箱密码")
+        ],
+        description="邮箱密码",
+        render_kw={
+            "placeholder": "请输入邮箱密码",
+            "type": "text",
+            "lay - verify": "title",
+            "autocomplete": "off",
+            "class": "layui-input"
+        }
+    )
+
+    FromUser = StringField(
+        label="发送人",
+        validators=[
+            DataRequired("请输入发送人")
+        ],
+        description="发送人",
+        render_kw={
+            "placeholder": "请输入发送人",
+            "type": "text",
+            "lay - verify": "title",
+            "autocomplete": "off",
+            "class": "layui-input"
+        }
+    )
+
+    ToUser = StringField(
+        label="接收人",
+        validators=[
+            DataRequired("请输入接收人")
+        ],
+        description="接收人",
+        render_kw={
+            "placeholder": "请输入接收人",
+            "type": "text",
+            "lay - verify": "title",
+            "autocomplete": "off",
+            "class": "layui-input"
+        }
+    )
+
+    subject = StringField(
+        label="邮件标题",
+        validators=[
+            DataRequired("请输入邮件标题")
+        ],
+        description="邮件标题",
+        render_kw={
+            "placeholder": "请输入邮件标题",
+            "type": "text",
+            "lay - verify": "title",
+            "autocomplete": "off",
+            "class": "layui-input"
+        }
+    )
+
+    MIMEText = TextAreaField(
+        label="邮件正文",
+        validators=[
+            DataRequired("请输入邮件正文")
+        ],
+        description="邮件正文",
+        render_kw={
+            "placeholder": "请输入邮件正文",
+            "class": "layui-textarea"
+        }
+    )
+
+    dbconfig = StringField(
+        label="数据库参数",
+        validators=[
+            DataRequired("请输入对应数据库参数")
+        ],
+        description="数据库参数",
+        render_kw={
+            "placeholder": "请输入对应数据库参数",
+            "type": "text",
+            "lay - verify": "title",
+            "autocomplete": "off",
+            "class": "layui-input"
+        }
+    )
+
+    comment = TextAreaField(
+        label="备注",
+        validators=[
+            DataRequired("请输入内容")
+        ],
+        description="请输入内容",
+        render_kw={
+            "class": "layui-textarea",
+            "placeholder": "请输入内容"
+        }
+    )
+
+    submit = SubmitField(
+        '立即提交',
+        render_kw={
+            "class": "layui-btn",
+            "lay-submit": "",
+            "lay-filter": "component-form-demo1"
         }
     )

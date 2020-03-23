@@ -27,9 +27,9 @@
         <form role="form" method="post" novalidate>
             <div class="box-body">
                 <div class="form-group">
-                    <label for="input_name">{{ form.name.label }}</label>
-                    {{ form.name(value=case.name) }}
-                    {% for err in form.name.errors %}
+                    <label for="input_name">{{ form.cases_name.label }}</label>
+                    {{ form.cases_name(value=case.cases_name) }}
+                    {% for err in form.cases_name.errors %}
                         <div class="col-md-12">
                             <p style="color:red">{{ err }}</p>
                         </div>

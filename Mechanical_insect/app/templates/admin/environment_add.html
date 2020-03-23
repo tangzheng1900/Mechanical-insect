@@ -120,64 +120,26 @@
 
 <div class="layui-fluid">
     <div class="layui-card">
-        {#        <div class="layui-card-header">新增用例</div>#}
+        {#        <div class="layui-card-header">基本信息</div>#}
         <div class="layui-card-body" style="padding: 15px;">
             <form role="form" method="post" novalidate class="layui-form" action="" lay-filter="component-form-group">
                 <div class="layui-form-item">
                     <div class="layui-inline">
-                        <label class="layui-form-label"><a style="color: red">* </a>{{ form.models.label }}</label>
+                        <label class="layui-form-label"><a style="color: red">* </a>{{ form.name.label }}</label>
                         <div class="layui-input-inline">
-                            {{ form.models }}
+                            {{ form.name }}
+                            {% for err in form.name.errors %}
+                                <div class="col-md-12">
+                                    <p style="color:red">{{ err }}</p>
+                                </div>
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="layui-inline">
                         <label class="layui-form-label"><a style="color: red">* </a>{{ form.version.label }}</label>
                         <div class="layui-input-inline">
                             {{ form.version }}
-                        </div>
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label"><a style="color: red">* </a>{{ form.cases_name.label }}</label>
-                    <div class="layui-input-block">
-                        {{ form.cases_name }}
-                        {% for err in form.cases_name.errors %}
-                            <div class="col-md-12">
-                                <p style="color:red">{{ err }}</p>
-                            </div>
-                        {% endfor %}
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <div class="layui-inline">
-                        <div class="layui-inline">
-                            <label class="layui-form-label"><a style="color: red">* </a>{{ form.case_leader.label }}</label>
-                            <div class="layui-input-inline">
-                                {{ form.case_leader }}
-                            </div>
-                        </div>
-                        <div class="layui-inline">
-                            <label class="layui-form-label"><a style="color: red">* </a>{{ form.Environment.label }}</label>
-                            <div class="layui-input-inline">
-                                {{ form.Environment }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <div class="layui-inline">
-                        <div class="layui-inline">
-                            <label class="layui-form-label"><a style="color: red">* </a>{{ form.RequestMethod.label }}</label>
-                            <div class="layui-input-inline">
-                                {{ form.RequestMethod }}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label"><a style="color: red">* </a>{{ form.code.label }}</label>
-                        <div class="layui-input-block">
-                            {{ form.code }}
-                            {% for err in form.code.errors %}
+                            {% for err in form.version.errors %}
                                 <div class="col-md-12">
                                     <p style="color:red">{{ err }}</p>
                                 </div>
@@ -186,21 +148,10 @@
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label"><a style="color: red">* </a>{{ form.RequestAddress.label }}</label>
+                    <label class="layui-form-label"><a style="color: red">* </a>{{ form.project_url.label }}</label>
                     <div class="layui-input-block">
-                        {{ form.RequestAddress }}
-                        {% for err in form.RequestAddress.errors %}
-                            <div class="col-md-12">
-                                <p style="color:red">{{ err }}</p>
-                            </div>
-                        {% endfor %}
-                    </div>
-                </div>
-                <div class="layui-form-item layui-form-text">
-                    <label class="layui-form-label"><a style="color: red">* </a>{{ form.RequestData.label }}</label>
-                    <div class="layui-input-block">
-                        {{ form.RequestData }}
-                        {% for err in form.RequestData.errors %}
+                        {{ form.project_url }}
+                        {% for err in form.project_url.errors %}
                             <div class="col-md-12">
                                 <p style="color:red">{{ err }}</p>
                             </div>
@@ -208,29 +159,109 @@
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label"><a style="color: red">* </a>{{ form.RequestSql.label }}</label>
+                    <label class="layui-form-label"><a style="color: red">* </a>{{ form.mail_host.label }}</label>
                     <div class="layui-input-block">
-                        {{ form.RequestSql }}
-                        <a style="color: #7e7e7e ; font-size: 10px ">事例：{"my_sql": "select * from knowledge_point where title=%s ORDER BY id DESC", "condition": "zghtest","1":3, "code": 0}</a>
-                        {% for err in form.RequestSql.errors %}
+                        {{ form.mail_host }}
+                        {% for err in form.mail_host.errors %}
                             <div class="col-md-12">
                                 <p style="color:red">{{ err }}</p>
                             </div>
                         {% endfor %}
                     </div>
-
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label"><a style="color: red">* </a>{{ form.mail_pass.label }}</label>
+                        <div class="layui-input-inline">
+                            {{ form.mail_user }}
+                            {% for err in form.mail_user.errors %}
+                                <div class="col-md-12">
+                                    <p style="color:red">{{ err }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label"><a style="color: red">* </a>{{ form.mail_user.label }}</label>
+                        <div class="layui-input-inline">
+                            {{ form.mail_pass }}
+                            {% for err in form.mail_pass.errors %}
+                                <div class="col-md-12">
+                                    <p style="color:red">{{ err }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label"><a style="color: red">* </a>{{ form.FromUser.label }}</label>
+                        <div class="layui-input-inline">
+                            {{ form.FromUser }}
+                            {% for err in form.FromUser.errors %}
+                                <div class="col-md-12">
+                                    <p style="color:red">{{ err }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label"><a style="color: red">* </a>{{ form.ToUser.label }}</label>
+                        <div class="layui-input-inline">
+                            {{ form.ToUser }}
+                            {% for err in form.ToUser.errors %}
+                                <div class="col-md-12">
+                                    <p style="color:red">{{ err }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><a style="color: red">* </a>{{ form.subject.label }}</label>
+                    <div class="layui-input-block">
+                        {{ form.subject }}
+                        {% for err in form.subject.errors %}
+                            <div class="col-md-12">
+                                <p style="color:red">{{ err }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
                 </div>
                 <div class="layui-form-item layui-form-text">
-                    <label class="layui-form-label">备注</label>
+                    <label class="layui-form-label"><a style="color: red">* </a>{{ form.MIMEText.label }}</label>
                     <div class="layui-input-block">
-{#                            <textarea name="text" placeholder="请输入内容" class="layui-textarea"></textarea>#}
+                        {{ form.MIMEText }}
+                        {% for err in form.MIMEText.errors %}
+                            <div class="col-md-12">
+                                <p style="color:red">{{ err }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><a style="color: red">* </a>{{ form.dbconfig.label }}</label>
+                    <div class="layui-input-block">
+                        {{ form.dbconfig }}
+                        <a style="color: #7e7e7e ; font-size: 10px ">事例：{'host':'127.0.0.1','user':'admin','password':'123456','port':3306,'database':'test',}</a>
+                        {% for err in form.dbconfig.errors %}
+                            <div class="col-md-12">
+                                <p style="color:red">{{ err }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">{{ form.comment.label }}</label>
+                    <div class="layui-input-block">
+                        {#                            <textarea name="text" placeholder="请输入内容" class="layui-textarea"></textarea>#}
                         {{ form.comment }}
                     </div>
                 </div>
                 <div class="layui-form-item layui-layout-admin">
                     <div class="layui-input-block">
                         <div class="layui-footer" style="left: 0;">
-{#                                <button class="layui-btn" lay-submit="" lay-filter="component-form-demo1">立即提交</button>#}
+                            {#                                <button class="layui-btn" lay-submit="" lay-filter="component-form-demo1">立即提交</button>#}
                             {{ form.submit }}
                             {{ form.csrf_token }}
                             <button type="reset" class="layui-btn layui-btn-primary">重置</button>

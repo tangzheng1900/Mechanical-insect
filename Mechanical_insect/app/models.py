@@ -70,7 +70,7 @@ class User(db.Model):
     projects = db.relationship('Project', backref='users')  # 会员外键关系
     # projects2 = db.relationship('Project', backref='users2')  # 负责人外键关系
     cases = db.relationship('Case', backref='users')  # 用例人外键关系
-
+    environments = db.relationship('Environment', backref='users')  # 环境外键关系
     # cases2 = db.relationship('Case', backref='users2')  # 接口人外键关系
 
     def __init__(self, name=None, email=None):
@@ -115,7 +115,16 @@ class Case(db.Model):
     __tablename__ = "case"
     __table_args__ = {"useexisting": True}
     id = db.Column(db.Integer, primary_key=True)  # 编号
-    name = db.Column(db.String(100), unique=True)  # 名称
+    cases_name = db.Column(db.String(100), unique=True)  # 名称
+    method = db.Column(db.String(100))  # 请求方法
+    url = db.Column(db.String(500))  # 接口路径
+    data = db.Column(db.String(500))  # 请求参数
+    sql = db.Column(db.String(500))  # 请求sql参数
+    code = db.Column(db.String(100))  # 期望值
+    actually = db.Column(db.String(100))  # 实际返回
+    sql_result = db.Column(db.String(100))  # 数据库返回
+    result = db.Column(db.String(100))  # 测试结果
+    msg = db.Column(db.String(100))  #
     version = db.Column(db.String(100), unique=True)  # 版本
     models = db.Column(db.String(100))  # 模块
     user_id = db.Column(db.String(100))  # 所属用户
@@ -140,6 +149,27 @@ class Case(db.Model):
     # 定义一个方法，返回的类型
     def __repr__(self):
         return "<Case %r>" % self.name
+
+
+# 定义项目环境配置
+class Environment(db.Model):
+    __tablename__ = "environment"
+    __table_args__ = {"useexisting": True}
+    id = db.Column(db.Integer, primary_key=True)  # 编号
+    name = db.Column(db.String(100), unique=True)  # 项目名称
+    version = db.Column(db.String(100), unique=True)  # 项目版本
+    smtp = db.Column(db.String(100))  # 邮件配置
+    project_url = db.Column(db.String(100))  # 项目地址
+    dbconfig = db.Column(db.String(100))  # 项目数据库
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))  # 所属用户
+    addtime = db.Column(db.DateTime, default=datetime.now)  # 创建时间
+    status = db.Column(db.Integer)  # 状态
+    comment = db.Column(db.Text)  # 备注
+
+    # 定义一个方法，返回的类型
+    def __repr__(self):
+        return "<Project %r>" % self.name
+
 
 # 会员登录日志
 class Userlog(db.Model):

@@ -8,8 +8,8 @@
 
 from . import admin
 from flask import render_template, redirect, url_for, flash, session, request, abort
-from app.admin.forms import LoginForm, AdminForm, RoleForm, AuthFrom, ProjectFrom, CaseFrom
-from app.models import Admin, User, Oplog, Adminlog, Userlog, Auth, Role, Project, Case
+from app.admin.forms import LoginForm, AdminForm, RoleForm, AuthFrom, ProjectFrom, CaseFrom, EnvironmentFrom
+from app.models import Admin, User, Oplog, Adminlog, Userlog, Auth, Role, Project, Case, Environment
 from functools import wraps
 from app import db
 import datetime
@@ -520,6 +520,12 @@ def project_edit(id=None):
     project = Project.query.get_or_404(id)
     if form.validate_on_submit():
         data = form.data
+        if Project.query.filter_by(name=data['name']).count() == 1:
+            flash('项目名称已存在！', category='err')
+            return redirect(url_for('admin.project_edit'))
+        elif Project.query.filter_by(name=data['version']).count() == 1:
+            flash('项目编号已存在！', category='err')
+            return redirect(url_for('admin.project_edit'))
         project.version = data['version']
         project.name = data["name"]
         project.models = data["models"]
@@ -606,3 +612,41 @@ def case_del(id=None, status=None):
     db.session.commit()
     flash("删除项目成功！", "ok")
     return redirect(url_for("admin.case_list", page=1))
+
+
+# 环境列表
+@admin.route("/environment/list/<int:page>/", methods=['GET'])
+@admin_login_req
+# @admin_auth
+def environment_list(page=None):
+    if page is None:
+        page = 1
+    page_data = Environment.query.join(User).filter(User.id == Environment.user_id, ).order_by(
+        Environment.addtime.desc()).paginate(
+        page=page, per_page=10)
+    return render_template("admin/environment_list.html", page_data=page_data)
+
+
+# 添加环境
+@admin.route("/environment/add/", methods=["GET", "POST"])
+@admin_login_req
+# @admin_auth
+def environment_add():
+    form = EnvironmentFrom()
+    if form.validate_on_submit():
+        data = form.data
+        if Environment.query.filter_by(name=data['name']).count() == 1:
+            flash('环境名称已存在！', category='err')
+            return redirect(url_for('admin.environment_add'))
+        environment = Environment(name=data["name"], version=data["version"], models=data["models"],
+                                  user_id=session["admin"],
+                                  case_leader=data["case_leader"], comment=data["comment"],
+                                  Environment=data["Environment"],
+                                  pass_num='', fail_num='', execute_count='', case_pass='', status=0)
+        db.session.add(environment)
+        db.session.commit()
+        flash("添加环境成功！", "ok")
+        oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="添加环境：%s" % data['name'])
+        db.session.add(oplog)
+        db.session.commit()
+    return render_template("admin/environment_add.html", form=form)
