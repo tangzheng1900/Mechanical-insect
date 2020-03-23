@@ -621,7 +621,7 @@ def case_del(id=None, status=None):
 def environment_list(page=None):
     if page is None:
         page = 1
-    page_data = Environment.query.join(User).filter(User.id == Environment.user_id, ).order_by(
+    page_data = Environment.query.order_by(
         Environment.addtime.desc()).paginate(
         page=page, per_page=10)
     return render_template("admin/environment_list.html", page_data=page_data)
@@ -635,14 +635,15 @@ def environment_add():
     form = EnvironmentFrom()
     if form.validate_on_submit():
         data = form.data
+        smtp = str({'mail_host': data["mail_host"], 'mail_user': data["mail_user"], 'mail_pass': data["mail_pass"],
+                    'From': data["FromUser"], 'To': data["ToUser"], 'subject': data["subject"],
+                    'MIMEText': data["MIMEText"]})
         if Environment.query.filter_by(name=data['name']).count() == 1:
             flash('环境名称已存在！', category='err')
             return redirect(url_for('admin.environment_add'))
-        environment = Environment(name=data["name"], version=data["version"], models=data["models"],
-                                  user_id=session["admin"],
-                                  case_leader=data["case_leader"], comment=data["comment"],
-                                  Environment=data["Environment"],
-                                  pass_num='', fail_num='', execute_count='', case_pass='', status=0)
+        environment = Environment(name=data["name"], version=data["version"], project_url=data["project_url"],
+                                  smtp=smtp, dbconfig=data["dbconfig"],
+                                  user_id=session["admin"], comment=data["comment"], status=0)
         db.session.add(environment)
         db.session.commit()
         flash("添加环境成功！", "ok")
@@ -650,3 +651,72 @@ def environment_add():
         db.session.add(oplog)
         db.session.commit()
     return render_template("admin/environment_add.html", form=form)
+
+
+# 项目修改
+@admin.route("/environment/edit/<int:id>/", methods=["GET", "POST"])
+@admin_login_req
+# @admin_auth
+def environment_edit(id=None):
+    form = EnvironmentFrom()
+    environment = Environment.query.get_or_404(id)
+    if form.validate_on_submit():
+        data = form.data
+        smtp = str({'mail_host': data["mail_host"], 'mail_user': data["mail_user"], 'mail_pass': data["mail_pass"],
+                    'From': data["FromUser"], 'To': data["ToUser"], 'subject': data["subject"],
+                    'MIMEText': data["MIMEText"]})
+        if Environment.query.filter_by(name=data['name']).count() == 1:
+            flash('环境名称已存在！', category='err')
+            return redirect(url_for('admin.project_edit'))
+        environment.version = data['version']
+        environment.name = data["name"]
+        environment.project_url = data["project_url"]
+        environment.dbconfig = data["dbconfig"]
+        environment.smtp = smtp
+        environment.comment = data["comment"]
+        db.session.add(environment)
+        db.session.commit()
+        flash("修改环境配置成功！", "ok")
+        oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="修改环境配置%s" % data['name'])
+        db.session.add(oplog)
+        db.session.commit()
+        return render_template("admin/environment_edit.html", form=form, environment=environment)
+    return render_template("admin/environment_edit.html", form=form, environment=environment)
+
+
+# 环境状态
+@admin.route("/environment/status/<int:id>/<int:status>", methods=["GET", "POST"])
+@admin_login_req
+# @admin_auth
+def environment_status(id=None, status=None):
+    environment = Environment.query.get_or_404(id)
+    if status == 0:
+        environment.status = 1
+        flash("停用环境成功！", "ok")
+        oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="停用环境%s" % id)
+        db.session.add(oplog)
+        db.session.commit()
+    else:
+        environment.status = 0
+        flash("启用环境成功！", "ok")
+        oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="启用环境%s" % id)
+        db.session.add(oplog)
+        db.session.commit()
+    db.session.add(environment)
+    db.session.commit()
+    return redirect(url_for("admin.environment_list", page=1))
+
+
+# 环境删除
+@admin.route("/environment/del/<int:id>/<int:status>", methods=["GET"])
+@admin_login_req
+# @admin_auth
+def environment_del(id=None, status=None):
+    environment = Environment.query.get_or_404(int(id))
+    if status == 0:
+        flash('环境正在使用！', category='err')
+        return redirect(url_for('admin.environment_list', page=1))
+    db.session.delete(environment)
+    db.session.commit()
+    flash("删除环境成功！", "ok")
+    return redirect(url_for("admin.environment_list", page=1))

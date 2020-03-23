@@ -12,6 +12,16 @@
     <link rel="stylesheet" href="{{ url_for('static',filename='css/xadmin.css') }}">
     <script src="{{ url_for('static',filename='lib/layui/layui.js') }}" charset="utf-8"></script>
     <script type="text/javascript" src="{{ url_for('static',filename='js/xadmin.js') }}"></script>
+    <style type="text/css">
+        table {
+            table-layout: fixed;
+        }
+
+        th {
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+    </style>
 </head>
 {% import "ul/admin_page.html" as pg %}
 {% import "ul/message.html" as message %}
@@ -27,7 +37,7 @@
             <a href="">首页</a>
             <a href="">项目管理</a>
             <a>
-              <cite>项目列表</cite></a>
+              <cite>环境列表</cite></a>
           </span>
     <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
        onclick="location.reload()" title="刷新">

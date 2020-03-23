@@ -117,14 +117,14 @@ class Case(db.Model):
     id = db.Column(db.Integer, primary_key=True)  # 编号
     cases_name = db.Column(db.String(100), unique=True)  # 名称
     method = db.Column(db.String(100))  # 请求方法
-    url = db.Column(db.String(500))  # 接口路径
-    data = db.Column(db.String(500))  # 请求参数
-    sql = db.Column(db.String(500))  # 请求sql参数
+    url = db.Column(db.String(1000))  # 接口路径
+    data = db.Column(db.String(5000))  # 请求参数
+    sql = db.Column(db.String(1000))  # 请求sql参数
     code = db.Column(db.String(100))  # 期望值
     actually = db.Column(db.String(100))  # 实际返回
     sql_result = db.Column(db.String(100))  # 数据库返回
-    result = db.Column(db.String(100))  # 测试结果
-    msg = db.Column(db.String(100))  #
+    result = db.Column(db.String(5000))  # 测试结果
+    msg = db.Column(db.String(100))  # 返回信息
     version = db.Column(db.String(100), unique=True)  # 版本
     models = db.Column(db.String(100))  # 模块
     user_id = db.Column(db.String(100))  # 所属用户
@@ -158,9 +158,9 @@ class Environment(db.Model):
     id = db.Column(db.Integer, primary_key=True)  # 编号
     name = db.Column(db.String(100), unique=True)  # 项目名称
     version = db.Column(db.String(100), unique=True)  # 项目版本
-    smtp = db.Column(db.String(100))  # 邮件配置
-    project_url = db.Column(db.String(100))  # 项目地址
-    dbconfig = db.Column(db.String(100))  # 项目数据库
+    smtp = db.Column(db.String(1000))  # 邮件配置
+    project_url = db.Column(db.String(1000))  # 项目地址
+    dbconfig = db.Column(db.String(1000))  # 项目数据库
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))  # 所属用户
     addtime = db.Column(db.DateTime, default=datetime.now)  # 创建时间
     status = db.Column(db.Integer)  # 状态
@@ -242,6 +242,7 @@ class Adminlog(db.Model):
 
     def __repr__(self):
         return "<Adminlog %r>" % self.id
+
 
 # 操作日志
 class Oplog(db.Model):

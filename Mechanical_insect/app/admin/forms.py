@@ -361,7 +361,7 @@ class CaseFrom(FlaskForm):
             DataRequired("请选请求方法")
         ],
         coerce=int,
-        choices=[(v.id, v.method) for v in environment_list],
+        choices=[(v.id, v.name) for v in environment_list],
         description="请求方法",
         render_kw={
             "class": "layui-input-inline",
@@ -582,10 +582,10 @@ class EnvironmentFrom(FlaskForm):
 
     comment = TextAreaField(
         label="备注",
-        validators=[
-            DataRequired("请输入内容")
-        ],
-        description="请输入内容",
+        # validators=[
+        #     DataRequired("请输入内容")
+        # ],
+        # description="请输入内容",
         render_kw={
             "class": "layui-textarea",
             "placeholder": "请输入内容"
