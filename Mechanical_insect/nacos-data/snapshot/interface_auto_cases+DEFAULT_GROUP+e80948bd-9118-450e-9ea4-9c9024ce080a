@@ -1,0 +1,9 @@
+[DBCONFIG]
+    config: {'host':'rm-bp153srx1gt80tl1x2o.mysql.rds.aliyuncs.com','user':'sunbin','password':'Sunbin@123','port':3306,'database':'autotest'}
+
+[PROJECT_PATH]
+    project_path : /mnt/interface_auto_cases
+    project_path1 : D:\Mechanical-insect\Mechanical_insect\interface_auto_cases
+
+[DBTABLE]
+    table : {"test_znkf":"znkf","test_aqhy":"aqhy","test_data_window":"dsjsc","sjsbtest_data_recognize":"sjsb","test_xycp":"xycp",}

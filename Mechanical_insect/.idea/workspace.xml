@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3f5d670-9dfe-47b8-882b-a821f75d19eb" name="Default Changelist" comment="">
+    <list default="true" id="e3f5d670-9dfe-47b8-882b-a821f75d19eb" name="Default Changelist" comment="》新增列表显示自动换行处理">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/admin/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/admin/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/database.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/case_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/case_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/environment_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/environment_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/admin/case_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/case_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/admin/environment_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/environment_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/grid.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/grid.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface_auto_cases/HTMLTestRunner_zgh.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface_auto_cases/HTMLTestRunner_zgh.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface_auto_cases/Result/htmlreport/report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/interface_auto_cases/Result/htmlreport/report/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface_auto_cases/conf/NacosConfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface_auto_cases/conf/NacosConfig.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface_auto_cases/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface_auto_cases/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface_auto_cases/public/Unit_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface_auto_cases/public/Unit_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface_auto_cases/public/get_mysql_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface_auto_cases/public/get_mysql_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface_auto_cases/public/httpRequest.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface_auto_cases/public/httpRequest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface_auto_cases/public/readExcel.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface_auto_cases/public/readExcel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface_auto_cases/public/smtp.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface_auto_cases/public/smtp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface_auto_cases/public/writeExcel.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface_auto_cases/public/writeExcel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface_auto_cases/test_data/interface_cases.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/interface_auto_cases/test_data/interface_cases.xlsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,14 +29,23 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Mechanical_insect$manage.coverage" NAME="manage Coverage Results" MODIFIED="1584961274914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mechanical_insect$models__1_.coverage" NAME="models (1) Coverage Results" MODIFIED="1576046319472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/models" />
-    <SUITE FILE_PATH="coverage/Mechanical_insect$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1578881717129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/fishbook/app" />
-    <SUITE FILE_PATH="coverage/Mechanical_insect$Flask________fishbook_test_test_py_.coverage" NAME="Flask (../../fishbook/test/test.py) Coverage Results" MODIFIED="1578882014406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Mechanical_insect$NacosConfig.coverage" NAME="NacosConfig Coverage Results" MODIFIED="1585113996757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface_auto_cases/conf" />
+    <SUITE FILE_PATH="coverage/Mechanical_insect$pytest_for_Unit_test_testHttpRequset_test_znkf.coverage" NAME="pytest for Unit_test.testHttpRequset.test_znkf Coverage Results" MODIFIED="1585207538420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface_auto_cases/public" />
+    <SUITE FILE_PATH="coverage/Mechanical_insect$httpRequest.coverage" NAME="httpRequest Coverage Results" MODIFIED="1585207838408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface_auto_cases/public" />
+    <SUITE FILE_PATH="coverage/Mechanical_insect$manage.coverage" NAME="manage Coverage Results" MODIFIED="1585215907171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mechanical_insect$readExcel.coverage" NAME="readExcel Coverage Results" MODIFIED="1585207585082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface_auto_cases/public" />
     <SUITE FILE_PATH="coverage/Mechanical_insect$models__2_.coverage" NAME="models (2) Coverage Results" MODIFIED="1584961204749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
     <SUITE FILE_PATH="coverage/Mechanical_insect$models.coverage" NAME="models Coverage Results" MODIFIED="1576031852102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/Mechanical_insect$Allpath.coverage" NAME="Allpath Coverage Results" MODIFIED="1585113732169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface_auto_cases/conf" />
+    <SUITE FILE_PATH="coverage/Mechanical_insect$logger.coverage" NAME="logger Coverage Results" MODIFIED="1585126228225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface_auto_cases/public" />
+    <SUITE FILE_PATH="coverage/Mechanical_insect$models__1_.coverage" NAME="models (1) Coverage Results" MODIFIED="1576046319472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/models" />
+    <SUITE FILE_PATH="coverage/Mechanical_insect$get_mysql_info.coverage" NAME="get_mysql_info Coverage Results" MODIFIED="1585212142185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface_auto_cases/public" />
+    <SUITE FILE_PATH="coverage/Mechanical_insect$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1578881717129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/fishbook/app" />
+    <SUITE FILE_PATH="coverage/Mechanical_insect$Flask________fishbook_test_test_py_.coverage" NAME="Flask (../../fishbook/test/test.py) Coverage Results" MODIFIED="1578882014406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Mechanical_insect$main.coverage" NAME="main Coverage Results" MODIFIED="1585215681222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface_auto_cases" />
     <SUITE FILE_PATH="coverage/Mechanical_insect$database.coverage" NAME="database Coverage Results" MODIFIED="1576032009180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
     <SUITE FILE_PATH="coverage/Mechanical_insect$Flask________fishbook_fisher_py_.coverage" NAME="Flask (../../fishbook/fisher.py) Coverage Results" MODIFIED="1578881914052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Mechanical_insect$pytest_in_Unit_test_py.coverage" NAME="pytest in Unit_test.py Coverage Results" MODIFIED="1585207954563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface_auto_cases/public" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -48,7 +68,7 @@
     <session id="-1858317955">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.0" value="5" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.10" value="1" />
@@ -61,28 +81,29 @@
           <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.4" value="4" />
           <entry key="project.open.time.47" value="1" />
-          <entry key="project.open.time.5" value="4" />
+          <entry key="project.open.time.5" value="5" />
           <entry key="project.open.time.53" value="1" />
           <entry key="project.open.time.6" value="3" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="38" />
+          <entry key="project.opened" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="conf" value="18" />
           <entry key="css" value="80" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="281" />
+          <entry key="html" value="290" />
           <entry key="jinja2" value="1" />
           <entry key="jpg" value="1" />
           <entry key="js" value="38" />
           <entry key="json" value="20" />
-          <entry key="log" value="2" />
+          <entry key="log" value="6" />
           <entry key="map" value="2" />
           <entry key="png" value="7" />
-          <entry key="py" value="125" />
+          <entry key="py" value="216" />
           <entry key="rnc" value="3" />
           <entry key="sql" value="3" />
           <entry key="svg" value="5" />
@@ -93,14 +114,14 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="80" />
-          <entry key="HTML" value="281" />
+          <entry key="HTML" value="290" />
           <entry key="Image" value="8" />
           <entry key="JSON" value="20" />
           <entry key="JavaScript" value="38" />
           <entry key="Jinja2" value="1" />
-          <entry key="Log" value="2" />
-          <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="125" />
+          <entry key="Log" value="6" />
+          <entry key="PLAIN_TEXT" value="21" />
+          <entry key="Python" value="216" />
           <entry key="RNG Compact" value="3" />
           <entry key="SVG" value="5" />
           <entry key="Scratch" value="3" />
@@ -110,22 +131,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="conf" value="2" />
           <entry key="css" value="152" />
-          <entry key="html" value="5123" />
+          <entry key="html" value="5176" />
           <entry key="js" value="62" />
           <entry key="json" value="20" />
-          <entry key="py" value="3336" />
+          <entry key="py" value="6779" />
           <entry key="txt" value="800" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="152" />
-          <entry key="HTML" value="5123" />
+          <entry key="HTML" value="5176" />
           <entry key="JSON" value="20" />
           <entry key="JavaScript" value="62" />
-          <entry key="PLAIN_TEXT" value="800" />
-          <entry key="Python" value="3336" />
+          <entry key="PLAIN_TEXT" value="802" />
+          <entry key="Python" value="6779" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -138,19 +160,50 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manage.py">
+        <entry file="file://$PROJECT_DIR$/interface_auto_cases/public/Unit_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            <state relative-caret-position="-625">
+              <caret line="30" column="72" lean-forward="true" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
+              <folding>
+                <element signature="e#116#137#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interface_auto_cases/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+              <folding>
+                <element signature="e#2#17#0" expanded="true" />
+                <marker date="1585215804710" expanded="true" signature="492:493" ph="..." />
+                <marker date="1585215804710" expanded="true" signature="492:497" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interface_auto_cases/public/get_mysql_info.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="159" column="39" selection-start-line="159" selection-start-column="39" selection-end-line="159" selection-end-column="39" />
+              <folding>
+                <element signature="e#116#169#0" expanded="true" />
+                <marker date="1585215371358" expanded="true" signature="676:1140" ph="..." />
+                <marker date="1585215371358" expanded="true" signature="1852:2336" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15663">
-              <caret line="689" column="13" selection-start-line="689" selection-start-column="13" selection-end-line="689" selection-end-column="13" />
+            <state relative-caret-position="409">
+              <caret line="569" lean-forward="true" selection-start-line="569" selection-end-line="569" />
               <folding>
                 <element signature="e#145#164#0" expanded="true" />
               </folding>
@@ -159,50 +212,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models.py">
+        <entry file="file://$PROJECT_DIR$/app/templates/admin/case_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="128" column="44" lean-forward="true" selection-start-line="128" selection-start-column="44" selection-end-line="128" selection-end-column="44" />
-              <folding>
-                <element signature="e#1419#1437#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="372">
+              <caret line="139" column="85" selection-start-line="139" selection-start-column="78" selection-end-line="139" selection-end-column="85" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/admin/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="351" column="36" selection-start-line="351" selection-start-column="36" selection-end-line="351" selection-end-column="36" />
-              <folding>
-                <element signature="e#144#175#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/admin/environment_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="31" selection-start-line="31" selection-end-line="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/templates/admin/environment_add.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3358">
-              <caret line="146" column="156" selection-start-line="146" selection-start-column="156" selection-end-line="146" selection-end-column="156" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/admin/case_add.html">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -212,22 +227,13 @@
       <list>
         <option value="JavaScript File" />
         <option value="CSS File" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>particles</find>
-      <find>particles-js-canvas-el</find>
-      <find>margin-inline-start</find>
-      <find>font</find>
-      <find>p</find>
-      <find>blink</find>
-      <find>off-canvas.js</find>
-      <find>layadmin-iframe</find>
-      <find>logout</find>
       <find>openTabsPage</find>
       <find>index.js</find>
       <find>layuiadmin/lib/index.js</find>
@@ -249,6 +255,15 @@
       <find>pagination</find>
       <find>auth-form-light</find>
       <find>#007bff</find>
+      <find>config1</find>
+      <find>http_conf_path</find>
+      <find>getMysqlInfo</find>
+      <find>log</find>
+      <find>ID</find>
+      <find>log_path</find>
+      <find>path</find>
+      <find>服务地址配置</find>
+      <find>case</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -262,9 +277,10 @@
       <dir>D:\Mechanical-insect\Mechanical_insect\app\static\css</dir>
       <dir>D:\Mechanical-insect\Mechanical_insect\app\templates\admin</dir>
       <dir>D:\fishbook</dir>
-      <dir>D:\Mechanical-insect\Mechanical_insect</dir>
       <dir>D:\Mechanical-insect\Mechanical_insect\app</dir>
       <dir>D:\Mechanical-insect\Mechanical_insect\app\static</dir>
+      <dir>D:\Mechanical-insect\Mechanical_insect\interface_auto_cases</dir>
+      <dir>D:\Mechanical-insect\Mechanical_insect</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -273,19 +289,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/static/gulpfile.js" />
-        <option value="$PROJECT_DIR$/app/static/layuiadmin/style/admin.css" />
-        <option value="$PROJECT_DIR$/app/static/layuiadmin/lib/index.js" />
-        <option value="$PROJECT_DIR$/app/static/layuiadmin/layui/css/layui.css" />
-        <option value="$PROJECT_DIR$/app/templates/admin/homepage1.html" />
-        <option value="$PROJECT_DIR$/app/templates/admin/homepage2.html" />
-        <option value="$PROJECT_DIR$/app/templates/admin/index.html" />
-        <option value="D:/fishbook/app/secure.py" />
-        <option value="$PROJECT_DIR$/app/templates/admin/home.html" />
-        <option value="$PROJECT_DIR$/app/static/css/font.css" />
-        <option value="$PROJECT_DIR$/manage.py" />
-        <option value="$PROJECT_DIR$/app/static/css/xadmin.css" />
-        <option value="$PROJECT_DIR$/app/static/lib/layui/css/layui.css" />
         <option value="$PROJECT_DIR$/app/static/lib/layui/lay/modules/jquery.js" />
         <option value="$PROJECT_DIR$/app/templates/admin/member-list.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/welcome.html" />
@@ -316,14 +319,27 @@
         <option value="$PROJECT_DIR$/app/templates/admin/website.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/email.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/case_edit.html" />
-        <option value="$PROJECT_DIR$/app/templates/admin/case_list.html" />
         <option value="$PROJECT_DIR$/app/templates/admin/case_add.html" />
-        <option value="$PROJECT_DIR$/app/admin/forms.py" />
         <option value="$PROJECT_DIR$/app/templates/admin/grid.html" />
-        <option value="$PROJECT_DIR$/app/admin/views.py" />
-        <option value="$PROJECT_DIR$/app/templates/admin/environment_list.html" />
-        <option value="$PROJECT_DIR$/app/models.py" />
         <option value="$PROJECT_DIR$/app/templates/admin/environment_add.html" />
+        <option value="$PROJECT_DIR$/interface_auto_cases/conf/case.conf" />
+        <option value="$PROJECT_DIR$/interface_auto_cases/conf/path.conf" />
+        <option value="$PROJECT_DIR$/app/templates/admin/environment_list.html" />
+        <option value="$PROJECT_DIR$/interface_auto_cases/conf/Allpath.py" />
+        <option value="$PROJECT_DIR$/interface_auto_cases/public/logger.py" />
+        <option value="$PROJECT_DIR$/app/models.py" />
+        <option value="$PROJECT_DIR$/app/admin/forms.py" />
+        <option value="$PROJECT_DIR$/interface_auto_cases/conf/NacosConfig.py" />
+        <option value="$PROJECT_DIR$/interface_auto_cases/public/httpRequest.py" />
+        <option value="$PROJECT_DIR$/interface_auto_cases/public/readExcel.py" />
+        <option value="$PROJECT_DIR$/interface_auto_cases/public/writeExcel.py" />
+        <option value="$PROJECT_DIR$/interface_auto_cases/HTMLTestRunner_zgh.py" />
+        <option value="$PROJECT_DIR$/interface_auto_cases/public/smtp.py" />
+        <option value="$PROJECT_DIR$/app/templates/admin/case_list.html" />
+        <option value="$PROJECT_DIR$/interface_auto_cases/public/get_mysql_info.py" />
+        <option value="$PROJECT_DIR$/interface_auto_cases/public/Unit_test.py" />
+        <option value="$PROJECT_DIR$/interface_auto_cases/main.py" />
+        <option value="$PROJECT_DIR$/app/admin/views.py" />
       </list>
     </option>
   </component>
@@ -338,9 +354,9 @@
       <path value="$PROJECT_DIR$/app/static/vendors/iconfonts/mdi/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="774" />
-    <option name="width" value="1152" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="759" />
+    <option name="width" value="1174" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -394,6 +410,35 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Mechanical_insect" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mechanical_insect" type="462c0819:PsiDirectoryNode" />
+              <item name="interface_auto_cases" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mechanical_insect" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mechanical_insect" type="462c0819:PsiDirectoryNode" />
+              <item name="interface_auto_cases" type="462c0819:PsiDirectoryNode" />
+              <item name="conf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mechanical_insect" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mechanical_insect" type="462c0819:PsiDirectoryNode" />
+              <item name="interface_auto_cases" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mechanical_insect" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mechanical_insect" type="462c0819:PsiDirectoryNode" />
+              <item name="interface_auto_cases" type="462c0819:PsiDirectoryNode" />
+              <item name="Result" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mechanical_insect" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mechanical_insect" type="462c0819:PsiDirectoryNode" />
+              <item name="interface_auto_cases" type="462c0819:PsiDirectoryNode" />
+              <item name="test_data" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -442,30 +487,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.models (2)">
-    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="fishbook" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="D:/fishbook/app" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:/fishbook/app/__init__.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="get_mysql_info" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Mechanical_insect" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -473,12 +496,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interface_auto_cases/public" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/interface_auto_cases/public/get_mysql_info.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -487,7 +510,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="models (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="httpRequest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Mechanical_insect" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -495,12 +518,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interface_auto_cases/public" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/models.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/interface_auto_cases/public/httpRequest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -509,19 +532,48 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Flask" type="Python.FlaskServer" factoryName="Flask server" temporary="true" nameIsGenerated="true">
-      <module name="fishbook" />
-      <option name="target" value="D:/fishbook/test/test.py" />
-      <option name="targetType" value="PATH" />
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Mechanical_insect" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interface_auto_cases" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/interface_auto_cases/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="readExcel" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Mechanical_insect" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interface_auto_cases/public" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/interface_auto_cases/public/readExcel.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Mechanical_insect" type="Python.FlaskServer" factoryName="Flask server">
@@ -539,18 +591,37 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in Unit_test.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Mechanical_insect" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interface_auto_cases/public" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/interface_auto_cases/public/Unit_test.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Flask server.Mechanical_insect" />
-      <item itemvalue="Flask server.Flask" />
-      <item itemvalue="Python.models (2)" />
-      <item itemvalue="Python.manage" />
-      <item itemvalue="Python.__init__" />
+      <item itemvalue="Python.get_mysql_info" />
+      <item itemvalue="Python.readExcel" />
+      <item itemvalue="Python tests.pytest in Unit_test.py" />
+      <item itemvalue="Python.httpRequest" />
+      <item itemvalue="Python.main" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.manage" />
-        <item itemvalue="Python.models (2)" />
-        <item itemvalue="Python.__init__" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.get_mysql_info" />
+        <item itemvalue="Python tests.pytest in Unit_test.py" />
+        <item itemvalue="Python.httpRequest" />
+        <item itemvalue="Python.readExcel" />
       </list>
     </recent_temporary>
   </component>
@@ -796,8 +867,47 @@
       <option name="project" value="LOCAL" />
       <updated>1584950063890</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="》新增列表显示自动换行处理">
+      <created>1584961500175</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1584961500176</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="pytest_in_Unit_test_py - 2020.03.26 at 15h 18m 18s.xml">
+      <configuration name="pytest in Unit_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_Unit_test_testHttpRequset_test_znkf - 2020.03.26 at 15h 19m 04s.xml">
+      <configuration name="pytest for Unit_test.testHttpRequset.test_znkf" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_Unit_test_testHttpRequset_test_znkf - 2020.03.26 at 15h 22m 16s.xml">
+      <configuration name="pytest for Unit_test.testHttpRequset.test_znkf" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_Unit_test_testHttpRequset_test_znkf - 2020.03.26 at 15h 23m 07s.xml">
+      <configuration name="pytest for Unit_test.testHttpRequset.test_znkf" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_Unit_test_testHttpRequset_test_znkf - 2020.03.26 at 15h 24m 28s.xml">
+      <configuration name="pytest for Unit_test.testHttpRequset.test_znkf" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_Unit_test_testHttpRequset_test_znkf - 2020.03.26 at 15h 25m 44s.xml">
+      <configuration name="pytest for Unit_test.testHttpRequset.test_znkf" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_Unit_test_py - 2020.03.26 at 15h 28m 03s.xml">
+      <configuration name="pytest in Unit_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_Unit_test_py - 2020.03.26 at 15h 28m 49s.xml">
+      <configuration name="pytest in Unit_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_Unit_test_py - 2020.03.26 at 15h 31m 46s.xml">
+      <configuration name="pytest in Unit_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_Unit_test_py - 2020.03.26 at 15h 32m 42s.xml">
+      <configuration name="pytest in Unit_test.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -809,16 +919,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="774" y="0" width="1152" height="1047" extended-state="1" />
+    <frame x="759" y="0" width="1174" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22985348" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49856734" visible="true" weight="0.22980252" />
+      <window_info id="Structure" order="1" sideWeight="0.50143266" side_tool="true" weight="0.22985348" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32894737" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32894737" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39522257" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32894737" />
@@ -826,10 +936,10 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.21491228" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013624" side_tool="true" weight="0.32894737" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49863762" weight="0.32894737" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49863762" weight="0.32790446" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32894737" />
       <window_info anchor="bottom" id="TypeScript" order="13" weight="0.32894737" />
-      <window_info anchor="bottom" id="Run" order="14" sideWeight="0.49901184" visible="true" weight="0.23464912" />
+      <window_info active="true" anchor="bottom" id="Run" order="14" sideWeight="0.49901184" visible="true" weight="0.30592105" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -923,180 +1033,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="》新增列表显示自动换行处理" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/static/lib/layui/css/layui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="176" lean-forward="true" selection-start-line="176" selection-end-line="176" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/lib/layui/lay/modules/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="1733" column="36" selection-start-line="1733" selection-start-column="36" selection-end-line="1733" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="44" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/welcome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="132" column="22" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="132" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/welcome1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/ul/home_page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="62" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/ul/message.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/alist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/core-scripting.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="211" column="18" selection-start-line="211" selection-start-column="18" selection-end-line="211" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/js/xadmin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views.py" />
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/role_add.py" />
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/admin_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="149" selection-start-line="149" selection-end-line="151" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/ul/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1495">
-          <caret line="65" column="20" lean-forward="true" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/role_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="41" column="36" lean-forward="true" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/role_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="55" column="23" lean-forward="true" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/user_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="36" column="35" lean-forward="true" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/adminloginlog_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="56" selection-start-line="56" selection-start-column="2" selection-end-line="62" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/userloginlog_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="56" selection-start-line="56" selection-start-column="2" selection-end-line="62" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/admin_add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="57" column="34" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/auth_add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="49" column="37" lean-forward="true" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/role_add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="38" column="54" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python37/Lib/site-packages/flask_wtf/form.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python37/Lib/site-packages/sqlalchemy/orm/relationships.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="2089" selection-start-line="2089" selection-end-line="2089" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cdd3520d-4a58-401b-bce1-6681b7ee4009/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/oplog_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1203">
-          <caret line="68" column="40" lean-forward="true" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
@@ -1168,13 +1116,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/project_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="34" lean-forward="true" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/email.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1105">
@@ -1196,13 +1137,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/project_add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="897">
-          <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/grid.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1210,64 +1144,311 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/views.py">
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/environment_add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15663">
-          <caret line="689" column="13" selection-start-line="689" selection-start-column="13" selection-end-line="689" selection-end-column="13" />
-          <folding>
-            <element signature="e#145#164#0" expanded="true" />
-          </folding>
+        <state>
+          <caret line="132" column="53" selection-start-line="132" selection-start-column="53" selection-end-line="132" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/case_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="72" column="53" selection-start-line="72" selection-start-column="40" selection-end-line="72" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/1201333238/_io.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="1268" column="61" lean-forward="true" selection-start-line="1268" selection-start-column="61" selection-end-line="1268" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python37/Lib/site-packages/_pytest/config/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/_jb_pytest_runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_auto_cases/conf/path.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_auto_cases/conf/smtpconf.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/environment_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_auto_cases/conf/http.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_auto_cases/conf/case.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python37/Lib/socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="747" selection-start-line="747" selection-end-line="747" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_auto_cases/conf/db.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="91" lean-forward="true" selection-start-line="2" selection-start-column="91" selection-end-line="2" selection-end-column="91" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        <state relative-caret-position="296">
+          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/case_list.html">
+    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/1201333238/nt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
+        <state relative-caret-position="208">
+          <caret line="211" column="4" selection-start-line="211" selection-start-column="4" selection-end-line="211" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/forms.py">
+    <entry file="file://$PROJECT_DIR$/interface_auto_cases/conf/Allpath.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="351" column="36" selection-start-line="351" selection-start-column="36" selection-end-line="351" selection-end-column="36" />
+        <state relative-caret-position="598">
+          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
           <folding>
-            <element signature="e#144#175#0" expanded="true" />
+            <element signature="e#117#126#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_auto_cases/public/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+          <folding>
+            <element signature="e#117#126#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python37/Lib/logging/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="1367" column="8" selection-start-line="1367" selection-start-column="8" selection-end-line="1367" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="1067" selection-start-line="1067" selection-end-line="1067" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_auto_cases/Result/log/Api_Autotest_log_2020-03-25.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="-4208" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/project_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1978">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/project_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="50" column="47" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="128" column="44" lean-forward="true" selection-start-line="128" selection-start-column="44" selection-end-line="128" selection-end-column="44" />
+        <state relative-caret-position="1357">
+          <caret line="132" selection-start-line="132" selection-end-line="132" />
           <folding>
             <element signature="e#1419#1437#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/case_add.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/environment_list.html">
+    <entry file="file://$PROJECT_DIR$/app/admin/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="31" selection-start-line="31" selection-end-line="32" />
+        <state relative-caret-position="391">
+          <caret line="309" column="35" lean-forward="true" selection-start-line="309" selection-start-column="35" selection-end-line="309" selection-end-column="35" />
+          <folding>
+            <element signature="e#144#175#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/environment_add.html">
+    <entry file="file://$PROJECT_DIR$/interface_auto_cases/public/readExcel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3358">
-          <caret line="146" column="156" selection-start-line="146" selection-start-column="156" selection-end-line="146" selection-end-column="156" />
+        <state relative-caret-position="185">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#120#129#0" expanded="true" />
+            <marker date="1585207898356" expanded="true" signature="1230:2295" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_auto_cases/public/httpRequest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="266" column="42" selection-start-line="266" selection-start-column="42" selection-end-line="266" selection-end-column="42" />
+          <folding>
+            <element signature="e#116#131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python37/Lib/site-packages/werkzeug/routing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="694" selection-start-line="694" selection-end-line="694" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_auto_cases/HTMLTestRunner_zgh.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+          <folding>
+            <element signature="e#933#942#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_auto_cases/public/smtp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="e#115#129#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_auto_cases/public/writeExcel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="e#121#164#0" expanded="true" />
+            <marker date="1585208257486" expanded="true" signature="322:427" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_auto_cases/conf/NacosConfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+          <folding>
+            <element signature="e#150#162#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_auto_cases/public/logger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding>
+            <element signature="e#116#130#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/case_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="139" column="85" selection-start-line="139" selection-start-column="78" selection-end-line="139" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_auto_cases/public/Unit_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-625">
+          <caret line="30" column="72" lean-forward="true" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
+          <folding>
+            <element signature="e#116#137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_auto_cases/public/get_mysql_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="159" column="39" selection-start-line="159" selection-start-column="39" selection-end-line="159" selection-end-column="39" />
+          <folding>
+            <element signature="e#116#169#0" expanded="true" />
+            <marker date="1585215371358" expanded="true" signature="676:1140" ph="..." />
+            <marker date="1585215371358" expanded="true" signature="1852:2336" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_auto_cases/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+          <folding>
+            <element signature="e#2#17#0" expanded="true" />
+            <marker date="1585215804710" expanded="true" signature="492:493" ph="..." />
+            <marker date="1585215804710" expanded="true" signature="492:497" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="569" lean-forward="true" selection-start-line="569" selection-end-line="569" />
+          <folding>
+            <element signature="e#145#164#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

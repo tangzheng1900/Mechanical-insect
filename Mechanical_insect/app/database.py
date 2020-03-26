@@ -28,7 +28,7 @@ class Project(db.Model):
 
 # 用例管理
 class Case(db.Model):
-    __tablename__ = "case"
+    __tablename__ = "testcase"
     __table_args__ = {"useexisting": True}
     id = db.Column(db.Integer, primary_key=True)  # 编号
     name = db.Column(db.String(100), unique=True)  # 名称

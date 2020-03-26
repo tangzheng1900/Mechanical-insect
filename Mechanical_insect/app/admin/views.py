@@ -553,6 +553,22 @@ def case_list(page=None):
     return render_template("admin/case_list.html", page_data=page_data)
 
 
+# 用例测试
+ver= ""
+@admin.route("/case/run/<string:version>", methods=["GET", "POST"])
+@admin_login_req
+# @admin_auth
+def case_run(version=None):
+    global ver
+    ver = version
+    print(ver)
+    import interface_auto_cases.main as ma
+    test=str(ma.run())
+    print(test)
+    flash(test, "ok")
+    return redirect(url_for('admin.case_list', page=1))
+
+
 # 添加用例
 @admin.route("/case/add/", methods=["GET", "POST"])
 @admin_login_req
@@ -561,16 +577,18 @@ def case_add():
     form = CaseFrom()
     if form.validate_on_submit():
         data = form.data
-        if Case.query.filter_by(name=data['name']).count() == 1:
+        if Case.query.filter_by(cases_name=data['cases_name']).count() == 1:
             flash('用例名称已存在！', category='err')
             return redirect(url_for('admin.case_add'))
-        case = Case(name=data["name"], version=data["version"], models=data["models"], user_id=session["admin"],
+        case = Case(cases_name=data["cases_name"], version=data["version"], models=data["models"],url=data["RequestAddress"],
+                    data = data["RequestData"],sql = data["RequestSql"],code = data["code"],actually = '',
+                    sql_result = '',result = '',msg = '',user_id=session["admin"],method=data["RequestMethod"],
                     case_leader=data["case_leader"], comment=data["comment"], Environment=data["Environment"],
                     pass_num='', fail_num='', execute_count='', case_pass='', status=0)
         db.session.add(case)
         db.session.commit()
         flash("添加用例成功！", "ok")
-        oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="添加用例：%s" % data['name'])
+        oplog = Oplog(admin_id=session["admin_id"], ip=request.remote_addr, reason="添加用例：%s" % data['cases_name'])
         db.session.add(oplog)
         db.session.commit()
     return render_template("admin/case_add.html", form=form)
@@ -653,7 +671,7 @@ def environment_add():
     return render_template("admin/environment_add.html", form=form)
 
 
-# 项目修改
+# 环境修改
 @admin.route("/environment/edit/<int:id>/", methods=["GET", "POST"])
 @admin_login_req
 # @admin_auth

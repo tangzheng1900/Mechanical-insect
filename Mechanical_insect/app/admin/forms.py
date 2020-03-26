@@ -275,8 +275,8 @@ class CaseFrom(FlaskForm):
         validators=[
             DataRequired("请输入版本编号")
         ],
-        coerce=int,
-        choices=[(v.id, v.version) for v in project_list],
+        coerce=str,
+        choices=[(v.version, v.version) for v in project_list],
         description="版本编号",
         render_kw={
             "class": "layui-input-inline",
@@ -288,8 +288,8 @@ class CaseFrom(FlaskForm):
         validators=[
             DataRequired("请选择项目模块")
         ],
-        coerce=int,
-        choices=[(v.id, v.name) for v in project_list],
+        coerce=str,
+        choices=[(v.name, v.name) for v in project_list],
         description="项目模块",
         render_kw={
             "class": "layui-input-inline",
@@ -316,8 +316,8 @@ class CaseFrom(FlaskForm):
         validators=[
             DataRequired("请选执行环境")
         ],
-        coerce=int,
-        choices=[(v.id, v.name) for v in environment_list],
+        coerce=str,
+        choices=[(v.name, v.name) for v in environment_list],
         description="环境列表",
         render_kw={
             "class": "layui-input-inline",
@@ -360,8 +360,8 @@ class CaseFrom(FlaskForm):
         validators=[
             DataRequired("请选请求方法")
         ],
-        coerce=int,
-        choices=[(v.id, v.name) for v in environment_list],
+        coerce=str,
+        choices=[(v.name, v.name) for v in environment_list],
         description="请求方法",
         render_kw={
             "class": "layui-input-inline",
@@ -449,13 +449,13 @@ class EnvironmentFrom(FlaskForm):
     )
 
     project_url = StringField(
-        label="项目路径",
+        label="环境地址",
         validators=[
-            DataRequired("请输入项目路径")
+            DataRequired("请输入环境地址")
         ],
-        description="项目路径",
+        description="环境地址",
         render_kw={
-            "placeholder": "请输入项目路径",
+            "placeholder": "请输入环境地址",
             "type": "text",
             "lay - verify": "title",
             "autocomplete": "off",

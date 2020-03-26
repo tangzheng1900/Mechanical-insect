@@ -98,21 +98,13 @@ class Project(db.Model):
     status = db.Column(db.Integer)  # 项目状态
     comment = db.Column(db.Text)  # 备注
 
-    # user = db.relationship('User', foreign_keys=user_id)
-    # leader = db.relationship('User', foreign_keys=leader)
-    #
-    # def __init__(self, user_id, leader):
-    #     self.user_id = user_id
-    #     self.leader = leader
-
-
     # 定义一个方法，返回的类型
     def __repr__(self):
         return "<Project %r>" % self.name
 
 # 用例管理
 class Case(db.Model):
-    __tablename__ = "case"
+    __tablename__ = "testcase"
     __table_args__ = {"useexisting": True}
     id = db.Column(db.Integer, primary_key=True)  # 编号
     cases_name = db.Column(db.String(100), unique=True)  # 名称
@@ -125,7 +117,7 @@ class Case(db.Model):
     sql_result = db.Column(db.String(100))  # 数据库返回
     result = db.Column(db.String(5000))  # 测试结果
     msg = db.Column(db.String(100))  # 返回信息
-    version = db.Column(db.String(100), unique=True)  # 版本
+    version = db.Column(db.String(100))  # 版本
     models = db.Column(db.String(100))  # 模块
     user_id = db.Column(db.String(100))  # 所属用户
     case_leader = db.Column(db.Integer, db.ForeignKey('users.id'))  # 接口负责人
@@ -138,13 +130,6 @@ class Case(db.Model):
     case_pass = db.Column(db.Float)  # 用例通过率
     status = db.Column(db.Integer)  # 用例状态
     comment = db.Column(db.Text)  # 备注
-
-    # user = db.relationship('User', foreign_keys=user_id)
-    # leader = db.relationship('User', foreign_keys=leader_id)
-
-    # def __init__(self, user_id, leader):
-    #     self.user_id = user_id
-    #     self.leader = leader
 
     # 定义一个方法，返回的类型
     def __repr__(self):

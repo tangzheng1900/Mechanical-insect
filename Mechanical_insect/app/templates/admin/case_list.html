@@ -126,7 +126,7 @@
                                 <td>{{ v.fail_num }}</td>
                                 <td>{{ v.execute_count }}</td>
                                 <td>{{ v.case_pass }}</td>
-                                {% if v.state==0 %}
+                                {% if v.status == 0 %}
                                     <td class="td-status"><a
                                             href="{{ url_for('admin.case_status',id=v.id,status=v.status) }}"
                                             class="layui-btn layui-btn-normal layui-btn-mini">已启用</a></td>
@@ -136,6 +136,9 @@
                                             class="layui-btn layui-btn-normal layui-btn-mini">已停用</a></td>
                                 {% endif %}
                                 <td>{{ v.comment }}</td>
+                                <td class="td-status"><a
+                                            href="{{ url_for('admin.case_run',version=v.version) }}"
+                                            class="layui-btn layui-btn-normal layui-btn-mini">测试一下</a></td>
                                 <td class="td-manage">
                                     <a title="编辑" onclick="xadmin.open('编辑','{{ url_for("admin.case_add") }}',600,400)"
                                        href="javascript:;">
