@@ -11,6 +11,7 @@ from flask import render_template, redirect, url_for, flash, session, request, a
 from app.admin.forms import LoginForm, AdminForm, RoleForm, AuthFrom, ProjectFrom, CaseFrom, EnvironmentFrom
 from app.models import Admin, User, Oplog, Adminlog, Userlog, Auth, Role, Project, Case, Environment
 from functools import wraps
+from werkzeug.security import generate_password_hash
 from app import db
 import datetime
 
@@ -162,7 +163,6 @@ def admin_state(id=None, state=None):
 @admin_auth
 def admin_add():
     form = AdminForm()
-    from werkzeug.security import generate_password_hash
     if form.validate_on_submit():
         data = form.data
         admin = Admin(
@@ -554,17 +554,12 @@ def case_list(page=None):
 
 
 # 用例测试
-ver= ""
 @admin.route("/case/run/<string:version>", methods=["GET", "POST"])
 @admin_login_req
 # @admin_auth
 def case_run(version=None):
-    global ver
-    ver = version
-    print(ver)
     import interface_auto_cases.main as ma
-    test=str(ma.run())
-    print(test)
+    test=ma.run(version)
     flash(test, "ok")
     return redirect(url_for('admin.case_list', page=1))
 

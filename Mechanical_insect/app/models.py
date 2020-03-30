@@ -50,6 +50,7 @@ secondaryjoin	SQLAlchemy无法自行决定时，指定多对多关系中的二�
 # from app import Base
 from app import db
 from datetime import datetime
+from werkzeug.security import check_password_hash
 
 
 class User(db.Model):
@@ -115,8 +116,8 @@ class Case(db.Model):
     code = db.Column(db.String(100))  # 期望值
     actually = db.Column(db.String(100))  # 实际返回
     sql_result = db.Column(db.String(100))  # 数据库返回
-    result = db.Column(db.String(5000))  # 测试结果
-    msg = db.Column(db.String(100))  # 返回信息
+    result = db.Column(db.String(100))  # 测试结果
+    msg = db.Column(db.String(5000))  # 返回信息
     version = db.Column(db.String(100))  # 版本
     models = db.Column(db.String(100))  # 模块
     user_id = db.Column(db.String(100))  # 所属用户
@@ -212,7 +213,6 @@ class Admin(db.Model):
         return "<Role %r>" % self.name
 
     def check_pwd(self, pwd):
-        from werkzeug.security import check_password_hash
         return check_password_hash(self.pwd, pwd)
 
 # 管理员登录日志

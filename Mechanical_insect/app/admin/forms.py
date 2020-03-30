@@ -8,13 +8,14 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, FileField, TextAreaField, SelectField, SelectMultipleField
 from wtforms.validators import DataRequired, ValidationError, EqualTo
-from app.models import Admin, Auth, Role, User, Project, Environment
+from app.models import Admin, Auth, Role, User, Project, Environment, Case
 
 project_list = Project.query.all()
 auths_list = Auth.query.all()
 role_list = Role.query.all()
 user_list = User.query.all()
 environment_list = Environment.query.all()
+testcase_list = Case.query.with_entities(Case.method).distinct().all()
 
 
 class LoginForm(FlaskForm):
@@ -361,7 +362,7 @@ class CaseFrom(FlaskForm):
             DataRequired("请选请求方法")
         ],
         coerce=str,
-        choices=[(v.name, v.name) for v in environment_list],
+        choices=[(v.method, v.method) for v in testcase_list],
         description="请求方法",
         render_kw={
             "class": "layui-input-inline",
