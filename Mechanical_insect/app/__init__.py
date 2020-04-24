@@ -12,9 +12,9 @@ from flask_sqlalchemy import SQLAlchemy
 
 # 定义数据库连接
 app = Flask(__name__)  # 创建实例化app对象
-import logging
-logger = logging.getLogger("werkzeug")
-logger.setLevel(logging.INFO)
+# import logging
+# logger = logging.getLogger("werkzeug")
+# logger.setLevel(logging.INFO)
 
 name='sunbin'
 pwd='Sunbin@123'
