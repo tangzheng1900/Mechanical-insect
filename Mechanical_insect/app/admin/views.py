@@ -17,6 +17,7 @@ import datetime
 
 user_list = User.query.all()
 
+
 # 上下文应用处理器
 @admin.context_processor
 def tpl_extra():
@@ -58,6 +59,7 @@ def admin_auth(f):
             flash('您没有权限！请咨询管理员。', 'err')
             abort(404)
         return f(*args, **kwargs)
+
     return decorated_function
 
 
@@ -67,15 +69,21 @@ def admin_auth(f):
 @admin_auth
 def index():
     return render_template("admin/admin.html")
+
+
 @admin.route("/home/")
 def home():
     return render_template("admin/welcome1.html")
+
+
 @admin.route("/home1/")
 def home1():
-    return render_template("admin/homepage1.html")
+    return render_template("admin/line.html")
+
+
 @admin.route("/home2/")
 def home2():
-    return render_template("admin/homepage2.html")
+    return render_template("admin/bar.html")
 
 
 # 登录
@@ -468,6 +476,7 @@ def project_status(id=None, status=None):
     db.session.commit()
     return redirect(url_for("admin.project_list", page=1))
 
+
 # 添加项目
 @admin.route("/project/add/", methods=["GET", "POST"])
 @admin_login_req
@@ -559,7 +568,7 @@ def case_list(page=None):
 # @admin_auth
 def case_run(version=None):
     import interface_auto_cases.main as ma
-    test=ma.run(version)
+    test = ma.run(version)
     flash(test, "ok")
     return redirect(url_for('admin.case_list', page=1))
 
@@ -575,9 +584,10 @@ def case_add():
         if Case.query.filter_by(cases_name=data['cases_name']).count() == 1:
             flash('用例名称已存在！', category='err')
             return redirect(url_for('admin.case_add'))
-        case = Case(cases_name=data["cases_name"], version=data["version"], models=data["models"],url=data["RequestAddress"],
-                    data = data["RequestData"],sql = data["RequestSql"],code = data["code"],actually = '',
-                    sql_result = '',result = '',msg = '',user_id=session["admin"],method=data["RequestMethod"],
+        case = Case(cases_name=data["cases_name"], version=data["version"], models=data["models"],
+                    url=data["RequestAddress"],
+                    data=data["RequestData"], sql=data["RequestSql"], code=data["code"], actually='',
+                    sql_result='', result='', msg='', user_id=session["admin"], method=data["RequestMethod"],
                     case_leader=data["case_leader"], comment=data["comment"], Environment=data["Environment"],
                     pass_num='', fail_num='', execute_count='', case_pass='', status=0)
         db.session.add(case)

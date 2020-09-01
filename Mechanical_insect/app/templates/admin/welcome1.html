@@ -9,6 +9,8 @@
           content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8"/>
     <link rel="stylesheet" href="{{ url_for('static',filename='css/font.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='css/xadmin.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='layuiadmin/layui/css/layui.css') }}" media="all">
+    <link rel="stylesheet" href="{{ url_for('static',filename='layuiadmin/style/admin.css') }}" media="all">
     <script src="{{ url_for('static',filename='lib/layui/layui.js') }}" charset="utf-8"></script>
     <script type="text/javascript" src="{{ url_for('static',filename='js/xadmin.js') }}"></script>
 </head>
@@ -26,7 +28,7 @@
         </div>
         <div class="layui-col-md12">
             <div class="layui-card">
-                <div class="layui-card-header">数据统计</div>
+                <div class="layui-card-header" style="font-size: 20px;">项目质量控制数据统计</div>
                 <div class="layui-card-body ">
                     <ul class="layui-row layui-col-space10 layui-this x-admin-carousel x-admin-backlog">
                         <li class="layui-col-md2 layui-col-xs6">
@@ -127,228 +129,384 @@
                 </div>
             </div>
         </div>
-        <div class="layui-fluid">
-            <div class="layui-row layui-col-space15">
+    </div>
+</div>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-header">标准折线图</div>
+                <div class="layui-card-body">
 
-                <div class="layui-col-sm12 layui-col-md6">
-                    <div class="layui-card">
-                        <div class="layui-card-header">最新一周新增用户</div>
-                        <div class="layui-card-body" style="min-height: 280px;">
-                            <div id="main1" class="layui-col-sm12" style="height: 300px;"></div>
-
+                    <div class="layui-carousel layadmin-carousel layadmin-dataview" data-anim="fade"
+                         lay-filter="LAY-index-normline">
+                        <div carousel-item id="LAY-index-normline">
+                            <div><i class="layui-icon layui-icon-loading1 layadmin-loading"></i></div>
                         </div>
                     </div>
-                </div>
-                <div class="layui-col-sm12 layui-col-md6">
-                    <div class="layui-card">
-                        <div class="layui-card-header">最新一周PV/UV量</div>
-                        <div class="layui-card-body" style="min-height: 280px;">
-                            <div id="main2" class="layui-col-sm12" style="height: 300px;"></div>
 
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header">堆积折线图</div>
+                <div class="layui-card-body">
+
+                    <div class="layui-carousel layadmin-carousel layadmin-dataview" data-anim="fade"
+                         lay-filter="LAY-index-heapline">
+                        <div carousel-item id="LAY-index-heapline">
+                            <div><i class="layui-icon layui-icon-loading1 layadmin-loading"></i></div>
                         </div>
                     </div>
-                </div>
-                <div class="layui-col-sm12 layui-col-md6">
-                    <div class="layui-card">
-                        <div class="layui-card-header">用户来源</div>
-                        <div class="layui-card-body" style="min-height: 280px;">
-                            <div id="main3" class="layui-col-sm12" style="height: 300px;"></div>
 
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header">不等距折线图</div>
+                <div class="layui-card-body">
+
+                    <div class="layui-carousel layadmin-carousel layadmin-dataview" data-anim="fade"
+                         lay-filter="LAY-index-diffline">
+                        <div carousel-item id="LAY-index-diffline">
+                            <div><i class="layui-icon layui-icon-loading1 layadmin-loading"></i></div>
                         </div>
                     </div>
-                </div>
-                <div class="layui-col-sm12 layui-col-md6">
-                    <div class="layui-card">
-                        <div class="layui-card-header">硬盘使用量</div>
-                        <div class="layui-card-body" style="min-height: 280px;">
-                            <div id="main4" class="layui-col-sm12" style="height: 300px;"></div>
 
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-header">堆积面积图</div>
+                <div class="layui-card-body">
+
+                    <div class="layui-carousel layadmin-carousel layadmin-dataview" data-anim="fade"
+                         lay-filter="LAY-index-heaparea">
+                        <div carousel-item id="LAY-index-heaparea">
+                            <div><i class="layui-icon layui-icon-loading1 layadmin-loading"></i></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header">面积图</div>
+                <div class="layui-card-body">
+
+                    <div class="layui-carousel layadmin-carousel layadmin-dataview" data-anim="fade"
+                         lay-filter="LAY-index-area">
+                        <div carousel-item id="LAY-index-area">
+                            <div><i class="layui-icon layui-icon-loading1 layadmin-loading"></i></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header">对数轴</div>
+                <div class="layui-card-body">
+
+                    <div class="layui-carousel layadmin-carousel layadmin-dataview" data-anim="fade"
+                         lay-filter="LAY-index-logline">
+                        <div carousel-item id="LAY-index-logline">
+                            <div><i class="layui-icon layui-icon-loading1 layadmin-loading"></i></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-header">标准柱状图</div>
+                <div class="layui-card-body">
+
+                    <div class="layui-carousel layadmin-carousel layadmin-dataview" data-anim="fade"
+                         lay-filter="LAY-index-normcol">
+                        <div carousel-item id="LAY-index-normcol">
+                            <div><i class="layui-icon layui-icon-loading1 layadmin-loading"></i></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header">堆积柱状图</div>
+                <div class="layui-card-body">
+
+                    <div class="layui-carousel layadmin-carousel layadmin-dataview" data-anim="fade"
+                         lay-filter="LAY-index-heapcol">
+                        <div carousel-item id="LAY-index-heapcol">
+                            <div><i class="layui-icon layui-icon-loading1 layadmin-loading"></i></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header">不等距柱形图</div>
+                <div class="layui-card-body">
+
+                    <div class="layui-carousel layadmin-carousel layadmin-dataview" data-anim="fade"
+                         lay-filter="LAY-index-diffcol">
+                        <div carousel-item id="LAY-index-diffcol">
+                            <div><i class="layui-icon layui-icon-loading1 layadmin-loading"></i></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header">彩虹柱形图</div>
+                <div class="layui-card-body">
+
+                    <div class="layui-carousel layadmin-carousel layadmin-dataview" data-anim="fade"
+                         lay-filter="LAY-index-colorline">
+                        <div carousel-item id="LAY-index-colorline">
+                            <div><i class="layui-icon layui-icon-loading1 layadmin-loading"></i></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-header">标准条形图</div>
+                <div class="layui-card-body">
+
+                    <div class="layui-carousel layadmin-carousel layadmin-dataview" data-anim="fade"
+                         lay-filter="LAY-index-normbar">
+                        <div carousel-item id="LAY-index-normbar">
+                            <div><i class="layui-icon layui-icon-loading1 layadmin-loading"></i></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header">堆积条形图</div>
+                <div class="layui-card-body">
+
+                    <div class="layui-carousel layadmin-carousel layadmin-dataview" data-anim="fade"
+                         lay-filter="LAY-index-heapbar">
+                        <div carousel-item id="LAY-index-heapbar">
+                            <div><i class="layui-icon layui-icon-loading1 layadmin-loading"></i></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header">旋风条形图</div>
+                <div class="layui-card-body">
+
+                    <div class="layui-carousel layadmin-carousel layadmin-dataview" data-anim="fade"
+                         lay-filter="LAY-index-windline">
+                        <div carousel-item id="LAY-index-windline">
+                            <div><i class="layui-icon layui-icon-loading1 layadmin-loading"></i></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.min.js"></script>
-    <script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('main1'));
 
-        // 指定图表的配置项和数据
-        var option = {
-            grid: {
-                top: '5%',
-                right: '1%',
-                left: '1%',
-                bottom: '10%',
-                containLabel: true
-            },
-            tooltip: {
-                trigger: 'axis'
-            },
-            xAxis: {
+<script src="../../static/layuiadmin/layui/layui.js"></script>
+<script>
+    layui.config({
+        base: '../../static/layuiadmin/' //静态资源所在路径
+    }).extend({
+        index: 'lib/index' //主入口模块
+    }).use(['index', 'senior']);
+</script>
+
+
+<script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.min.js"></script>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main1'));
+
+    // 指定图表的配置项和数据
+    var option = {
+        grid: {
+            top: '5%',
+            right: '1%',
+            left: '1%',
+            bottom: '10%',
+            containLabel: true
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        xAxis: {
+            type: 'category',
+            data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            name: '用户量',
+            data: [820, 932, 901, 934, 1290, 1330, 1320],
+            type: 'line',
+            smooth: true
+        }]
+    };
+
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main2'));
+
+    // 指定图表的配置项和数据
+    var option = {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                label: {
+                    backgroundColor: '#6a7985'
+                }
+            }
+        },
+        grid: {
+            top: '5%',
+            right: '2%',
+            left: '1%',
+            bottom: '10%',
+            containLabel: true
+        },
+        xAxis: [
+            {
                 type: 'category',
+                boundaryGap: false,
                 data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
-            },
-            yAxis: {
+            }
+        ],
+        yAxis: [
+            {
                 type: 'value'
-            },
-            series: [{
-                name: '用户量',
-                data: [820, 932, 901, 934, 1290, 1330, 1320],
+            }
+        ],
+        series: [
+            {
+                name: 'PV',
                 type: 'line',
+                areaStyle: {normal: {}},
+                data: [120, 132, 101, 134, 90, 230, 210],
                 smooth: true
-            }]
-        };
+            },
+            {
+                name: 'UV',
+                type: 'line',
+                areaStyle: {normal: {}},
+                data: [45, 182, 191, 234, 290, 330, 310],
+                smooth: true,
+
+            }
+        ]
+    };
 
 
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
 
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('main2'));
 
-        // 指定图表的配置项和数据
-        var option = {
-            tooltip: {
-                trigger: 'axis',
-                axisPointer: {
-                    type: 'cross',
-                    label: {
-                        backgroundColor: '#6a7985'
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main3'));
+
+    // 指定图表的配置项和数据
+    var option = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+            data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
+        },
+        series: [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius: '55%',
+                center: ['50%', '60%'],
+                data: [
+                    {value: 335, name: '直接访问'},
+                    {value: 310, name: '邮件营销'},
+                    {value: 234, name: '联盟广告'},
+                    {value: 135, name: '视频广告'},
+                    {value: 1548, name: '搜索引擎'}
+                ],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
                     }
                 }
-            },
-            grid: {
-                top: '5%',
-                right: '2%',
-                left: '1%',
-                bottom: '10%',
-                containLabel: true
-            },
-            xAxis: [
-                {
-                    type: 'category',
-                    boundaryGap: false,
-                    data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
-                }
-            ],
-            yAxis: [
-                {
-                    type: 'value'
-                }
-            ],
-            series: [
-                {
-                    name: 'PV',
-                    type: 'line',
-                    areaStyle: {normal: {}},
-                    data: [120, 132, 101, 134, 90, 230, 210],
-                    smooth: true
-                },
-                {
-                    name: 'UV',
-                    type: 'line',
-                    areaStyle: {normal: {}},
-                    data: [45, 182, 191, 234, 290, 330, 310],
-                    smooth: true,
-
-                }
-            ]
-        };
+            }
+        ]
+    };
 
 
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
 
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main4'));
 
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('main3'));
+    // 指定图表的配置项和数据
+    var option = {
+        tooltip: {
+            formatter: "{a} <br/>{b} : {c}%"
+        },
+        series: [
+            {
+                name: '硬盘使用量',
+                type: 'gauge',
+                detail: {formatter: '{value}%'},
+                data: [{value: 88, name: '已使用'}]
+            }
+        ]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    var ss = document.getElementById('t').getElementsByTagName('span');
 
-        // 指定图表的配置项和数据
-        var option = {
-            tooltip: {
-                trigger: 'item',
-                formatter: "{a} <br/>{b} : {c} ({d}%)"
-            },
-            legend: {
-                orient: 'vertical',
-                left: 'left',
-                data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
-            },
-            series: [
-                {
-                    name: '访问来源',
-                    type: 'pie',
-                    radius: '55%',
-                    center: ['50%', '60%'],
-                    data: [
-                        {value: 335, name: '直接访问'},
-                        {value: 310, name: '邮件营销'},
-                        {value: 234, name: '联盟广告'},
-                        {value: 135, name: '视频广告'},
-                        {value: 1548, name: '搜索引擎'}
-                    ],
-                    itemStyle: {
-                        emphasis: {
-                            shadowBlur: 10,
-                            shadowOffsetX: 0,
-                            shadowColor: 'rgba(0, 0, 0, 0.5)'
-                        }
-                    }
-                }
-            ]
-        };
+    function changetime() {
+        var time = new Date();
+        ss[0].innerHTML = time.getFullYear();
+        ss[1].innerHTML = time.getMonth() + 1;
+        ss[2].innerHTML = time.getDate();
+        ss[3].innerHTML = time.getHours();
+        ss[4].innerHTML = time.getMinutes();
+        ss[5].innerHTML = time.getSeconds();
+    }
 
-
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('main4'));
-
-        // 指定图表的配置项和数据
-        var option = {
-            tooltip: {
-                formatter: "{a} <br/>{b} : {c}%"
-            },
-            series: [
-                {
-                    name: '硬盘使用量',
-                    type: 'gauge',
-                    detail: {formatter: '{value}%'},
-                    data: [{value: 88, name: '已使用'}]
-                }
-            ]
-        };
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-    </script>
-    <script>
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-    <script>
-        var ss=document.getElementById('t').getElementsByTagName('span');
-        function changetime(){
-            var time=new Date();
-            ss[0].innerHTML=time.getFullYear();
-            ss[1].innerHTML=time.getMonth()+1;
-            ss[2].innerHTML=time.getDate();
-            ss[3].innerHTML=time.getHours();
-            ss[4].innerHTML=time.getMinutes();
-            ss[5].innerHTML=time.getSeconds();
-        }
+    changetime();
+    setInterval(function () {
         changetime();
-        setInterval(function(){
-            changetime();
-        },1000)
-    </script>
+    }, 1000)
+</script>
 </body>
 </html>

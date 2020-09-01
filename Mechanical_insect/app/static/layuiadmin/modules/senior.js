@@ -79,7 +79,7 @@ layui.define(function(exports){
           {
             name:'最高气温',
             type:'line',
-            data:[11, 11, 15, 13, 12, 13, 10],
+              data: [110, 11, 15, 13, 12, 13, 10],
             markPoint : {
               data : [{type : 'max', name: '最大值'},{type : 'min', name: '最小值'}]
             },

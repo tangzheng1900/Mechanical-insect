@@ -13,12 +13,12 @@ import interface_auto_cases.conf.NacosConfig as NC
 db = NC.config
 # 定义数据库连接
 app = Flask(__name__)  # 创建实例化app对象
-# import logging
-# logger = logging.getLogger("werkzeug")
-# logger.setLevel(logging.INFO)
+import logging
 
+logger = logging.getLogger("werkzeug")
+logger.setLevel(logging.INFO)
 
-# app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:123456@172.16.20.130:3306/autotest"
+# app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:123456@192.168.182.130:3306/autotest"
 app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://" + db['user'] + ":" + db['password'] + "@" + db[
     'host'] + ":" + str(db['port']) + "/" + db['database']
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True  # 配置，如果设置True,将会追踪对象修改并且发送信号
@@ -43,9 +43,11 @@ app.register_blueprint(admin_blueprint, url_prefix="/admin")
 # 404
 @app.errorhandler(404)
 def page_not_found(error):
+    # app.logger.warning('页面不存在！')
     return render_template("ul/404.html"), 404
 
 # 500
 @app.errorhandler(500)
 def page_not_found(error):
+    # app.logger.warning('服务器无响应！')
     return render_template("ul/500.html"), 500
