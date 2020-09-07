@@ -87,14 +87,14 @@ layui.define(function(exports){
           trigger: 'axis'
         },
         legend: {
-          data:['最高气温','最低气温']
+          data:['安全核验', '智能客服', '数据识别', '数据发现', '数智校园', 'AI开放平台']
         },
         calculable : true,
         xAxis : [
           {
             type : 'category',
             boundaryGap : false,
-            data : ['周一','周二','周三','周四','周五','周六','周日']
+            data : ['LAST','九次','八次','七次','六次','五次','四次','三次','两次','最近']
           }
         ],
         yAxis : [
@@ -107,9 +107,9 @@ layui.define(function(exports){
         ],
         series : [
           {
-            name:'最高气温',
+            name:'安全核验',
             type:'line',
-              data: [110, 11, 15, 13, 12, 13, 10],
+              data: [110, 11, 15, 13, 12, 13, 10,55,77,33],
             markPoint : {
               data : [{type : 'max', name: '最大值'},{type : 'min', name: '最小值'}]
             },
@@ -118,16 +118,60 @@ layui.define(function(exports){
             }
           },
           {
-            name:'最低气温',
+            name:'智能客服',
             type:'line',
-            data:[1, -2, 2, 5, 3, 2, 0],
+            data:[19, -23, 24, 53, 33, 23, 10,-1,7,40],
             markPoint : {
               data : [{name : '周最低', value : -2, xAxis: 1, yAxis: -1.5}]
             },
             markLine : {
               data : [{type : 'average', name : '平均值'}]
             }
-          }
+          },
+          {
+            name:'数据识别',
+            type:'line',
+            data:[14, -42, 26, 59, 73, 52, 70,66,47,83],
+            markPoint : {
+              data : [{name : '周最低', value : -2, xAxis: 1, yAxis: -1.5}]
+            },
+            markLine : {
+              data : [{type : 'average', name : '平均值'}]
+            }
+          },
+            {
+            name:'数据发现',
+            type:'line',
+            data:[12, -22, 2, 5, 32, 23, 30,2,37,58],
+            markPoint : {
+              data : [{name : '周最低', value : -2, xAxis: 1, yAxis: -1.5}]
+            },
+            markLine : {
+              data : [{type : 'average', name : '平均值'}]
+            }
+          },
+            {
+            name:'数智校园',
+            type:'line',
+            data:[1, -2, 2, 35, 66, 72, 95,63,4,2],
+            markPoint : {
+              data : [{name : '周最低', value : -2, xAxis: 1, yAxis: -1.5}]
+            },
+            markLine : {
+              data : [{type : 'average', name : '平均值'}]
+            }
+          },
+            {
+            name:'AI开放平台',
+            type:'line',
+            data:[19, -2, 44,23, 30, 2, 90,47,97,50],
+            markPoint : {
+              data : [{name : '周最低', value : -2, xAxis: 1, yAxis: -1.5}]
+            },
+            markLine : {
+              data : [{type : 'average', name : '平均值'}]
+            }
+          },
         ]
       }
     ]
