@@ -1,0 +1,163 @@
+2020-03-30 09:10:27,792-[INFO]-logger.py-Unit_test-日志信息:============我要开始测试了===============
+2020-03-30 09:10:27,794-[INFO]-logger.py-Unit_test-日志信息:正在执行第10条用例
+2020-03-30 09:10:27,795-[INFO]-logger.py-Unit_test-日志信息:当前请求内容_URL：https://testznkf.citydo.com.cn/v1/staff/login；method：POST1；data：{'username': 'emhhbmcwMDE=', 'password': 'MTIzNDU2', 'forceFlag': 'true'}；sql：{}
+2020-03-30 09:10:27,997-[INFO]-logger.py-httpRequest-日志信息:客服登录请求返回：{'code': 'ok'}
+2020-03-30 09:10:28,121-[INFO]-logger.py-httpRequest-日志信息:客服返回cookie：{'s_authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJzXzgxOWFlZThlZDg1NTRiOWY4MmU4ZDYzMDJjOGQyNDExIiwidGVuYW50SWQiOiJfMU5UTVdMQSIsImV4cCI6MTU4NjEzNTQyNn0.5V2mGORitR9QuyccrDVl_v-TYMMEWpP601N-b5CSz1g'}
+2020-03-30 09:10:28,303-[INFO]-logger.py-httpRequest-日志信息:客户返回cookie：{'v_authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJ2X2FfMDBkOWQwNWI3NzI3NDY0MTllZjQ1ZGM5YjA3YmRiMjYiLCJ0ZW5hbnRJZCI6Il8xTlRNV0xBIiwiZXhwIjoxNTg3MDAxODU1fQ.zccBqICGiZpZjAFKdTY0x_C_UgQHdN0g1bE6a_Y8eFI', 'visitor_id': 'v_a_00d9d05b772746419ef45dc9b07bdb26'}
+2020-03-30 09:10:28,306-[INFO]-logger.py-httpRequest-日志信息:当前客服headers配置：{'Host': '47.110.131.231', 'Connection': 'keep-alive', 'Origin': 'http://47.110.131.231', 'X-TraceId': 'c502d7c0-5c48-11ea-98c2-1b2105b568ad', 'Referer': 'http://47.110.131.231/customerService/SystemManagement/Online', 'Cookie': 's_authorization=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJzXzgxOWFlZThlZDg1NTRiOWY4MmU4ZDYzMDJjOGQyNDExIiwidGVuYW50SWQiOiJfMU5UTVdMQSIsImV4cCI6MTU4NjEzNTQyNn0.5V2mGORitR9QuyccrDVl_v-TYMMEWpP601N-b5CSz1g'}
+2020-03-30 09:10:28,308-[INFO]-logger.py-httpRequest-日志信息:当前客客户header配置：{'Host': '47.110.131.231', 'Connection': 'keep-alive', 'Origin': 'http://47.110.131.231', 'X-TraceId': 'b2486a20-a9d1-11e9-a2b4-5fa2b013c14c', 'Referer': 'http://47.110.131.231/customerService/SystemManagement/Online', 'Cookie': 'v_authorization=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJ2X2FfMDBkOWQwNWI3NzI3NDY0MTllZjQ1ZGM5YjA3YmRiMjYiLCJ0ZW5hbnRJZCI6Il8xTlRNV0xBIiwiZXhwIjoxNTg3MDAxODU1fQ.zccBqICGiZpZjAFKdTY0x_C_UgQHdN0g1bE6a_Y8eFI'}
+2020-03-30 09:10:28,311-[INFO]-logger.py-httpRequest-日志信息:现在开始进行post1请求
+2020-03-30 09:10:28,416-[INFO]-logger.py-Unit_test-日志信息:用例code比对成功！实际返回：ok
+2020-03-30 09:10:28,421-[INFO]-logger.py-Unit_test-日志信息:返回数据写入excel{'id': 10, 'actually': 'ok', 'result': 'pass'}
+2020-03-30 09:10:28,430-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:10:28,435-[INFO]-logger.py-get_mysql_info-日志信息:写入sql语句记录！！！UPDATE testcase SET actually='ok',sql_result='',result='pass',msg='' where id=10
+2020-03-30 09:10:28,437-[INFO]-logger.py-get_mysql_info-日志信息:写入sql数据记录！！！{'id': 10, 'actually': 'ok', 'result': 'pass', 'msg': '', 'sql_result': ''}
+2020-03-30 09:10:28,618-[INFO]-logger.py-get_mysql_info-日志信息:sql写入统计测试记录成功！
+2020-03-30 09:10:28,921-[INFO]-logger.py-Unit_test-日志信息:===============我要结束测试了！==================
+2020-03-30 09:10:28,923-[INFO]-logger.py-Unit_test-日志信息:============我要开始测试了===============
+2020-03-30 09:10:28,924-[INFO]-logger.py-Unit_test-日志信息:正在执行第11条用例
+2020-03-30 09:10:28,927-[INFO]-logger.py-Unit_test-日志信息:当前请求内容_URL：https://testznkf.citydo.com.cn/v1/tenants/_1NTMWLA/addStaffSummaryAfterwards；method：POST；data：{'staffId': 's_819aee8ed8554b9f82e8d6302c8d2411', 'keywords': '测试', 'afterEvent': '这个是什么鬼'}；sql：{}
+2020-03-30 09:10:29,010-[INFO]-logger.py-httpRequest-日志信息:客服登录请求返回：{'code': 'ok'}
+2020-03-30 09:10:29,123-[INFO]-logger.py-httpRequest-日志信息:客服返回cookie：{'s_authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJzXzgxOWFlZThlZDg1NTRiOWY4MmU4ZDYzMDJjOGQyNDExIiwidGVuYW50SWQiOiJfMU5UTVdMQSIsImV4cCI6MTU4NjEzNTQyN30.BcKjbCHmovVV76M7n5ImJFDaU8qMh3FOUt_IxWGxf1A'}
+2020-03-30 09:10:29,290-[INFO]-logger.py-httpRequest-日志信息:客户返回cookie：{'v_authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJ2X2FfYTgxODdkNjQ1Zjc5NGVhZGJjYTM5YmQ0OGUxMTZmNTMiLCJ0ZW5hbnRJZCI6Il8xTlRNV0xBIiwiZXhwIjoxNTg3MDAxODU2fQ.6zo96ByKNq9dkVaOR-M1JAP0COCQevjUt_7HuM50Kas', 'visitor_id': 'v_a_a8187d645f794eadbca39bd48e116f53'}
+2020-03-30 09:10:29,292-[INFO]-logger.py-httpRequest-日志信息:当前客服headers配置：{'Host': '47.110.131.231', 'Connection': 'keep-alive', 'Origin': 'http://47.110.131.231', 'X-TraceId': 'c502d7c0-5c48-11ea-98c2-1b2105b568ad', 'Referer': 'http://47.110.131.231/customerService/SystemManagement/Online', 'Cookie': 's_authorization=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJzXzgxOWFlZThlZDg1NTRiOWY4MmU4ZDYzMDJjOGQyNDExIiwidGVuYW50SWQiOiJfMU5UTVdMQSIsImV4cCI6MTU4NjEzNTQyN30.BcKjbCHmovVV76M7n5ImJFDaU8qMh3FOUt_IxWGxf1A'}
+2020-03-30 09:10:29,293-[INFO]-logger.py-httpRequest-日志信息:当前客客户header配置：{'Host': '47.110.131.231', 'Connection': 'keep-alive', 'Origin': 'http://47.110.131.231', 'X-TraceId': 'b2486a20-a9d1-11e9-a2b4-5fa2b013c14c', 'Referer': 'http://47.110.131.231/customerService/SystemManagement/Online', 'Cookie': 'v_authorization=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJ2X2FfYTgxODdkNjQ1Zjc5NGVhZGJjYTM5YmQ0OGUxMTZmNTMiLCJ0ZW5hbnRJZCI6Il8xTlRNV0xBIiwiZXhwIjoxNTg3MDAxODU2fQ.6zo96ByKNq9dkVaOR-M1JAP0COCQevjUt_7HuM50Kas'}
+2020-03-30 09:10:29,294-[INFO]-logger.py-httpRequest-日志信息:现在开始进行post请求
+2020-03-30 09:10:29,496-[INFO]-logger.py-Unit_test-日志信息:接口返回data{'code': 'ok', 'data': {'baseSuccess': True, 'httpStatusCode': 0, 'success': True}}
+2020-03-30 09:10:29,499-[INFO]-logger.py-Unit_test-日志信息:用例code比对成功！实际返回：ok
+2020-03-30 09:10:29,501-[INFO]-logger.py-Unit_test-日志信息:返回数据写入excel{'id': 11, 'actually': 'ok', 'msg': {'baseSuccess': True, 'httpStatusCode': 0, 'success': True}, 'result': 'pass'}
+2020-03-30 09:10:29,504-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:10:29,505-[INFO]-logger.py-get_mysql_info-日志信息:写入sql语句记录！！！UPDATE testcase SET actually='ok',sql_result='',result='pass',msg='{'baseSuccess': True, 'httpStatusCode': 0, 'success': True}' where id=11
+2020-03-30 09:10:29,507-[INFO]-logger.py-get_mysql_info-日志信息:写入sql数据记录！！！{'id': 11, 'actually': 'ok', 'msg': {'baseSuccess': True, 'httpStatusCode': 0, 'success': True}, 'result': 'pass', 'sql_result': ''}
+2020-03-30 09:10:29,608-[INFO]-logger.py-get_mysql_info-日志信息:sql写入统计测试记录失败！！！(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'baseSuccess': True, 'httpStatusCode': 0, 'success': True}' where id=11' at line 1")
+2020-03-30 09:10:29,609-[INFO]-logger.py-Unit_test-日志信息:===============我要结束测试了！==================
+2020-03-30 09:10:29,611-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:10:29,612-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:10:29,737-[INFO]-logger.py-get_mysql_info-日志信息:插入数据库sql拼接成功！INSERT INTO znkf (restult,sum,ok,fail,error,error_1,date) VALUES (%(restult)s,%(sum)s,%(ok)s,%(fail)s,%(error)s,%(error_1)s,%(date)s)
+2020-03-30 09:10:29,830-[INFO]-logger.py-get_mysql_info-日志信息:sql写入统计测试记录成功！[{'restult': "{'testname': '质量保障部—章广华', 'time': '2020-03-30 09:10:27', 'sumtime': '0:00:01.820984', 'testresult': '共 2 条接口用例，通过 1 条，错误 1 条', 'tonggl': '50.00%'}", 'sum': 2, 'ok': 1, 'fail': 0, 'error': 1, 'error_1': '50.00', 'date': '2020-03-27_18_15_19'}]
+2020-03-30 09:10:29,833-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:10:29,937-[INFO]-logger.py-get_mysql_info-日志信息:测试结果数据库调用成功！
+2020-03-30 09:10:29,939-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:10:30,045-[INFO]-logger.py-get_mysql_info-日志信息:测试结果数据库调用成功！
+2020-03-30 09:10:30,047-[INFO]-logger.py-main-日志信息:获取表单内容成功：{'testname': '质量保障部—章广华', 'time': '2020-03-27 22:00:06', 'sumtime': '0:05:06.052426', 'testresult': '共 410 条接口用例，通过 389 条，失败 18 条，错误 3 条', 'tonggl': '94.88%'}
+2020-03-30 09:10:30,051-[INFO]-logger.py-main-日志信息:本次Python接口自动化框架执行完毕！2020-03-30 09:10:30
+2020-03-30 09:14:16,569-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:14:16,604-[INFO]-logger.py-get_mysql_info-日志信息:查询项目配置结果调用成功！[{'id': 0, 'name': '智能客服', 'version': 'V0.3.5', 'smtp': "{'mail_host':'smtp.citydo.com.cn','mail_user':'zentao@citydo.com.cn','mail_pass':'Zz123456','From':'zhanggh@citydo.com.cn','To':'Everboby','subject':'AI虚拟机器人接口自动化测试报告【V0.3.5】','MIMEText':'这是python接口自动框架邮件模块发送的接口自动化测试报告，详情见附件或查看在线报告。\\n测试报告仅体现某接口请求以及参数值验证情况！',}", 'project_url': 'https://testznkf.citydo.com.cn', 'dbconfig': "{'host':'rm-bp153srx1gt80tl1x2o.mysql.rds.aliyuncs.com','user':'sunbin','password':'Sunbin@123','port':3306,'database':'test_znkf'}", 'user_id': 0, 'addtime': datetime.datetime(2020, 3, 23, 19, 2, 34), 'status': 0, 'comment': '1'}]
+2020-03-30 09:14:16,606-[INFO]-logger.py-readExcel-日志信息:用例执行模式（0全部执行，1指定接口，2区间接口）：1
+2020-03-30 09:14:16,607-[INFO]-logger.py-readExcel-日志信息:配置用例列表：指定[309],区间[294, 410]
+2020-03-30 09:14:16,608-[INFO]-logger.py-readExcel-日志信息:当前使用临时配置用例列表：[309]
+2020-03-30 09:14:16,610-[INFO]-logger.py-readExcel-日志信息:开始处理数据库用例自动化格式！
+2020-03-30 09:14:16,612-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:14:16,661-[INFO]-logger.py-get_mysql_info-日志信息:查询测试库用例结果调用成功！[{'id': 10, 'cases_name': '登录接口-成功', 'method': 'POST1', 'url': '/v1/staff/login', 'data': '{"username":"emhhbmcwMDE=","password":"MTIzNDU2","forceFlag":"true"}', 'sql': '{}', 'code': 'ok', 'actually': 'ok', 'sql_result': '', 'result': 'pass', 'msg': '', 'version': 'V0.3.5', 'models': '智能客服-测试版', 'user_id': 'admin', 'case_leader': 1, 'addtime': datetime.datetime(2020, 3, 26, 14, 42, 44), 'update_time': datetime.datetime(2020, 3, 26, 14, 42, 44), 'Environment': '智能客服', 'pass_num': 0, 'fail_num': 0, 'execute_count': 0, 'case_pass': 0.0, 'status': 0, 'comment': '1'}, {'id': 11, 'cases_name': '在线-事务小结-添加事务小结-成功', 'method': 'POST', 'url': '/v1/tenants/_1NTMWLA/addStaffSummaryAfterwards', 'data': '{ "staffId":"s_819aee8ed8554b9f82e8d6302c8d2411", "keywords":"测试","afterEvent":"这个是什么鬼"}', 'sql': '{}', 'code': 'ok', 'actually': '', 'sql_result': '', 'result': '', 'msg': '', 'version': 'V0.3.5', 'models': '智能客服-测试版', 'user_id': 'admin', 'case_leader': 1, 'addtime': datetime.datetime(2020, 3, 26, 14, 42, 44), 'update_time': datetime.datetime(2020, 3, 26, 14, 42, 44), 'Environment': '智能客服', 'pass_num': 0, 'fail_num': 0, 'execute_count': 0, 'case_pass': 0.0, 'status': 0, 'comment': '1'}]
+2020-03-30 09:14:16,662-[INFO]-logger.py-readExcel-日志信息:------------版本全部用例集------------
+2020-03-30 09:14:16,671-[INFO]-logger.py-Unit_test-日志信息:============我要开始测试了===============
+2020-03-30 09:14:16,672-[INFO]-logger.py-Unit_test-日志信息:正在执行第10条用例
+2020-03-30 09:14:16,673-[INFO]-logger.py-Unit_test-日志信息:当前请求内容_URL：https://testznkf.citydo.com.cn/v1/staff/login；method：POST1；data：{'username': 'emhhbmcwMDE=', 'password': 'MTIzNDU2', 'forceFlag': 'true'}；sql：{}
+2020-03-30 09:14:16,822-[INFO]-logger.py-httpRequest-日志信息:客服登录请求返回：{'code': 'ok'}
+2020-03-30 09:14:16,892-[INFO]-logger.py-httpRequest-日志信息:客服返回cookie：{'s_authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJzXzgxOWFlZThlZDg1NTRiOWY4MmU4ZDYzMDJjOGQyNDExIiwidGVuYW50SWQiOiJfMU5UTVdMQSIsImV4cCI6MTU4NjEzNTY1NX0.35TaXYbI2v7jp6W1kxiT0FB2dOYob1UuA6XFWZ1NzSQ'}
+2020-03-30 09:14:16,994-[INFO]-logger.py-httpRequest-日志信息:客户返回cookie：{'v_authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJ2X2FfNGQ5OTI2MTcwMzM0NGViZjhmZmMzN2NiNDdkNzFlODkiLCJ0ZW5hbnRJZCI6Il8xTlRNV0xBIiwiZXhwIjoxNTg3MDAyMDg0fQ.Akwg1_IjKyIHIcfoHTRiphfRdwHGhl9mO6oT3eeZ8w8', 'visitor_id': 'v_a_4d99261703344ebf8ffc37cb47d71e89'}
+2020-03-30 09:14:16,998-[INFO]-logger.py-httpRequest-日志信息:当前客服headers配置：{'Host': '47.110.131.231', 'Connection': 'keep-alive', 'Origin': 'http://47.110.131.231', 'X-TraceId': 'c502d7c0-5c48-11ea-98c2-1b2105b568ad', 'Referer': 'http://47.110.131.231/customerService/SystemManagement/Online', 'Cookie': 's_authorization=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJzXzgxOWFlZThlZDg1NTRiOWY4MmU4ZDYzMDJjOGQyNDExIiwidGVuYW50SWQiOiJfMU5UTVdMQSIsImV4cCI6MTU4NjEzNTY1NX0.35TaXYbI2v7jp6W1kxiT0FB2dOYob1UuA6XFWZ1NzSQ'}
+2020-03-30 09:14:17,000-[INFO]-logger.py-httpRequest-日志信息:当前客客户header配置：{'Host': '47.110.131.231', 'Connection': 'keep-alive', 'Origin': 'http://47.110.131.231', 'X-TraceId': 'b2486a20-a9d1-11e9-a2b4-5fa2b013c14c', 'Referer': 'http://47.110.131.231/customerService/SystemManagement/Online', 'Cookie': 'v_authorization=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJ2X2FfNGQ5OTI2MTcwMzM0NGViZjhmZmMzN2NiNDdkNzFlODkiLCJ0ZW5hbnRJZCI6Il8xTlRNV0xBIiwiZXhwIjoxNTg3MDAyMDg0fQ.Akwg1_IjKyIHIcfoHTRiphfRdwHGhl9mO6oT3eeZ8w8'}
+2020-03-30 09:14:17,002-[INFO]-logger.py-httpRequest-日志信息:现在开始进行post1请求
+2020-03-30 09:14:17,066-[INFO]-logger.py-Unit_test-日志信息:用例code比对成功！实际返回：ok
+2020-03-30 09:14:17,067-[INFO]-logger.py-Unit_test-日志信息:返回数据写入excel{'id': 10, 'actually': 'ok', 'result': 'pass'}
+2020-03-30 09:14:17,068-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:14:17,069-[INFO]-logger.py-get_mysql_info-日志信息:写入sql语句记录！！！UPDATE testcase SET actually='ok',sql_result='',result='pass',msg='' where id=10
+2020-03-30 09:14:17,070-[INFO]-logger.py-get_mysql_info-日志信息:写入sql数据记录！！！{'id': 10, 'actually': 'ok', 'result': 'pass', 'msg': '', 'sql_result': ''}
+2020-03-30 09:14:17,112-[INFO]-logger.py-get_mysql_info-日志信息:sql写入统计测试记录成功！
+2020-03-30 09:14:17,413-[INFO]-logger.py-Unit_test-日志信息:===============我要结束测试了！==================
+2020-03-30 09:14:17,415-[INFO]-logger.py-Unit_test-日志信息:============我要开始测试了===============
+2020-03-30 09:14:17,416-[INFO]-logger.py-Unit_test-日志信息:正在执行第11条用例
+2020-03-30 09:14:17,417-[INFO]-logger.py-Unit_test-日志信息:当前请求内容_URL：https://testznkf.citydo.com.cn/v1/tenants/_1NTMWLA/addStaffSummaryAfterwards；method：POST；data：{'staffId': 's_819aee8ed8554b9f82e8d6302c8d2411', 'keywords': '测试', 'afterEvent': '这个是什么鬼'}；sql：{}
+2020-03-30 09:14:17,470-[INFO]-logger.py-httpRequest-日志信息:客服登录请求返回：{'code': 'ok'}
+2020-03-30 09:14:17,529-[INFO]-logger.py-httpRequest-日志信息:客服返回cookie：{'s_authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJzXzgxOWFlZThlZDg1NTRiOWY4MmU4ZDYzMDJjOGQyNDExIiwidGVuYW50SWQiOiJfMU5UTVdMQSIsImV4cCI6MTU4NjEzNTY1NX0.35TaXYbI2v7jp6W1kxiT0FB2dOYob1UuA6XFWZ1NzSQ'}
+2020-03-30 09:14:17,612-[INFO]-logger.py-httpRequest-日志信息:客户返回cookie：{'v_authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJ2X2FfMDU2YTliZDhiYWE2NGI3OGI0NTY5NjczMmQ4ZjFkOGQiLCJ0ZW5hbnRJZCI6Il8xTlRNV0xBIiwiZXhwIjoxNTg3MDAyMDg0fQ.EzxxLLuh3OtvnkwD8EXE9UZly1K6o7SlyGRGmv5HRcA', 'visitor_id': 'v_a_056a9bd8baa64b78b45696732d8f1d8d'}
+2020-03-30 09:14:17,614-[INFO]-logger.py-httpRequest-日志信息:当前客服headers配置：{'Host': '47.110.131.231', 'Connection': 'keep-alive', 'Origin': 'http://47.110.131.231', 'X-TraceId': 'c502d7c0-5c48-11ea-98c2-1b2105b568ad', 'Referer': 'http://47.110.131.231/customerService/SystemManagement/Online', 'Cookie': 's_authorization=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJzXzgxOWFlZThlZDg1NTRiOWY4MmU4ZDYzMDJjOGQyNDExIiwidGVuYW50SWQiOiJfMU5UTVdMQSIsImV4cCI6MTU4NjEzNTY1NX0.35TaXYbI2v7jp6W1kxiT0FB2dOYob1UuA6XFWZ1NzSQ'}
+2020-03-30 09:14:17,615-[INFO]-logger.py-httpRequest-日志信息:当前客客户header配置：{'Host': '47.110.131.231', 'Connection': 'keep-alive', 'Origin': 'http://47.110.131.231', 'X-TraceId': 'b2486a20-a9d1-11e9-a2b4-5fa2b013c14c', 'Referer': 'http://47.110.131.231/customerService/SystemManagement/Online', 'Cookie': 'v_authorization=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJ2X2FfMDU2YTliZDhiYWE2NGI3OGI0NTY5NjczMmQ4ZjFkOGQiLCJ0ZW5hbnRJZCI6Il8xTlRNV0xBIiwiZXhwIjoxNTg3MDAyMDg0fQ.EzxxLLuh3OtvnkwD8EXE9UZly1K6o7SlyGRGmv5HRcA'}
+2020-03-30 09:14:17,615-[INFO]-logger.py-httpRequest-日志信息:现在开始进行post请求
+2020-03-30 09:14:17,670-[INFO]-logger.py-Unit_test-日志信息:接口返回data{'code': 'ok', 'data': {'baseSuccess': True, 'httpStatusCode': 0, 'success': True}}
+2020-03-30 09:14:17,671-[INFO]-logger.py-Unit_test-日志信息:用例code比对成功！实际返回：ok
+2020-03-30 09:14:17,672-[INFO]-logger.py-Unit_test-日志信息:返回数据写入excel{'id': 11, 'actually': 'ok', 'msg': {'baseSuccess': True, 'httpStatusCode': 0, 'success': True}, 'result': 'pass'}
+2020-03-30 09:14:17,673-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:14:17,674-[INFO]-logger.py-get_mysql_info-日志信息:写入sql语句记录！！！UPDATE testcase SET actually='ok',sql_result='',result='pass',msg='{'baseSuccess': True, 'httpStatusCode': 0, 'success': True}' where id=11
+2020-03-30 09:14:17,675-[INFO]-logger.py-get_mysql_info-日志信息:写入sql数据记录！！！{'id': 11, 'actually': 'ok', 'msg': {'baseSuccess': True, 'httpStatusCode': 0, 'success': True}, 'result': 'pass', 'sql_result': ''}
+2020-03-30 09:14:17,702-[INFO]-logger.py-get_mysql_info-日志信息:sql写入统计测试记录失败！！！(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'baseSuccess': True, 'httpStatusCode': 0, 'success': True}' where id=11' at line 1")
+2020-03-30 09:14:17,703-[INFO]-logger.py-Unit_test-日志信息:===============我要结束测试了！==================
+2020-03-30 09:14:17,708-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:14:17,709-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:14:17,763-[INFO]-logger.py-get_mysql_info-日志信息:插入数据库sql拼接成功！INSERT INTO znkf (restult,sum,ok,fail,error,error_1,date) VALUES (%(restult)s,%(sum)s,%(ok)s,%(fail)s,%(error)s,%(error_1)s,%(date)s)
+2020-03-30 09:14:17,809-[INFO]-logger.py-get_mysql_info-日志信息:sql写入统计测试记录成功！[{'restult': "{'testname': '质量保障部—章广华', 'time': '2020-03-30 09:14:16', 'sumtime': '0:00:01.037264', 'testresult': '共 2 条接口用例，通过 1 条，错误 1 条', 'tonggl': '50.00%'}", 'sum': 2, 'ok': 1, 'fail': 0, 'error': 1, 'error_1': '50.00', 'date': '2020-03-30_09_14_16'}]
+2020-03-30 09:14:17,811-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:14:17,850-[INFO]-logger.py-get_mysql_info-日志信息:测试结果数据库调用成功！
+2020-03-30 09:14:17,852-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:14:17,915-[INFO]-logger.py-get_mysql_info-日志信息:测试结果数据库调用成功！
+2020-03-30 09:14:17,917-[INFO]-logger.py-main-日志信息:获取表单内容成功：{'testname': '质量保障部—章广华', 'time': '2020-03-30 09:14:16', 'sumtime': '0:00:01.037264', 'testresult': '共 2 条接口用例，通过 1 条，错误 1 条', 'tonggl': '50.00%'}
+2020-03-30 09:14:17,941-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:14:17,942-[INFO]-logger.py-main-日志信息:本次Python接口自动化框架执行完毕！2020-03-30 09:14:17
+2020-03-30 09:21:50,822-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:21:50,858-[INFO]-logger.py-get_mysql_info-日志信息:查询项目配置结果调用成功！[{'id': 0, 'name': '智能客服', 'version': 'V0.3.5', 'smtp': "{'mail_host':'smtp.citydo.com.cn','mail_user':'zentao@citydo.com.cn','mail_pass':'Zz123456','From':'zhanggh@citydo.com.cn','To':'Everboby','subject':'AI虚拟机器人接口自动化测试报告【V0.3.5】','MIMEText':'这是python接口自动框架邮件模块发送的接口自动化测试报告，详情见附件或查看在线报告。\\n测试报告仅体现某接口请求以及参数值验证情况！',}", 'project_url': 'https://testznkf.citydo.com.cn', 'dbconfig': "{'host':'rm-bp153srx1gt80tl1x2o.mysql.rds.aliyuncs.com','user':'sunbin','password':'Sunbin@123','port':3306,'database':'test_znkf'}", 'user_id': 0, 'addtime': datetime.datetime(2020, 3, 23, 19, 2, 34), 'status': 0, 'comment': '1'}]
+2020-03-30 09:21:50,860-[INFO]-logger.py-readExcel-日志信息:用例执行模式（0全部执行，1指定接口，2区间接口）：1
+2020-03-30 09:21:50,862-[INFO]-logger.py-readExcel-日志信息:配置用例列表：指定[309],区间[294, 410]
+2020-03-30 09:21:50,863-[INFO]-logger.py-readExcel-日志信息:当前使用临时配置用例列表：[309]
+2020-03-30 09:21:50,866-[INFO]-logger.py-readExcel-日志信息:开始处理数据库用例自动化格式！
+2020-03-30 09:21:50,868-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:21:50,917-[INFO]-logger.py-get_mysql_info-日志信息:查询测试库用例结果调用成功！[{'id': 10, 'cases_name': '登录接口-成功', 'method': 'POST1', 'url': '/v1/staff/login', 'data': '{"username":"emhhbmcwMDE=","password":"MTIzNDU2","forceFlag":"true"}', 'sql': '{}', 'code': 'ok', 'actually': 'ok', 'sql_result': '', 'result': 'pass', 'msg': '', 'version': 'V0.3.5', 'models': '智能客服-测试版', 'user_id': 'admin', 'case_leader': 1, 'addtime': datetime.datetime(2020, 3, 26, 14, 42, 44), 'update_time': datetime.datetime(2020, 3, 26, 14, 42, 44), 'Environment': '智能客服', 'pass_num': 0, 'fail_num': 0, 'execute_count': 0, 'case_pass': 0.0, 'status': 0, 'comment': '1'}, {'id': 11, 'cases_name': '在线-事务小结-添加事务小结-成功', 'method': 'POST', 'url': '/v1/tenants/_1NTMWLA/addStaffSummaryAfterwards', 'data': '{ "staffId":"s_819aee8ed8554b9f82e8d6302c8d2411", "keywords":"测试","afterEvent":"这个是什么鬼"}', 'sql': '{}', 'code': 'ok', 'actually': '', 'sql_result': '', 'result': '', 'msg': '', 'version': 'V0.3.5', 'models': '智能客服-测试版', 'user_id': 'admin', 'case_leader': 1, 'addtime': datetime.datetime(2020, 3, 26, 14, 42, 44), 'update_time': datetime.datetime(2020, 3, 26, 14, 42, 44), 'Environment': '智能客服', 'pass_num': 0, 'fail_num': 0, 'execute_count': 0, 'case_pass': 0.0, 'status': 0, 'comment': '1'}]
+2020-03-30 09:21:50,918-[INFO]-logger.py-readExcel-日志信息:------------版本全部用例集------------
+2020-03-30 09:21:50,928-[INFO]-logger.py-Unit_test-日志信息:============我要开始测试了===============
+2020-03-30 09:21:50,929-[INFO]-logger.py-Unit_test-日志信息:正在执行第10条用例
+2020-03-30 09:21:50,930-[INFO]-logger.py-Unit_test-日志信息:当前请求内容_URL：https://testznkf.citydo.com.cn/v1/staff/login；method：POST1；data：{'username': 'emhhbmcwMDE=', 'password': 'MTIzNDU2', 'forceFlag': 'true'}；sql：{}
+2020-03-30 09:21:51,141-[INFO]-logger.py-httpRequest-日志信息:客服登录请求返回：{'code': 'ok'}
+2020-03-30 09:21:51,239-[INFO]-logger.py-httpRequest-日志信息:客服返回cookie：{'s_authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJzXzgxOWFlZThlZDg1NTRiOWY4MmU4ZDYzMDJjOGQyNDExIiwidGVuYW50SWQiOiJfMU5UTVdMQSIsImV4cCI6MTU4NjEzNjEwOX0.IU9JIvEV_TC38FD4A4Z8niC3yZvd4VukV-2N9JrWMlQ'}
+2020-03-30 09:22:00,195-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:22:00,247-[INFO]-logger.py-get_mysql_info-日志信息:查询项目配置结果调用成功！[{'id': 0, 'name': '智能客服', 'version': 'V0.3.5', 'smtp': "{'mail_host':'smtp.citydo.com.cn','mail_user':'zentao@citydo.com.cn','mail_pass':'Zz123456','From':'zhanggh@citydo.com.cn','To':'Everboby','subject':'AI虚拟机器人接口自动化测试报告【V0.3.5】','MIMEText':'这是python接口自动框架邮件模块发送的接口自动化测试报告，详情见附件或查看在线报告。\\n测试报告仅体现某接口请求以及参数值验证情况！',}", 'project_url': 'https://testznkf.citydo.com.cn', 'dbconfig': "{'host':'rm-bp153srx1gt80tl1x2o.mysql.rds.aliyuncs.com','user':'sunbin','password':'Sunbin@123','port':3306,'database':'test_znkf'}", 'user_id': 0, 'addtime': datetime.datetime(2020, 3, 23, 19, 2, 34), 'status': 0, 'comment': '1'}]
+2020-03-30 09:22:00,249-[INFO]-logger.py-readExcel-日志信息:用例执行模式（0全部执行，1指定接口，2区间接口）：1
+2020-03-30 09:22:00,250-[INFO]-logger.py-readExcel-日志信息:配置用例列表：指定[309],区间[294, 410]
+2020-03-30 09:22:00,251-[INFO]-logger.py-readExcel-日志信息:当前使用临时配置用例列表：[309]
+2020-03-30 09:22:00,253-[INFO]-logger.py-readExcel-日志信息:开始处理数据库用例自动化格式！
+2020-03-30 09:22:00,254-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:22:00,289-[INFO]-logger.py-get_mysql_info-日志信息:查询测试库用例结果调用成功！[{'id': 10, 'cases_name': '登录接口-成功', 'method': 'POST1', 'url': '/v1/staff/login', 'data': '{"username":"emhhbmcwMDE=","password":"MTIzNDU2","forceFlag":"true"}', 'sql': '{}', 'code': 'ok', 'actually': 'ok', 'sql_result': '', 'result': 'pass', 'msg': '', 'version': 'V0.3.5', 'models': '智能客服-测试版', 'user_id': 'admin', 'case_leader': 1, 'addtime': datetime.datetime(2020, 3, 26, 14, 42, 44), 'update_time': datetime.datetime(2020, 3, 26, 14, 42, 44), 'Environment': '智能客服', 'pass_num': 0, 'fail_num': 0, 'execute_count': 0, 'case_pass': 0.0, 'status': 0, 'comment': '1'}, {'id': 11, 'cases_name': '在线-事务小结-添加事务小结-成功', 'method': 'POST', 'url': '/v1/tenants/_1NTMWLA/addStaffSummaryAfterwards', 'data': '{ "staffId":"s_819aee8ed8554b9f82e8d6302c8d2411", "keywords":"测试","afterEvent":"这个是什么鬼"}', 'sql': '{}', 'code': 'ok', 'actually': '', 'sql_result': '', 'result': '', 'msg': '', 'version': 'V0.3.5', 'models': '智能客服-测试版', 'user_id': 'admin', 'case_leader': 1, 'addtime': datetime.datetime(2020, 3, 26, 14, 42, 44), 'update_time': datetime.datetime(2020, 3, 26, 14, 42, 44), 'Environment': '智能客服', 'pass_num': 0, 'fail_num': 0, 'execute_count': 0, 'case_pass': 0.0, 'status': 0, 'comment': '1'}]
+2020-03-30 09:22:00,290-[INFO]-logger.py-readExcel-日志信息:------------版本全部用例集------------
+2020-03-30 09:22:00,298-[INFO]-logger.py-Unit_test-日志信息:============我要开始测试了===============
+2020-03-30 09:22:00,298-[INFO]-logger.py-Unit_test-日志信息:正在执行第10条用例
+2020-03-30 09:22:00,300-[INFO]-logger.py-Unit_test-日志信息:当前请求内容_URL：https://testznkf.citydo.com.cn/v1/staff/login；method：POST1；data：{'username': 'emhhbmcwMDE=', 'password': 'MTIzNDU2', 'forceFlag': 'true'}；sql：{}
+2020-03-30 09:22:00,445-[INFO]-logger.py-httpRequest-日志信息:客服登录请求返回：{'code': 'ok'}
+2020-03-30 09:22:00,522-[INFO]-logger.py-httpRequest-日志信息:客服返回cookie：{'s_authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJzXzgxOWFlZThlZDg1NTRiOWY4MmU4ZDYzMDJjOGQyNDExIiwidGVuYW50SWQiOiJfMU5UTVdMQSIsImV4cCI6MTU4NjEzNjExOH0.dweqsbtMLXWBdOXwD5Zc8I821sEJxQAY2eSt42mEHMI'}
+2020-03-30 09:22:00,628-[INFO]-logger.py-httpRequest-日志信息:客户返回cookie：{'v_authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJ2X2FfYTE4NjdhNWEwNjZiNDhjNThmNDNjNDJlMjMzMDgxYTYiLCJ0ZW5hbnRJZCI6Il8xTlRNV0xBIiwiZXhwIjoxNTg3MDAyNTQ3fQ.947354XyWUwJqL4TJivGMpgxbwXzIRT81PvarLaHNfo', 'visitor_id': 'v_a_a1867a5a066b48c58f43c42e233081a6'}
+2020-03-30 09:22:00,631-[INFO]-logger.py-httpRequest-日志信息:当前客服headers配置：{'Host': '47.110.131.231', 'Connection': 'keep-alive', 'Origin': 'http://47.110.131.231', 'X-TraceId': 'c502d7c0-5c48-11ea-98c2-1b2105b568ad', 'Referer': 'http://47.110.131.231/customerService/SystemManagement/Online', 'Cookie': 's_authorization=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJzXzgxOWFlZThlZDg1NTRiOWY4MmU4ZDYzMDJjOGQyNDExIiwidGVuYW50SWQiOiJfMU5UTVdMQSIsImV4cCI6MTU4NjEzNjExOH0.dweqsbtMLXWBdOXwD5Zc8I821sEJxQAY2eSt42mEHMI'}
+2020-03-30 09:22:00,632-[INFO]-logger.py-httpRequest-日志信息:当前客客户header配置：{'Host': '47.110.131.231', 'Connection': 'keep-alive', 'Origin': 'http://47.110.131.231', 'X-TraceId': 'b2486a20-a9d1-11e9-a2b4-5fa2b013c14c', 'Referer': 'http://47.110.131.231/customerService/SystemManagement/Online', 'Cookie': 'v_authorization=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJ2X2FfYTE4NjdhNWEwNjZiNDhjNThmNDNjNDJlMjMzMDgxYTYiLCJ0ZW5hbnRJZCI6Il8xTlRNV0xBIiwiZXhwIjoxNTg3MDAyNTQ3fQ.947354XyWUwJqL4TJivGMpgxbwXzIRT81PvarLaHNfo'}
+2020-03-30 09:22:00,633-[INFO]-logger.py-httpRequest-日志信息:现在开始进行post1请求
+2020-03-30 09:22:00,684-[INFO]-logger.py-Unit_test-日志信息:用例code比对成功！实际返回：ok
+2020-03-30 09:22:00,684-[INFO]-logger.py-Unit_test-日志信息:返回数据写入excel{'id': 10, 'actually': 'ok', 'result': 'pass'}
+2020-03-30 09:22:00,685-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:22:00,686-[INFO]-logger.py-get_mysql_info-日志信息:写入sql语句记录！！！UPDATE testcase SET actually="ok",sql_result="",result="pass",msg="" where id=10
+2020-03-30 09:22:00,687-[INFO]-logger.py-get_mysql_info-日志信息:写入sql数据记录！！！{'id': 10, 'actually': 'ok', 'result': 'pass', 'msg': '', 'sql_result': ''}
+2020-03-30 09:22:00,733-[INFO]-logger.py-get_mysql_info-日志信息:sql写入统计测试记录成功！
+2020-03-30 09:22:01,035-[INFO]-logger.py-Unit_test-日志信息:===============我要结束测试了！==================
+2020-03-30 09:22:01,036-[INFO]-logger.py-Unit_test-日志信息:============我要开始测试了===============
+2020-03-30 09:22:01,037-[INFO]-logger.py-Unit_test-日志信息:正在执行第11条用例
+2020-03-30 09:22:01,038-[INFO]-logger.py-Unit_test-日志信息:当前请求内容_URL：https://testznkf.citydo.com.cn/v1/tenants/_1NTMWLA/addStaffSummaryAfterwards；method：POST；data：{'staffId': 's_819aee8ed8554b9f82e8d6302c8d2411', 'keywords': '测试', 'afterEvent': '这个是什么鬼'}；sql：{}
+2020-03-30 09:22:01,158-[INFO]-logger.py-httpRequest-日志信息:客服登录请求返回：{'code': 'ok'}
+2020-03-30 09:22:01,244-[INFO]-logger.py-httpRequest-日志信息:客服返回cookie：{'s_authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJzXzgxOWFlZThlZDg1NTRiOWY4MmU4ZDYzMDJjOGQyNDExIiwidGVuYW50SWQiOiJfMU5UTVdMQSIsImV4cCI6MTU4NjEzNjExOX0.O9kv5g24z96ed3UCzYbgP4LwN_QSYm1lKjIokHgtL3c'}
+2020-03-30 09:22:01,379-[INFO]-logger.py-httpRequest-日志信息:客户返回cookie：{'v_authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJ2X2FfYWRkMTBiNGU2NDZmNDI0NGIxZGU5NzRiYmJkMjFiNTQiLCJ0ZW5hbnRJZCI6Il8xTlRNV0xBIiwiZXhwIjoxNTg3MDAyNTQ4fQ.xo4F5iSuuBdL-YxcT2z1lh6zGhu9ZS4WeOauKBxre84', 'visitor_id': 'v_a_add10b4e646f4244b1de974bbbd21b54'}
+2020-03-30 09:22:01,381-[INFO]-logger.py-httpRequest-日志信息:当前客服headers配置：{'Host': '47.110.131.231', 'Connection': 'keep-alive', 'Origin': 'http://47.110.131.231', 'X-TraceId': 'c502d7c0-5c48-11ea-98c2-1b2105b568ad', 'Referer': 'http://47.110.131.231/customerService/SystemManagement/Online', 'Cookie': 's_authorization=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJzXzgxOWFlZThlZDg1NTRiOWY4MmU4ZDYzMDJjOGQyNDExIiwidGVuYW50SWQiOiJfMU5UTVdMQSIsImV4cCI6MTU4NjEzNjExOX0.O9kv5g24z96ed3UCzYbgP4LwN_QSYm1lKjIokHgtL3c'}
+2020-03-30 09:22:01,382-[INFO]-logger.py-httpRequest-日志信息:当前客客户header配置：{'Host': '47.110.131.231', 'Connection': 'keep-alive', 'Origin': 'http://47.110.131.231', 'X-TraceId': 'b2486a20-a9d1-11e9-a2b4-5fa2b013c14c', 'Referer': 'http://47.110.131.231/customerService/SystemManagement/Online', 'Cookie': 'v_authorization=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiJ2X2FfYWRkMTBiNGU2NDZmNDI0NGIxZGU5NzRiYmJkMjFiNTQiLCJ0ZW5hbnRJZCI6Il8xTlRNV0xBIiwiZXhwIjoxNTg3MDAyNTQ4fQ.xo4F5iSuuBdL-YxcT2z1lh6zGhu9ZS4WeOauKBxre84'}
+2020-03-30 09:22:01,383-[INFO]-logger.py-httpRequest-日志信息:现在开始进行post请求
+2020-03-30 09:22:01,487-[INFO]-logger.py-Unit_test-日志信息:接口返回data{'code': 'ok', 'data': {'baseSuccess': True, 'httpStatusCode': 0, 'success': True}}
+2020-03-30 09:22:01,488-[INFO]-logger.py-Unit_test-日志信息:用例code比对成功！实际返回：ok
+2020-03-30 09:22:01,489-[INFO]-logger.py-Unit_test-日志信息:返回数据写入excel{'id': 11, 'actually': 'ok', 'msg': {'baseSuccess': True, 'httpStatusCode': 0, 'success': True}, 'result': 'pass'}
+2020-03-30 09:22:01,490-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:22:01,491-[INFO]-logger.py-get_mysql_info-日志信息:写入sql语句记录！！！UPDATE testcase SET actually="ok",sql_result="",result="pass",msg="{'baseSuccess': True, 'httpStatusCode': 0, 'success': True}" where id=11
+2020-03-30 09:22:01,492-[INFO]-logger.py-get_mysql_info-日志信息:写入sql数据记录！！！{'id': 11, 'actually': 'ok', 'msg': {'baseSuccess': True, 'httpStatusCode': 0, 'success': True}, 'result': 'pass', 'sql_result': ''}
+2020-03-30 09:22:01,534-[INFO]-logger.py-get_mysql_info-日志信息:sql写入统计测试记录成功！
+2020-03-30 09:22:01,836-[INFO]-logger.py-Unit_test-日志信息:===============我要结束测试了！==================
+2020-03-30 09:22:01,837-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:22:01,838-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:22:01,872-[INFO]-logger.py-get_mysql_info-日志信息:插入数据库sql拼接成功！INSERT INTO znkf (restult,sum,ok,fail,error,error_1,date) VALUES (%(restult)s,%(sum)s,%(ok)s,%(fail)s,%(error)s,%(error_1)s,%(date)s)
+2020-03-30 09:22:01,921-[INFO]-logger.py-get_mysql_info-日志信息:sql写入统计测试记录成功！[{'restult': "{'testname': '质量保障部—章广华', 'time': '2020-03-30 09:22:00', 'sumtime': '0:00:01.539840', 'testresult': '共 2 条接口用例，通过 2 条', 'tonggl': '100.00%'}", 'sum': 2, 'ok': 2, 'fail': 0, 'error': 0, 'error_1': 0, 'date': '2020-03-30_09_22_00'}]
+2020-03-30 09:22:01,923-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:22:01,968-[INFO]-logger.py-get_mysql_info-日志信息:测试结果数据库调用成功！
+2020-03-30 09:22:01,970-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:22:02,003-[INFO]-logger.py-get_mysql_info-日志信息:测试结果数据库调用成功！
+2020-03-30 09:22:02,004-[INFO]-logger.py-main-日志信息:获取表单内容成功：{'testname': '质量保障部—章广华', 'time': '2020-03-30 09:22:00', 'sumtime': '0:00:01.539840', 'testresult': '共 2 条接口用例，通过 2 条', 'tonggl': '100.00%'}
+2020-03-30 09:22:02,024-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-03-30 09:22:02,025-[INFO]-logger.py-main-日志信息:本次Python接口自动化框架执行完毕！2020-03-30 09:22:02
