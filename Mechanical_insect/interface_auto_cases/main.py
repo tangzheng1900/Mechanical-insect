@@ -14,7 +14,7 @@ def run(version):
     print(ver)
     logger = Log('main', NC.log_path)
     # 去随机数赋值图片名称
-    name = str(random.randint(0, 18))
+    name = str(random.randint(0, 30))
 
     from interface_auto_cases.public import Unit_test
     suite = unittest.TestSuite()  # 实例
@@ -37,45 +37,32 @@ def run(version):
     sqlinfo = "select * from " + gmi.testtable + " ORDER BY date DESC LIMIT 10;"
     text = eval(gmi.getMysqlInfo(NC.config).get_mysql_info_test(sqlinfo, 1)['restult'])
     logger.info('获取表单内容成功：%s' % text)
-    # 钉钉智能消息机器人AI虚拟机器人
-    # url='https://oapi.dingtalk.com/robot/send?access_token=746c8737b87ebb1d394e8790d272846789a73fc263c284d1de43c21162fe642e'
-    # url='https://oapi.dingtalk.com/robot/send?access_token=8a41242fd2858c2614077a9f74b503623c0cf87b5db7bdb35f3f983b3de52f1d'
+    # 钉钉智能消息机器人项目质量报告机器人
+    # url='https://oapi.dingtalk.com/robot/send?access_token=6128ef1568799123702f701123c30b2c19f953c1f0a028b0c1a0598ccbf94481'
     # 测试地址
     # url='https://oapi.dingtalk.com/robot/send?access_token=9abe37c6a640422cb85c9a877bb026b0b9029378890c5f14fcc106be9ab5725e'
     headers = {"Content-Type": "application/json"}
+
     data = {
-        "actionCard": {
-            "title": "乔布斯 20 年前想打造一间苹果咖啡厅，而它正是 Apple Store 的前身",
-            "text": "![screenshot](https://gw.alicdn.com/tfs/TB1ut3xxbsrBKNjSZFpXXcXhFXa-846-786.png)"
-                    "### 乔布斯 20 年前想打造的苹果咖啡厅" + "\n" +
-                    "Apple Store 的设计正从原来满满的科技感走向生活化，而其生活化的走向其实可以追溯到 20 年前苹果一个建立咖啡馆的计划",
-            "btnOrientation": "0",
-            "singleTitle": "阅读全文",
-            "singleURL": "https://www.dingtalk.com/"
+        "msgtype": "markdown",
+        "markdown": {
+            "title": "项目质量数据统计报告",
+            "text": "#### 项目质量数据统计报告【test】\n" +
+                    "> 【项目个数】:{}".format(6) + "\n" +
+                    "\n> 【共计用例】:{}".format(3403) + "\n" +
+                    "\n> 【成功率】:{}".format('87%') + "\n" +
+                    "\n> 【失败率】:{}".format('10%') + "\n" +
+                    "\n> 【错误率】:{}".format('3%') + "\n" +
+                    "> ![screenshot](http://autotest-report.oss-cn-hangzhou.aliyuncs.com/report/" + name + ".jpg)\n" +
+                    "> ###### " + now[0:10] + " 发布 [在线查看报告详情](http://172.16.25.46:82/admin/home/) \n"
         },
-        "msgtype": "actionCard"
+        "at": {
+            "atMobiles": [
+                "17681829051",
+            ],
+            "isAtAll": "false"
+        }
     }
-    # data = {
-    #     "msgtype": "markdown",
-    #     "markdown": {
-    #         "title": "项目质量控制数据统计报告",
-    #         "text": "#### 项目质量控制数据统计报告【Python】\n" +
-    #                 "> 【测试人员】:" + str(text['testname']) + "\n" +
-    #                 "\n> 【开始时间】:" + str(text['time']) + "\n" +
-    #                 "\n> 【合计耗时】:" + str(text['sumtime']) + "\n" +
-    #                 "\n> 【本次结果】:" + str(text['testresult']) + "\n" +
-    #                 "\n> 【通过率】:" + str(text['tonggl']) + "\n" +
-    #                 "> ![screenshot](http://autotest-report.oss-cn-hangzhou.aliyuncs.com/report/" + name + ".jpg)\n" +
-    #                 "> ###### " + now[0:10] + " 发布 [在线查看报告详情](http://47.111.14.23:8500/) \n"
-    #     },
-    #     "at": {
-    #         "atMobiles": [
-    #             "18267199586",
-    #             "13111595333"
-    #         ],
-    #         "isAtAll": "false"
-    #     }
-    # }
     # request = requests.post(url, json=data, headers=headers).json()
     # logger.info("钉钉机器人消息请求内容%s" % data)
     # logger.info('钉钉机器人消息请求成功%s' % request)
@@ -96,4 +83,4 @@ def run(version):
 
 
 if __name__ == '__main__':
-    run()
+    run('V0.3.5')

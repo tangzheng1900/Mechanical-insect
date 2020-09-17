@@ -7,36 +7,6 @@
 
  */
 
-function executes() {
-    env = $('#env').val();
-    code = $('#code').val();
-    if (code.length == 0) {
-        alert("code is not null");
-    }
-    $.ajax({
-        url: "/insertInvertory",
-        type: 'GET',
-        dataType: 'json',
-        async: false,
-        timeout: 15000,
-        cache: true,
-        beforeSend: LoadFunction,
-        error: ErrFunction,
-        success: function (data) {
-            var jsons = data ? data : [];
-            $("#result").html(jsons)
-        }
-    })
-}
-
-function LoadFunction() {
-    $("#result").html('数据加载中，请稍后！')
-}
-
-function ErrFunction() {
-    $("#result").html('数据加载失败！请重试！')
-}
-
 
 layui.define(function(exports){
 

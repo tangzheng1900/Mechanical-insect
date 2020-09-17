@@ -1,0 +1,117 @@
+2020-09-07 14:31:15,827-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 14:31:15,971-[INFO]-logger.py-get_mysql_info-日志信息:查询项目配置结果调用成功！[{'id': 0, 'name': '智能客服', 'version': 'V0.3.5', 'smtp': "{'mail_host':'smtp.citydo.com.cn','mail_user':'zentao@citydo.com.cn','mail_pass':'Zz123456','From':'zhanggh@citydo.com.cn','To':'Everboby','subject':'AI虚拟机器人接口自动化测试报告【V0.3.5】','MIMEText':'这是python接口自动框架邮件模块发送的接口自动化测试报告，详情见附件或查看在线报告。\\n测试报告仅体现某接口请求以及参数值验证情况！',}", 'project_url': 'https://testznkf.citydo.com.cn', 'dbconfig': "{'host':'rm-bp153srx1gt80tl1x2o.mysql.rds.aliyuncs.com','user':'sunbin','password':'Sunbin@123','port':3306,'database':'test_znkf'}", 'user_id': 0, 'addtime': datetime.datetime(2020, 3, 23, 19, 2, 34), 'status': 0, 'comment': '1'}]
+2020-09-07 14:31:15,978-[INFO]-logger.py-readExcel-日志信息:用例执行模式（0全部执行，1指定接口，2区间接口）：1
+2020-09-07 14:31:15,982-[INFO]-logger.py-readExcel-日志信息:配置用例列表：指定[309],区间[294, 410]
+2020-09-07 14:31:15,984-[INFO]-logger.py-readExcel-日志信息:当前使用临时配置用例列表：[309]
+2020-09-07 14:31:16,000-[INFO]-logger.py-readExcel-日志信息:开始处理数据库用例自动化格式！
+2020-09-07 14:31:16,001-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 14:31:16,051-[INFO]-logger.py-get_mysql_info-日志信息:查询测试库用例结果调用成功！[]
+2020-09-07 14:31:16,052-[INFO]-logger.py-readExcel-日志信息:------------版本全部用例集------------
+2020-09-07 14:31:17,486-[INFO]-logger.py-main-日志信息:钉钉机器人消息请求内容{'actionCard': {'title': '项目质量控制数据统计报告【test】', 'text': '![screenshot](http://autotest-report.oss-cn-hangzhou.aliyuncs.com/report/18.jpg)\n### 乔布斯 20 年前想打造的苹果咖啡厅\nApple Store 的设计正从原来满满的科技感走向生活化，而其生活化的走向其实可以追溯到 20 年前苹果一个建立咖啡馆的计划', 'btnOrientation': '0', 'singleTitle': '阅读全文', 'singleURL': 'http://172.16.25.46:82/admin/home/'}, 'msgtype': 'actionCard'}
+2020-09-07 14:31:17,487-[INFO]-logger.py-main-日志信息:钉钉机器人消息请求成功{'errcode': 0, 'errmsg': 'ok'}
+2020-09-07 14:34:54,589-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 14:34:54,644-[INFO]-logger.py-get_mysql_info-日志信息:查询项目配置结果调用成功！[{'id': 0, 'name': '智能客服', 'version': 'V0.3.5', 'smtp': "{'mail_host':'smtp.citydo.com.cn','mail_user':'zentao@citydo.com.cn','mail_pass':'Zz123456','From':'zhanggh@citydo.com.cn','To':'Everboby','subject':'AI虚拟机器人接口自动化测试报告【V0.3.5】','MIMEText':'这是python接口自动框架邮件模块发送的接口自动化测试报告，详情见附件或查看在线报告。\\n测试报告仅体现某接口请求以及参数值验证情况！',}", 'project_url': 'https://testznkf.citydo.com.cn', 'dbconfig': "{'host':'rm-bp153srx1gt80tl1x2o.mysql.rds.aliyuncs.com','user':'sunbin','password':'Sunbin@123','port':3306,'database':'test_znkf'}", 'user_id': 0, 'addtime': datetime.datetime(2020, 3, 23, 19, 2, 34), 'status': 0, 'comment': '1'}]
+2020-09-07 14:34:54,645-[INFO]-logger.py-readExcel-日志信息:用例执行模式（0全部执行，1指定接口，2区间接口）：1
+2020-09-07 14:34:54,646-[INFO]-logger.py-readExcel-日志信息:配置用例列表：指定[309],区间[294, 410]
+2020-09-07 14:34:54,647-[INFO]-logger.py-readExcel-日志信息:当前使用临时配置用例列表：[309]
+2020-09-07 14:34:54,648-[INFO]-logger.py-readExcel-日志信息:开始处理数据库用例自动化格式！
+2020-09-07 14:34:54,649-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 14:34:54,684-[INFO]-logger.py-get_mysql_info-日志信息:查询测试库用例结果调用成功！[]
+2020-09-07 14:34:54,684-[INFO]-logger.py-readExcel-日志信息:------------版本全部用例集------------
+2020-09-07 14:40:00,948-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 14:40:01,047-[INFO]-logger.py-get_mysql_info-日志信息:查询项目配置结果调用成功！[{'id': 0, 'name': '智能客服', 'version': 'V0.3.5', 'smtp': "{'mail_host':'smtp.citydo.com.cn','mail_user':'zentao@citydo.com.cn','mail_pass':'Zz123456','From':'zhanggh@citydo.com.cn','To':'Everboby','subject':'AI虚拟机器人接口自动化测试报告【V0.3.5】','MIMEText':'这是python接口自动框架邮件模块发送的接口自动化测试报告，详情见附件或查看在线报告。\\n测试报告仅体现某接口请求以及参数值验证情况！',}", 'project_url': 'https://testznkf.citydo.com.cn', 'dbconfig': "{'host':'rm-bp153srx1gt80tl1x2o.mysql.rds.aliyuncs.com','user':'sunbin','password':'Sunbin@123','port':3306,'database':'test_znkf'}", 'user_id': 0, 'addtime': datetime.datetime(2020, 3, 23, 19, 2, 34), 'status': 0, 'comment': '1'}]
+2020-09-07 14:40:01,048-[INFO]-logger.py-readExcel-日志信息:用例执行模式（0全部执行，1指定接口，2区间接口）：1
+2020-09-07 14:40:01,049-[INFO]-logger.py-readExcel-日志信息:配置用例列表：指定[309],区间[294, 410]
+2020-09-07 14:40:01,050-[INFO]-logger.py-readExcel-日志信息:当前使用临时配置用例列表：[309]
+2020-09-07 14:40:01,052-[INFO]-logger.py-readExcel-日志信息:开始处理数据库用例自动化格式！
+2020-09-07 14:40:01,053-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 14:40:01,109-[INFO]-logger.py-get_mysql_info-日志信息:查询测试库用例结果调用成功！[]
+2020-09-07 14:40:01,110-[INFO]-logger.py-readExcel-日志信息:------------版本全部用例集------------
+2020-09-07 14:42:00,051-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 14:42:00,095-[INFO]-logger.py-get_mysql_info-日志信息:查询项目配置结果调用成功！[{'id': 0, 'name': '智能客服', 'version': 'V0.3.5', 'smtp': "{'mail_host':'smtp.citydo.com.cn','mail_user':'zentao@citydo.com.cn','mail_pass':'Zz123456','From':'zhanggh@citydo.com.cn','To':'Everboby','subject':'AI虚拟机器人接口自动化测试报告【V0.3.5】','MIMEText':'这是python接口自动框架邮件模块发送的接口自动化测试报告，详情见附件或查看在线报告。\\n测试报告仅体现某接口请求以及参数值验证情况！',}", 'project_url': 'https://testznkf.citydo.com.cn', 'dbconfig': "{'host':'rm-bp153srx1gt80tl1x2o.mysql.rds.aliyuncs.com','user':'sunbin','password':'Sunbin@123','port':3306,'database':'test_znkf'}", 'user_id': 0, 'addtime': datetime.datetime(2020, 3, 23, 19, 2, 34), 'status': 0, 'comment': '1'}]
+2020-09-07 14:42:00,096-[INFO]-logger.py-readExcel-日志信息:用例执行模式（0全部执行，1指定接口，2区间接口）：1
+2020-09-07 14:42:00,098-[INFO]-logger.py-readExcel-日志信息:配置用例列表：指定[309],区间[294, 410]
+2020-09-07 14:42:00,099-[INFO]-logger.py-readExcel-日志信息:当前使用临时配置用例列表：[309]
+2020-09-07 14:42:00,102-[INFO]-logger.py-readExcel-日志信息:开始处理数据库用例自动化格式！
+2020-09-07 14:42:43,987-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 14:43:03,612-[INFO]-logger.py-get_mysql_info-日志信息:查询测试库用例结果调用成功！[]
+2020-09-07 14:43:44,750-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 14:43:44,805-[INFO]-logger.py-get_mysql_info-日志信息:查询项目配置结果调用成功！[{'id': 0, 'name': '智能客服', 'version': 'V0.3.5', 'smtp': "{'mail_host':'smtp.citydo.com.cn','mail_user':'zentao@citydo.com.cn','mail_pass':'Zz123456','From':'zhanggh@citydo.com.cn','To':'Everboby','subject':'AI虚拟机器人接口自动化测试报告【V0.3.5】','MIMEText':'这是python接口自动框架邮件模块发送的接口自动化测试报告，详情见附件或查看在线报告。\\n测试报告仅体现某接口请求以及参数值验证情况！',}", 'project_url': 'https://testznkf.citydo.com.cn', 'dbconfig': "{'host':'rm-bp153srx1gt80tl1x2o.mysql.rds.aliyuncs.com','user':'sunbin','password':'Sunbin@123','port':3306,'database':'test_znkf'}", 'user_id': 0, 'addtime': datetime.datetime(2020, 3, 23, 19, 2, 34), 'status': 0, 'comment': '1'}]
+2020-09-07 14:43:44,807-[INFO]-logger.py-readExcel-日志信息:用例执行模式（0全部执行，1指定接口，2区间接口）：1
+2020-09-07 14:43:44,808-[INFO]-logger.py-readExcel-日志信息:配置用例列表：指定[309],区间[294, 410]
+2020-09-07 14:43:44,809-[INFO]-logger.py-readExcel-日志信息:当前使用临时配置用例列表：[309]
+2020-09-07 15:29:58,404-[INFO]-logger.py-readExcel-日志信息:开始处理数据库用例自动化格式！
+2020-09-07 15:30:32,764-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 15:31:21,478-[INFO]-logger.py-get_mysql_info-日志信息:查询测试库用例结果调用成功！[]
+2020-09-07 15:31:33,509-[INFO]-logger.py-readExcel-日志信息:------------版本全部用例集------------
+2020-09-07 15:32:16,756-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 15:32:16,818-[INFO]-logger.py-get_mysql_info-日志信息:查询项目配置结果调用成功！[{'id': 0, 'name': '智能客服', 'version': 'V0.3.5', 'smtp': "{'mail_host':'smtp.citydo.com.cn','mail_user':'zentao@citydo.com.cn','mail_pass':'Zz123456','From':'zhanggh@citydo.com.cn','To':'Everboby','subject':'AI虚拟机器人接口自动化测试报告【V0.3.5】','MIMEText':'这是python接口自动框架邮件模块发送的接口自动化测试报告，详情见附件或查看在线报告。\\n测试报告仅体现某接口请求以及参数值验证情况！',}", 'project_url': 'https://testznkf.citydo.com.cn', 'dbconfig': "{'host':'rm-bp153srx1gt80tl1x2o.mysql.rds.aliyuncs.com','user':'sunbin','password':'Sunbin@123','port':3306,'database':'test_znkf'}", 'user_id': 0, 'addtime': datetime.datetime(2020, 3, 23, 19, 2, 34), 'status': 0, 'comment': '1'}]
+2020-09-07 15:32:16,820-[INFO]-logger.py-readExcel-日志信息:用例执行模式（0全部执行，1指定接口，2区间接口）：1
+2020-09-07 15:32:16,821-[INFO]-logger.py-readExcel-日志信息:配置用例列表：指定[309],区间[294, 410]
+2020-09-07 15:32:16,823-[INFO]-logger.py-readExcel-日志信息:当前使用临时配置用例列表：[309]
+2020-09-07 15:34:09,698-[INFO]-logger.py-readExcel-日志信息:开始处理数据库用例自动化格式！
+2020-09-07 15:34:38,763-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 15:34:56,060-[INFO]-logger.py-get_mysql_info-日志信息:查询测试库用例结果调用成功！[]
+2020-09-07 15:49:28,851-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 15:49:28,902-[INFO]-logger.py-get_mysql_info-日志信息:查询项目配置结果调用成功！[{'id': 0, 'name': '智能客服', 'version': 'V0.3.5', 'smtp': "{'mail_host':'smtp.citydo.com.cn','mail_user':'zentao@citydo.com.cn','mail_pass':'Zz123456','From':'zhanggh@citydo.com.cn','To':'Everboby','subject':'AI虚拟机器人接口自动化测试报告【V0.3.5】','MIMEText':'这是python接口自动框架邮件模块发送的接口自动化测试报告，详情见附件或查看在线报告。\\n测试报告仅体现某接口请求以及参数值验证情况！',}", 'project_url': 'https://testznkf.citydo.com.cn', 'dbconfig': "{'host':'rm-bp153srx1gt80tl1x2o.mysql.rds.aliyuncs.com','user':'sunbin','password':'Sunbin@123','port':3306,'database':'test_znkf'}", 'user_id': 0, 'addtime': datetime.datetime(2020, 3, 23, 19, 2, 34), 'status': 0, 'comment': '1'}]
+2020-09-07 15:49:28,903-[INFO]-logger.py-readExcel-日志信息:用例执行模式（0全部执行，1指定接口，2区间接口）：1
+2020-09-07 15:49:28,905-[INFO]-logger.py-readExcel-日志信息:配置用例列表：指定[309],区间[294, 410]
+2020-09-07 15:49:28,906-[INFO]-logger.py-readExcel-日志信息:当前使用临时配置用例列表：[309]
+2020-09-07 15:49:48,945-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 15:49:48,986-[INFO]-logger.py-get_mysql_info-日志信息:查询项目配置结果调用成功！[{'id': 0, 'name': '智能客服', 'version': 'V0.3.5', 'smtp': "{'mail_host':'smtp.citydo.com.cn','mail_user':'zentao@citydo.com.cn','mail_pass':'Zz123456','From':'zhanggh@citydo.com.cn','To':'Everboby','subject':'AI虚拟机器人接口自动化测试报告【V0.3.5】','MIMEText':'这是python接口自动框架邮件模块发送的接口自动化测试报告，详情见附件或查看在线报告。\\n测试报告仅体现某接口请求以及参数值验证情况！',}", 'project_url': 'https://testznkf.citydo.com.cn', 'dbconfig': "{'host':'rm-bp153srx1gt80tl1x2o.mysql.rds.aliyuncs.com','user':'sunbin','password':'Sunbin@123','port':3306,'database':'test_znkf'}", 'user_id': 0, 'addtime': datetime.datetime(2020, 3, 23, 19, 2, 34), 'status': 0, 'comment': '1'}]
+2020-09-07 15:49:48,987-[INFO]-logger.py-readExcel-日志信息:用例执行模式（0全部执行，1指定接口，2区间接口）：1
+2020-09-07 15:49:48,988-[INFO]-logger.py-readExcel-日志信息:配置用例列表：指定[309],区间[294, 410]
+2020-09-07 15:49:48,989-[INFO]-logger.py-readExcel-日志信息:当前使用临时配置用例列表：[309]
+2020-09-07 15:49:48,991-[INFO]-logger.py-readExcel-日志信息:开始处理数据库用例自动化格式！
+2020-09-07 15:49:48,992-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 15:49:49,020-[INFO]-logger.py-get_mysql_info-日志信息:查询测试库用例结果调用成功！[{'id': 10, 'cases_name': '登录接口-成功', 'method': 'POST1', 'url': '/v1/staff/login', 'data': '{"username":"emhhbmcwMDE=","password":"MTIzNDU2","forceFlag":"true"}', 'sql': '{}', 'code': 'ok', 'actually': 'ok', 'sql_result': '', 'result': 'pass', 'msg': '', 'version': 'V0.3.5', 'models': '智能客服-测试版', 'user_id': 'admin', 'case_leader': 1, 'addtime': datetime.datetime(2020, 3, 26, 14, 42, 44), 'update_time': datetime.datetime(2020, 3, 26, 14, 42, 44), 'Environment': '智能客服', 'pass_num': 0, 'fail_num': 0, 'execute_count': 0, 'case_pass': 0.0, 'status': 0, 'comment': '1'}, {'id': 11, 'cases_name': '在线-事务小结-添加事务小结-成功', 'method': 'POST', 'url': '/v1/tenants/_1NTMWLA/addStaffSummaryAfterwards', 'data': '{ "staffId":"s_819aee8ed8554b9f82e8d6302c8d2411", "keywords":"测试","afterEvent":"这个是什么鬼"}', 'sql': '{}', 'code': 'ok', 'actually': 'ok', 'sql_result': '', 'result': 'pass', 'msg': "{'baseSuccess': True, 'httpStatusCode': 0, 'success': True}", 'version': 'V0.3.5', 'models': '智能客服-测试版', 'user_id': 'admin', 'case_leader': 1, 'addtime': datetime.datetime(2020, 3, 26, 14, 42, 44), 'update_time': datetime.datetime(2020, 3, 26, 14, 42, 44), 'Environment': '智能客服', 'pass_num': 0, 'fail_num': 0, 'execute_count': 0, 'case_pass': 0.0, 'status': 0, 'comment': '1'}]
+2020-09-07 15:49:49,021-[INFO]-logger.py-readExcel-日志信息:------------版本全部用例集------------
+2020-09-07 15:49:49,027-[INFO]-logger.py-Unit_test-日志信息:============我要开始测试了===============
+2020-09-07 15:49:49,027-[INFO]-logger.py-Unit_test-日志信息:正在执行第10条用例
+2020-09-07 15:49:49,028-[INFO]-logger.py-Unit_test-日志信息:当前请求内容_URL：https://testznkf.citydo.com.cn/v1/staff/login；method：POST1；data：{'username': 'emhhbmcwMDE=', 'password': 'MTIzNDU2', 'forceFlag': 'true'}；sql：{}
+2020-09-07 15:50:10,043-[INFO]-logger.py-Unit_test-日志信息:===============我要结束测试了！==================
+2020-09-07 15:50:10,210-[INFO]-logger.py-Unit_test-日志信息:============我要开始测试了===============
+2020-09-07 15:50:10,210-[INFO]-logger.py-Unit_test-日志信息:正在执行第11条用例
+2020-09-07 15:50:10,211-[INFO]-logger.py-Unit_test-日志信息:当前请求内容_URL：https://testznkf.citydo.com.cn/v1/tenants/_1NTMWLA/addStaffSummaryAfterwards；method：POST；data：{'staffId': 's_819aee8ed8554b9f82e8d6302c8d2411', 'keywords': '测试', 'afterEvent': '这个是什么鬼'}；sql：{}
+2020-09-07 15:50:31,216-[INFO]-logger.py-Unit_test-日志信息:===============我要结束测试了！==================
+2020-09-07 15:50:31,216-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 15:50:31,218-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 15:50:31,449-[INFO]-logger.py-get_mysql_info-日志信息:插入数据库sql拼接成功！INSERT INTO znkf (restult,sum,ok,fail,error,error_1,date) VALUES (%(restult)s,%(sum)s,%(ok)s,%(fail)s,%(error)s,%(error_1)s,%(date)s)
+2020-09-07 15:50:31,515-[INFO]-logger.py-get_mysql_info-日志信息:sql写入统计测试记录成功！[{'restult': "{'testname': '质量保障部—章广华', 'time': '2020-09-07 15:49:49', 'sumtime': '0:00:42.190204', 'testresult': '共 2 条接口用例，错误 2 条', 'tonggl': '0.00%'}", 'sum': 2, 'ok': 0, 'fail': 0, 'error': 2, 'error_1': '100.00', 'date': '2020-09-07_15_49_49'}]
+2020-09-07 15:50:31,516-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 15:50:31,621-[INFO]-logger.py-get_mysql_info-日志信息:测试结果数据库调用成功！
+2020-09-07 15:50:31,622-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 15:50:31,727-[INFO]-logger.py-get_mysql_info-日志信息:测试结果数据库调用成功！
+2020-09-07 15:50:31,728-[INFO]-logger.py-main-日志信息:获取表单内容成功：{'testname': '质量保障部—章广华', 'time': '2020-09-07 15:49:49', 'sumtime': '0:00:42.190204', 'testresult': '共 2 条接口用例，错误 2 条', 'tonggl': '0.00%'}
+2020-09-07 15:50:32,663-[INFO]-logger.py-main-日志信息:钉钉机器人消息请求内容{'msgtype': 'markdown', 'markdown': {'title': '项目质量控制数据统计报告', 'text': '#### 项目质量控制数据统计报告【Python】\n> 【测试人员】:质量保障部—章广华\n\n> 【开始时间】:2020-09-07 15:49:49\n\n> 【合计耗时】:0:00:42.190204\n\n> 【本次结果】:共 2 条接口用例，错误 2 条\n\n> 【通过率】:0.00%\n> ![screenshot](http://autotest-report.oss-cn-hangzhou.aliyuncs.com/report/26.jpg)\n> ###### 2020-09-07 发布 [在线查看报告详情](http://172.16.25.46:82/admin/home/) \n'}, 'at': {'atMobiles': ['18267199586', '13111595333'], 'isAtAll': 'false'}}
+2020-09-07 15:50:32,664-[INFO]-logger.py-main-日志信息:钉钉机器人消息请求成功{'errcode': 0, 'errmsg': 'ok'}
+2020-09-07 15:50:32,842-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 15:50:32,843-[INFO]-logger.py-main-日志信息:本次Python接口自动化框架执行完毕！2020-09-07 15:50:32
+2020-09-07 16:21:39,132-[INFO]-logger.py-main-日志信息:钉钉机器人消息请求内容{'msgtype': 'markdown', 'markdown': {'title': '项目质量控制数据统计报告', 'text': '#### 项目质量控制数据统计报告【test】\n> 【项目个数】:6\n\n> 【共计用例】:3403\n\n> 【成功率】:87%\n\n> 【失败率】:10%\n\n> 【错误率】:\n> ![screenshot](http://autotest-report.oss-cn-hangzhou.aliyuncs.com/report/17.jpg)\n> ###### 2020-09-07 发布 [在线查看报告详情](http://172.16.25.46:82/admin/home/) \n'}, 'at': {'atMobiles': ['18267199586', '13111595333'], 'isAtAll': 'false'}}
+2020-09-07 16:21:39,134-[INFO]-logger.py-main-日志信息:钉钉机器人消息请求成功{'errcode': 310000, 'errmsg': 'ip 183.156.104.78 not in whitelist, more: [https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq]'}
+2020-09-07 16:21:39,194-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 16:21:39,223-[INFO]-logger.py-get_mysql_info-日志信息:查询项目配置结果调用成功！[{'id': 0, 'name': '智能客服', 'version': 'V0.3.5', 'smtp': "{'mail_host':'smtp.citydo.com.cn','mail_user':'zentao@citydo.com.cn','mail_pass':'Zz123456','From':'zhanggh@citydo.com.cn','To':'Everboby','subject':'AI虚拟机器人接口自动化测试报告【V0.3.5】','MIMEText':'这是python接口自动框架邮件模块发送的接口自动化测试报告，详情见附件或查看在线报告。\\n测试报告仅体现某接口请求以及参数值验证情况！',}", 'project_url': 'https://testznkf.citydo.com.cn', 'dbconfig': "{'host':'rm-bp153srx1gt80tl1x2o.mysql.rds.aliyuncs.com','user':'sunbin','password':'Sunbin@123','port':3306,'database':'test_znkf'}", 'user_id': 0, 'addtime': datetime.datetime(2020, 3, 23, 19, 2, 34), 'status': 0, 'comment': '1'}]
+2020-09-07 16:21:39,225-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 16:21:39,226-[INFO]-logger.py-main-日志信息:本次Python接口自动化框架执行完毕！2020-09-07 16:21:39
+2020-09-07 16:23:12,544-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 16:23:12,621-[INFO]-logger.py-get_mysql_info-日志信息:查询项目配置结果调用成功！[{'id': 0, 'name': '智能客服', 'version': 'V0.3.5', 'smtp': "{'mail_host':'smtp.citydo.com.cn','mail_user':'zentao@citydo.com.cn','mail_pass':'Zz123456','From':'zhanggh@citydo.com.cn','To':'Everboby','subject':'AI虚拟机器人接口自动化测试报告【V0.3.5】','MIMEText':'这是python接口自动框架邮件模块发送的接口自动化测试报告，详情见附件或查看在线报告。\\n测试报告仅体现某接口请求以及参数值验证情况！',}", 'project_url': 'https://testznkf.citydo.com.cn', 'dbconfig': "{'host':'rm-bp153srx1gt80tl1x2o.mysql.rds.aliyuncs.com','user':'sunbin','password':'Sunbin@123','port':3306,'database':'test_znkf'}", 'user_id': 0, 'addtime': datetime.datetime(2020, 3, 23, 19, 2, 34), 'status': 0, 'comment': '1'}]
+2020-09-07 16:23:12,625-[INFO]-logger.py-readExcel-日志信息:用例执行模式（0全部执行，1指定接口，2区间接口）：1
+2020-09-07 16:23:12,628-[INFO]-logger.py-readExcel-日志信息:配置用例列表：指定[309],区间[294, 410]
+2020-09-07 16:23:12,629-[INFO]-logger.py-readExcel-日志信息:当前使用临时配置用例列表：[309]
+2020-09-07 16:23:12,634-[INFO]-logger.py-readExcel-日志信息:开始处理数据库用例自动化格式！
+2020-09-07 16:23:12,636-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 16:23:12,685-[INFO]-logger.py-get_mysql_info-日志信息:查询测试库用例结果调用成功！[{'id': 10, 'cases_name': '登录接口-成功', 'method': 'POST1', 'url': '/v1/staff/login', 'data': '{"username":"emhhbmcwMDE=","password":"MTIzNDU2","forceFlag":"true"}', 'sql': '{}', 'code': 'ok', 'actually': 'ok', 'sql_result': '', 'result': 'pass', 'msg': '', 'version': 'V0.3.5', 'models': '智能客服-测试版', 'user_id': 'admin', 'case_leader': 1, 'addtime': datetime.datetime(2020, 3, 26, 14, 42, 44), 'update_time': datetime.datetime(2020, 3, 26, 14, 42, 44), 'Environment': '智能客服', 'pass_num': 0, 'fail_num': 0, 'execute_count': 0, 'case_pass': 0.0, 'status': 0, 'comment': '1'}, {'id': 11, 'cases_name': '在线-事务小结-添加事务小结-成功', 'method': 'POST', 'url': '/v1/tenants/_1NTMWLA/addStaffSummaryAfterwards', 'data': '{ "staffId":"s_819aee8ed8554b9f82e8d6302c8d2411", "keywords":"测试","afterEvent":"这个是什么鬼"}', 'sql': '{}', 'code': 'ok', 'actually': 'ok', 'sql_result': '', 'result': 'pass', 'msg': "{'baseSuccess': True, 'httpStatusCode': 0, 'success': True}", 'version': 'V0.3.5', 'models': '智能客服-测试版', 'user_id': 'admin', 'case_leader': 1, 'addtime': datetime.datetime(2020, 3, 26, 14, 42, 44), 'update_time': datetime.datetime(2020, 3, 26, 14, 42, 44), 'Environment': '智能客服', 'pass_num': 0, 'fail_num': 0, 'execute_count': 0, 'case_pass': 0.0, 'status': 0, 'comment': '1'}]
+2020-09-07 16:23:12,690-[INFO]-logger.py-readExcel-日志信息:------------版本全部用例集------------
+2020-09-07 16:23:12,910-[INFO]-logger.py-main-日志信息:钉钉机器人消息请求内容{'msgtype': 'markdown', 'markdown': {'title': '项目质量控制数据统计报告', 'text': '#### 项目质量控制数据统计报告【test】\n> 【项目个数】:6\n\n> 【共计用例】:3403\n\n> 【成功率】:87%\n\n> 【失败率】:10%\n\n> 【错误率】:\n> ![screenshot](http://autotest-report.oss-cn-hangzhou.aliyuncs.com/report/2.jpg)\n> ###### 2020-09-07 发布 [在线查看报告详情](http://172.16.25.46:82/admin/home/) \n'}, 'at': {'atMobiles': ['18267199586', '13111595333'], 'isAtAll': 'false'}}
+2020-09-07 16:23:12,911-[INFO]-logger.py-main-日志信息:钉钉机器人消息请求成功{'errcode': 310000, 'errmsg': 'ip 183.156.104.78 not in whitelist, more: [https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq]'}
+2020-09-07 16:24:03,537-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 16:24:03,580-[INFO]-logger.py-get_mysql_info-日志信息:查询项目配置结果调用成功！[{'id': 0, 'name': '智能客服', 'version': 'V0.3.5', 'smtp': "{'mail_host':'smtp.citydo.com.cn','mail_user':'zentao@citydo.com.cn','mail_pass':'Zz123456','From':'zhanggh@citydo.com.cn','To':'Everboby','subject':'AI虚拟机器人接口自动化测试报告【V0.3.5】','MIMEText':'这是python接口自动框架邮件模块发送的接口自动化测试报告，详情见附件或查看在线报告。\\n测试报告仅体现某接口请求以及参数值验证情况！',}", 'project_url': 'https://testznkf.citydo.com.cn', 'dbconfig': "{'host':'rm-bp153srx1gt80tl1x2o.mysql.rds.aliyuncs.com','user':'sunbin','password':'Sunbin@123','port':3306,'database':'test_znkf'}", 'user_id': 0, 'addtime': datetime.datetime(2020, 3, 23, 19, 2, 34), 'status': 0, 'comment': '1'}]
+2020-09-07 16:24:03,582-[INFO]-logger.py-readExcel-日志信息:用例执行模式（0全部执行，1指定接口，2区间接口）：1
+2020-09-07 16:24:03,583-[INFO]-logger.py-readExcel-日志信息:配置用例列表：指定[309],区间[294, 410]
+2020-09-07 16:24:03,584-[INFO]-logger.py-readExcel-日志信息:当前使用临时配置用例列表：[309]
+2020-09-07 16:24:03,585-[INFO]-logger.py-readExcel-日志信息:开始处理数据库用例自动化格式！
+2020-09-07 16:24:03,585-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-07 16:24:03,621-[INFO]-logger.py-get_mysql_info-日志信息:查询测试库用例结果调用成功！[{'id': 10, 'cases_name': '登录接口-成功', 'method': 'POST1', 'url': '/v1/staff/login', 'data': '{"username":"emhhbmcwMDE=","password":"MTIzNDU2","forceFlag":"true"}', 'sql': '{}', 'code': 'ok', 'actually': 'ok', 'sql_result': '', 'result': 'pass', 'msg': '', 'version': 'V0.3.5', 'models': '智能客服-测试版', 'user_id': 'admin', 'case_leader': 1, 'addtime': datetime.datetime(2020, 3, 26, 14, 42, 44), 'update_time': datetime.datetime(2020, 3, 26, 14, 42, 44), 'Environment': '智能客服', 'pass_num': 0, 'fail_num': 0, 'execute_count': 0, 'case_pass': 0.0, 'status': 0, 'comment': '1'}, {'id': 11, 'cases_name': '在线-事务小结-添加事务小结-成功', 'method': 'POST', 'url': '/v1/tenants/_1NTMWLA/addStaffSummaryAfterwards', 'data': '{ "staffId":"s_819aee8ed8554b9f82e8d6302c8d2411", "keywords":"测试","afterEvent":"这个是什么鬼"}', 'sql': '{}', 'code': 'ok', 'actually': 'ok', 'sql_result': '', 'result': 'pass', 'msg': "{'baseSuccess': True, 'httpStatusCode': 0, 'success': True}", 'version': 'V0.3.5', 'models': '智能客服-测试版', 'user_id': 'admin', 'case_leader': 1, 'addtime': datetime.datetime(2020, 3, 26, 14, 42, 44), 'update_time': datetime.datetime(2020, 3, 26, 14, 42, 44), 'Environment': '智能客服', 'pass_num': 0, 'fail_num': 0, 'execute_count': 0, 'case_pass': 0.0, 'status': 0, 'comment': '1'}]
+2020-09-07 16:24:03,622-[INFO]-logger.py-readExcel-日志信息:------------版本全部用例集------------
+2020-09-07 16:24:04,825-[INFO]-logger.py-main-日志信息:钉钉机器人消息请求内容{'msgtype': 'markdown', 'markdown': {'title': '项目质量控制数据统计报告', 'text': '#### 项目质量控制数据统计报告【test】\n> 【项目个数】:6\n\n> 【共计用例】:3403\n\n> 【成功率】:87%\n\n> 【失败率】:10%\n\n> 【错误率】:\n> ![screenshot](http://autotest-report.oss-cn-hangzhou.aliyuncs.com/report/7.jpg)\n> ###### 2020-09-07 发布 [在线查看报告详情](http://172.16.25.46:82/admin/home/) \n'}, 'at': {'atMobiles': ['18267199586', '13111595333'], 'isAtAll': 'false'}}
+2020-09-07 16:24:04,826-[INFO]-logger.py-main-日志信息:钉钉机器人消息请求成功{'errcode': 0, 'errmsg': 'ok'}
