@@ -55,7 +55,12 @@
             {#            </ul>#}
             <ul class="layui-nav right" lay-filter="">
                 <li class="layui-nav-item">
-                    <a href="javascript:;">{{ session['admin'] }}</a>
+                    <a href="javascript:;">
+                        {% if session['admin'] == nll %}
+                            <a class="x-red">游客</a>
+                        {% else %}
+                            <a class="x-red">{{ session['admin'] }}</a>
+                        {% endif %}</a>
                     <dl class="layui-nav-child">
                         <!-- 二级菜单 -->
                         <dd>

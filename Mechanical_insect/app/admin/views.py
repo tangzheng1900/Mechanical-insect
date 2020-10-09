@@ -65,8 +65,8 @@ def admin_auth(f):
 
 # 系统管理
 @admin.route("/")
-@admin_login_req
-@admin_auth
+# @admin_login_req
+# @admin_auth
 def index():
     return render_template("admin/admin.html")
 
@@ -744,38 +744,3 @@ def environment_del(id=None, status=None):
     flash("删除环境成功！", "ok")
     return redirect(url_for("admin.environment_list", page=1))
 
-
-import time, DBUtils, jsonify
-
-
-@admin.route('/insertInvertory', methods=['GET'])
-def insertInvertory():
-    env = request.args.get('env')
-    code = request.args.get('code')
-    datenow = time.strftime("%Y-%m-%d")
-
-    db = DBUtils(env)
-    selectsql = "SELECT a.id propertyId,c.id roomTypeId,c.code RoomType FROM info.property AS a,info.room_class AS b,info.room_type AS c WHERE a.code ='" + code + "' AND b.property_id =a.id AND c.room_class_id =b.id"
-    result = db.dbSelect(selectsql)
-
-    for i in range(len(result)):
-        property_id = str(result[i]['propertyId'])
-        delsql = "DELETE FROM inv.`property_inventory_detail` WHERE property_id ='" + property_id + "' AND effective_date >='" + str(
-            datenow) + "'"
-        dbs = DBUtils(env)
-        resutls = dbs.dbExcute(delsql)
-        print("the resutls is:", resutls)
-        print(delsql)
-
-    for i in range(len(result)):
-        property_id = str(result[i]['propertyId'])
-        relation_id = str(result[i]['roomTypeId'])
-        insertsql = "INSERT INTO inv.`property_inventory_detail`(property_id,relation_type,relation_id,effective_date,original,consume,STATUS,create_time,update_time,deducted,out_order,non_deducted)VALUES(" + property_id + ",4," + relation_id + ",DATE_ADD('" + str(
-            datenow) + "',INTERVAL 0 DAY),100,0,1,NOW(),NOW(),0,0,0),(" + property_id + ",4," + relation_id + ",DATE_ADD('" + str(
-            datenow) + "',INTERVAL 1 DAY),100,0,1,NOW(),NOW(),0,0,0),(" + property_id + ",4," + relation_id + ",DATE_ADD('" + str(
-            datenow) + "',INTERVAL 90 DAY),100,0,1,NOW(),NOW(),0,0,0);"
-        dbs = DBUtils(env)
-        resutls = dbs.dbExcute(insertsql)
-        print(resutls)
-        print(insertsql)
-    return jsonify("<p color='green'>{status:200,msg:it's success!!!}</p>")

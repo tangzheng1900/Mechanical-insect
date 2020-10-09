@@ -1,0 +1,28 @@
+2020-09-24 15:39:56,041-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-24 15:39:56,072-[INFO]-logger.py-get_mysql_info-日志信息:查询项目配置结果调用成功！[{'id': 0, 'name': '智能客服', 'version': 'V0.3.5', 'smtp': "{'mail_host':'smtp.citydo.com.cn','mail_user':'zentao@citydo.com.cn','mail_pass':'Zz123456','From':'zhanggh@citydo.com.cn','To':'Everboby','subject':'AI虚拟机器人接口自动化测试报告【V0.3.5】','MIMEText':'这是python接口自动框架邮件模块发送的接口自动化测试报告，详情见附件或查看在线报告。\\n测试报告仅体现某接口请求以及参数值验证情况！',}", 'project_url': 'https://testznkf.citydo.com.cn', 'dbconfig': "{'host':'rm-bp153srx1gt80tl1x2o.mysql.rds.aliyuncs.com','user':'sunbin','password':'Sunbin@123','port':3306,'database':'test_znkf'}", 'user_id': 0, 'addtime': datetime.datetime(2020, 3, 23, 19, 2, 34), 'status': 0, 'comment': '1'}]
+2020-09-24 15:39:56,078-[INFO]-logger.py-readExcel-日志信息:用例执行模式（0全部执行，1指定接口，2区间接口）：1
+2020-09-24 15:39:56,080-[INFO]-logger.py-readExcel-日志信息:配置用例列表：指定[309],区间[294, 410]
+2020-09-24 15:39:56,081-[INFO]-logger.py-readExcel-日志信息:当前使用临时配置用例列表：[309]
+2020-09-24 15:39:56,100-[INFO]-logger.py-readExcel-日志信息:开始处理数据库用例自动化格式！
+2020-09-24 15:39:56,101-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-24 15:39:56,132-[INFO]-logger.py-get_mysql_info-日志信息:查询测试库用例结果调用成功！[{'id': 10, 'cases_name': '登录接口-成功', 'method': 'POST1', 'url': '/v1/staff/login', 'data': '{"username":"emhhbmcwMDE=","password":"MTIzNDU2","forceFlag":"true"}', 'sql': '{}', 'code': 'ok', 'actually': 'ok', 'sql_result': '', 'result': 'pass', 'msg': '', 'version': 'V0.3.5', 'models': '智能客服-测试版', 'user_id': 'admin', 'case_leader': 1, 'addtime': datetime.datetime(2020, 3, 26, 14, 42, 44), 'update_time': datetime.datetime(2020, 3, 26, 14, 42, 44), 'Environment': '智能客服', 'pass_num': 0, 'fail_num': 0, 'execute_count': 0, 'case_pass': 0.0, 'status': 0, 'comment': '1'}, {'id': 11, 'cases_name': '在线-事务小结-添加事务小结-成功', 'method': 'POST', 'url': '/v1/tenants/_1NTMWLA/addStaffSummaryAfterwards', 'data': '{ "staffId":"s_819aee8ed8554b9f82e8d6302c8d2411", "keywords":"测试","afterEvent":"这个是什么鬼"}', 'sql': '{}', 'code': 'ok', 'actually': 'ok', 'sql_result': '', 'result': 'pass', 'msg': "{'baseSuccess': True, 'httpStatusCode': 0, 'success': True}", 'version': 'V0.3.5', 'models': '智能客服-测试版', 'user_id': 'admin', 'case_leader': 1, 'addtime': datetime.datetime(2020, 3, 26, 14, 42, 44), 'update_time': datetime.datetime(2020, 3, 26, 14, 42, 44), 'Environment': '智能客服', 'pass_num': 0, 'fail_num': 0, 'execute_count': 0, 'case_pass': 0.0, 'status': 0, 'comment': '1'}]
+2020-09-24 15:39:56,133-[INFO]-logger.py-readExcel-日志信息:------------版本全部用例集------------
+2020-09-24 15:39:56,210-[INFO]-logger.py-Unit_test-日志信息:============我要开始测试了===============
+2020-09-24 15:39:56,211-[INFO]-logger.py-Unit_test-日志信息:正在执行第10条用例
+2020-09-24 15:39:56,212-[INFO]-logger.py-Unit_test-日志信息:当前请求内容_URL：https://testznkf.citydo.com.cn/v1/staff/login；method：POST1；data：{'username': 'emhhbmcwMDE=', 'password': 'MTIzNDU2', 'forceFlag': 'true'}；sql：{}
+2020-09-24 15:40:17,283-[INFO]-logger.py-Unit_test-日志信息:===============我要结束测试了！==================
+2020-09-24 15:40:17,455-[INFO]-logger.py-Unit_test-日志信息:============我要开始测试了===============
+2020-09-24 15:40:17,456-[INFO]-logger.py-Unit_test-日志信息:正在执行第11条用例
+2020-09-24 15:40:17,457-[INFO]-logger.py-Unit_test-日志信息:当前请求内容_URL：https://testznkf.citydo.com.cn/v1/tenants/_1NTMWLA/addStaffSummaryAfterwards；method：POST；data：{'staffId': 's_819aee8ed8554b9f82e8d6302c8d2411', 'keywords': '测试', 'afterEvent': '这个是什么鬼'}；sql：{}
+2020-09-24 15:40:38,463-[INFO]-logger.py-Unit_test-日志信息:===============我要结束测试了！==================
+2020-09-24 15:40:38,465-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-24 15:40:38,466-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-24 15:40:38,513-[INFO]-logger.py-get_mysql_info-日志信息:插入数据库sql拼接成功！INSERT INTO znkf (restult,sum,ok,fail,error,error_1,date) VALUES (%(restult)s,%(sum)s,%(ok)s,%(fail)s,%(error)s,%(error_1)s,%(date)s)
+2020-09-24 15:40:38,560-[INFO]-logger.py-get_mysql_info-日志信息:sql写入统计测试记录成功！[{'restult': "{'testname': '质量保障部—章广华', 'time': '2020-09-24 15:39:56', 'sumtime': '0:00:42.253453', 'testresult': '共 2 条接口用例，错误 2 条', 'tonggl': '0.00%'}", 'sum': 2, 'ok': 0, 'fail': 0, 'error': 2, 'error_1': '100.00', 'date': '2020-09-24_15_39_56'}]
+2020-09-24 15:40:38,561-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-24 15:40:38,604-[INFO]-logger.py-get_mysql_info-日志信息:测试结果数据库调用成功！
+2020-09-24 15:40:38,606-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-24 15:40:38,651-[INFO]-logger.py-get_mysql_info-日志信息:测试结果数据库调用成功！
+2020-09-24 15:40:38,653-[INFO]-logger.py-main-日志信息:获取表单内容成功：{'testname': '质量保障部—章广华', 'time': '2020-09-24 15:39:56', 'sumtime': '0:00:42.253453', 'testresult': '共 2 条接口用例，错误 2 条', 'tonggl': '0.00%'}
+2020-09-24 15:40:38,709-[INFO]-logger.py-get_mysql_info-日志信息:本次数据库调用配置成功！
+2020-09-24 15:40:38,710-[INFO]-logger.py-main-日志信息:本次Python接口自动化框架执行完毕！2020-09-24 15:40:38

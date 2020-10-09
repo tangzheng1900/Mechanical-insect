@@ -39,4 +39,4 @@ if __name__ == '__main__':
     #     '%(asctime)s 【%(levelname)s】 -- %(filename)s _%(funcName)s _%(lineno)s : %(message)s')
     # handler.setFormatter(logging_format)
     # app.logger.addHandler(handler)
-    app.run(host='0.0.0.0', port=82)  # 启动web服务器
+    app.run(host='127.0.0.1', port=82)  # 启动web服务器
